@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BondBridge - Download</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Download Page Specific Styles */
+        .download-page {
+            padding-top: 96px;
+            padding-bottom: 96px;
+        }
+        
+        .download-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .download-heading {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .download-heading h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .download-heading p {
+            font-size: 18px;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .download-options {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            margin-bottom: 64px;
+        }
+        
+        @media (min-width: 768px) {
+            .download-options {
+                flex-direction: row;
+                align-items: stretch;
+            }
+        }
+        
+        .download-option {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .download-option:hover {
+            transform: translateY(-8px);
+        }
+        
+        .download-option h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .download-option p {
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+        
+        .download-option img {
+            width: 150px;
+            height: auto;
+            margin: 0 auto 24px;
+        }
+        
+        .download-btn-large {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(to right, #A7D0FF, #4C00FF);
+            color: white;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .download-btn-large:hover {
+            transform: scale(1.05);
+        }
+        
+        .get-app-section {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+        }
+        
+        .get-app-heading {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .get-app-heading h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .get-app-heading p {
+            color: #6b7280;
+        }
+        
+        .option-tabs {
+            display: flex;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 24px;
+        }
+        
+        .option-tab {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 500;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        
+        .option-tab.active {
+            color: #4f46e5;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .input-group {
+            margin-bottom: 24px;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .input-field:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+        
+        .input-field.error {
+            border-color: #ef4444;
+        }
+        
+        .error-message {
+            color: #ef4444;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #A7D0FF, #4C00FF);
+            color: white;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .success-message {
+            text-align: center;
+            background-color: #dcfce7;
+            color: #166534;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 24px;
+            display: none;
+        }
+        
+        .success-message.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <h3 class="grad">BondBridge</h3>
+        </a>
+        
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="download.html" class="download-btn">Download Now</a>
+        </div>
+        
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="about.html">About</a>
+            <a href="download.html">Download</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="download.html" class="mobile-download-btn">Download Now</a>
+        </div>
+    </div>
+    
+    <!-- Download Page Content -->
+    <main class="download-page">
+        <div class="download-container">
+            <div class="download-heading">
+                <h1>Download BondBridge</h1>
+                <p>Get the BondBridge app on your device and start connecting with communities that share your interests.</p>
+            </div>
+            
+            <!-- Download Options -->
+            <div class="download-options">
+                <!-- iOS Option -->
+                <div class="download-option">
+                    <img src="assets/icons/apple-logo.png" alt="Apple Logo">
+                    <h2>iOS App</h2>
+                    <p>Download BondBridge for iPhone and iPad devices.</p>
+                    <a href="#" class="download-btn-large">Download for iOS</a>
+                </div>
+                
+                <!-- Android Option -->
+                <div class="download-option">
+                    <img src="assets/icons/android-logo.png" alt="Android Logo">
+                    <h2>Android App</h2>
+                    <p>Download BondBridge for Android smartphones and tablets.</p>
+                    <a href="#" class="download-btn-large">Download for Android</a>
+                </div>
+            </div>
+            
+            <!-- Get App Link Section -->
+            <div class="get-app-section">
+                <div class="get-app-heading">
+                    <h2>Get the App Link</h2>
+                    <p>We'll send you a direct link to download the app.</p>
+                </div>
+                
+                <div class="option-tabs">
+                    <div class="option-tab active" id="phoneTab">Send via SMS</div>
+                    <div class="option-tab" id="emailTab">Send via Email</div>
+                </div>
+                
+                <form id="getAppForm">
+                    <div class="input-group">
+                        <input type="text" id="contactInput" class="input-field" placeholder="Enter your phone number">
+                        <div class="error-message" id="inputError"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">Send App Link</button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    <h3>Link Sent!</h3>
+                    <p>We've sent you a link to download the BondBridge app.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3 class="grad">BondBridge</h3>
+                </div>
+                <p>Connect with people who share your interests and passions.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="support.html">Help Center</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 BondBridge. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script>
+        // Download Form Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneTab = document.getElementById('phoneTab');
+            const emailTab = document.getElementById('emailTab');
+            const contactInput = document.getElementById('contactInput');
+            const getAppForm = document.getElementById('getAppForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const inputError = document.getElementById('inputError');
+            const successMessage = document.getElementById('successMessage');
+            
+            let selectedOption = 'phone';
+            
+            // Tab switching
+            phoneTab.addEventListener('click', function() {
+                phoneTab.classList.add('active');
+                emailTab.classList.remove('active');
+                selectedOption = 'phone';
+                contactInput.placeholder = 'Enter your phone number';
+                contactInput.value = '';
+                inputError.textContent = '';
+                contactInput.classList.remove('error');
+            });
+            
+            emailTab.addEventListener('click', function() {
+                emailTab.classList.add('active');
+                phoneTab.classList.remove('active');
+                selectedOption = 'email';
+                contactInput.placeholder = 'Enter your email address';
+                contactInput.value = '';
+                inputError.textContent = '';
+                contactInput.classList.remove('error');
+            });
+            
+            // Validation function
+            function validateInput() {
+                const value = contactInput.value.trim();
+                if (!value) {
+                    inputError.textContent = 'This field is required';
+                    contactInput.classList.add('error');
+                    return false;
+                }
+                
+                if (selectedOption === 'email' && !/^\S+@\S+\.\S+$/.test(value)) {
+                    inputError.textContent = 'Enter a valid email address';
+                    contactInput.classList.add('error');
+                    return false;
+                }
+                
+                if (selectedOption === 'phone' && !/^[0-9+\s()-]+$/.test(value)) {
+                    inputError.textContent = 'Enter a valid phone number';
+                    contactInput.classList.add('error');
+                    return false;
+                }
+                
+                inputError.textContent = '';
+                contactInput.classList.remove('error');
+                return true;
+            }
+            
+            // Input validation on change
+            contactInput.addEventListener('input', validateInput);
+            
+            // Form submission
+            getAppForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateInput()) {
+                    // Simulate API call
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    
+                    setTimeout(function() {
+                        contactInput.value = '';
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send App Link';
+                        successMessage.classList.add('visible');
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(function() {
+                            successMessage.classList.remove('visible');
+                        }, 5000);
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

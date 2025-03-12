@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BondBridge - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Landing Page Specific Styles */
+        /* Hero Section */
+        .landing-hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 112px 32px 40px;
+            overflow-x: hidden;
+        }
+        
+        .hero-logo {
+            max-width: 384px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-logo img {
+            width: 100%;
+            object-fit: contain;
+            height: 96px;
+        }
+        
+        .hero-logo h2 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background-color: #f3e8ff;
+            color: #9333ea;
+            padding: 4px 16px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                text-align: left;
+            }
+        }
+        
+        .hero-text {
+            max-width: 600px;
+            justify-self: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-text {
+                justify-self: start;
+            }
+        }
+        
+        .hero-text h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            margin-top: 16px;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-text h1 {
+                font-size: 40px;
+                line-height: 1.3;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-text h1 {
+                font-size: 48px;
+            }
+        }
+        
+        .hero-text .gradient-brand {
+            display: block;
+            font-size: 40px;
+            background: linear-gradient(to top left, #D220FF, #1E17D0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% 100%;
+            background-position: 100% 73%;
+            margin-top: 8px;
+            line-height: 1.3;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-text .gradient-brand {
+                font-size: 48px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-text .gradient-brand {
+                display: inline;
+                margin-left: 16px;
+                font-size: 56px;
+                margin-top: 0;
+            }
+        }
+        
+        .hero-text p {
+            color: #6b7280;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-text p {
+                font-size: 18px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-text p {
+                text-align: justify;
+            }
+        }
+        
+        .get-started-btn {
+            display: flex;
+            width: 208px;
+            padding: 12px 0;
+            background-color: #111827;
+            color: white;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            margin: 24px auto 0;
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .get-started-btn:hover {
+            gap: 8px;
+            background-color: #9333ea;
+        }
+        
+        @media (min-width: 1024px) {
+            .get-started-btn {
+                margin: 24px 0 0;
+            }
+        }
+        
+        .arrow-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            background: white;
+            color: black;
+            border-radius: 50%;
+            padding: 4px;
+        }
+        
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-image {
+                margin-right: -20vw;
+            }
+        }
+        
+        .background-liquid {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: -10;
+            width: 50%;
+            height: 90vh;
+            object-fit: cover;
+        }
+        
+        /* Interactive Section */
+        .interactive-section {
+            position: relative;
+            padding: 80px 24px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+        
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .floating-icon img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+        
+        .floating-icon:nth-child(1) {
+            top: 15%;
+            left: 5%;
+            background-color: #3b82f6;
+        }
+        
+        .floating-icon:nth-child(2) {
+            top: 30%;
+            right: 5%;
+            background: linear-gradient(to bottom right, #F58529, #DD2A7B, #8134AF);
+        }
+        
+        .floating-icon:nth-child(3) {
+            top: 60%;
+            right: 8%;
+            background-color: #06b6d4;
+        }
+        
+        .floating-icon:nth-child(4) {
+            top: 50%;
+            left: 3%;
+            background-color: #22c55e;
+        }
+        
+        .floating-icon:nth-child(5) {
+            top: 70%;
+            left: 8%;
+            background-color: #ec4899;
+        }
+        
+        .interactive-section:hover .floating-icon:nth-child(1) {
+            transform: translate(-40px, -24px);
+        }
+        
+        .interactive-section:hover .floating-icon:nth-child(2) {
+            transform: translate(40px, -16px);
+        }
+        
+        .interactive-section:hover .floating-icon:nth-child(3) {
+            transform: translate(40px, 24px);
+        }
+        
+        .interactive-section:hover .floating-icon:nth-child(4) {
+            transform: translate(-40px, 0);
+        }
+        
+        .interactive-section:hover .floating-icon:nth-child(5) {
+            transform: translate(-40px, 24px);
+        }
+        
+        .interactive-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .interactive-content img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 48px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .interactive-content img:hover {
+            transform: translateY(-8px);
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 80px 24px;
+            background-color: #f9fafb;
+            margin-top: 40px;
+        }
+        
+        .section-heading {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background-color: #e0e7ff;
+            color: #4f46e5;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.3;
+        }
+        
+        .section-title .highlight {
+            padding: 2px 8px;
+            background-color: rgba(115, 102, 254, 0.25);
+            border-radius: 8px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 32px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 36px;
+            }
+        }
+        
+        .section-description {
+            color: #6b7280;
+            font-size: 16px;
+            max-width: 640px;
+            margin: 16px auto 0;
+            line-height: 1.6;
+        }
+        
+        @media (min-width: 768px) {
+            .section-description {
+                font-size: 18px;
+            }
+        }
+        
+        .feature-items {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+            text-align: center;
+            padding: 0 16px;
+        }
+        
+        @media (min-width: 768px) {
+            .feature-item {
+                flex-direction: row;
+                text-align: left;
+                gap: 60px;
+            }
+            
+            .feature-item.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+        
+        .feature-item-text {
+            flex: 1;
+        }
+        
+        .feature-item-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        
+        .feature-item-title .highlight {
+            padding: 2px 8px;
+            background-color: rgba(115, 102, 254, 0.25);
+            border-radius: 8px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        .feature-item-description {
+            color: #6b7280;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .feature-item-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            max-width: 90%;
+        }
+        
+        @media (min-width: 768px) {
+            .feature-item-image {
+                max-width: 100%;
+            }
+        }
+        
+        .feature-item-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .feature-item-image img:hover {
+            transform: translateY(-8px);
+        }
+        
+        /* Work Section */
+        .work-section {
+            padding: 64px 24px 80px;
+            background-color: #f9fafb;
+            text-align: center;
+        }
+        
+        .work-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .work-image {
+            max-width: 800px;
+            width: 100%;
+            margin-top: 48px;
+        }
+        
+        .work-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .work-image img:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <h3 class="grad">BondBridge</h3>
+        </a>
+        
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="download.html" class="download-btn">Download Now</a>
+        </div>
+        
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="about.html">About</a>
+            <a href="download.html">Download</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="download.html" class="mobile-download-btn">Download Now</a>
+        </div>
+    </div>
+    
+    <!-- Landing Page Content -->
+    <main>
+        <!-- Hero Section - Perfectly converted from React component -->
+        <section class="landing-hero">
+            <div class="hero-logo">
+                <img src="assets/landing/mid-logo.png" alt="BondBridge Logo">
+                <h2 class="grad">BondBridge</h2>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Welcome To BondBridge</span>
+                    <h1>
+                        Socialize Your Social Media With
+                        <span class="gradient-brand">BondBridge</span>
+                    </h1>
+                    <p>
+                        BondBridge is an anonymous social media app that lets you connect,
+                        share, and engage freely without revealing your identity. Build
+                        genuine connections, express yourself openly, and explore diverse
+                        conversations in a secure, judgment-free environment.
+                    </p>
+                    <a href="download.html" class="get-started-btn">
+                        <span>Get Started</span>
+                        <span class="arrow-icon">
+                            <i class="fas fa-arrow-right fa-xs"></i>
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="assets/landing/hero-image.png" alt="Illustration of people collaborating together">
+                </div>
+            </div>
+            
+            <img src="assets/landing/liquid-bg.png" alt="Background decoration" class="background-liquid">
+        </section>
+        
+        <!-- Interactive Image Section -->
+        <section class="interactive-section">
+            <div class="floating-icons">
+                <div class="floating-icon">
+                    <img src="assets/icons/floating/triangle.png" alt="Triangle icon">
+                </div>
+                <div class="floating-icon">
+                    <img src="assets/icons/floating/instagram.png" alt="Instagram icon">
+                </div>
+                <div class="floating-icon">
+                    <img src="assets/icons/floating/safe-home.png" alt="Safe home icon">
+                </div>
+                <div class="floating-icon">
+                    <img src="assets/icons/floating/verify.png" alt="Verify icon">
+                </div>
+                <div class="floating-icon">
+                    <img src="assets/icons/floating/wifi-square.png" alt="WiFi icon">
+                </div>
+            </div>
+            
+            <div class="interactive-content">
+                <div class="section-heading">
+                    <span class="section-badge">Interactive</span>
+                    <h2 class="section-title">Experience Social Media <span class="highlight">Differently</span></h2>
+                    <p class="section-description">
+                        Discover a new way to connect with others, express yourself freely, and build genuine relationships.
+                    </p>
+                </div>
+                
+                <img src="assets/landing/interactive-image.png" alt="Interactive social media illustration">
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="section-heading">
+                <span class="section-badge">Features</span>
+                <h2 class="section-title">Why Choose <span class="highlight">BondBridge</span></h2>
+                <p class="section-description">
+                    BondBridge offers unique features designed to enhance your social media experience and provide a secure platform for genuine connections.
+                </p>
+            </div>
+            
+            <div class="feature-items">
+                <div class="feature-item">
+                    <div class="feature-item-text">
+                        <span class="section-badge">Privacy</span>
+                        <h3 class="feature-item-title">Complete <span class="highlight">Anonymity</span></h3>
+                        <p class="feature-item-description">
+                            Express yourself freely without fear of judgment. Your identity remains protected, allowing for genuine interactions.
+                        </p>
+                    </div>
+                    <div class="feature-item-image">
+                        <img src="assets/screenshots/anonymity-feature.png" alt="Anonymity feature">
+                    </div>
+                </div>
+                
+                <div class="feature-item reverse">
+                    <div class="feature-item-text">
+                        <span class="section-badge">Community</span>
+                        <h3 class="feature-item-title">Interest-based <span class="highlight">Groups</span></h3>
+                        <p class="feature-item-description">
+                            Find like-minded individuals and join communities that share your interests, passions, and goals.
+                        </p>
+                    </div>
+                    <div class="feature-item-image">
+                        <img src="assets/screenshots/community-feature.png" alt="Community feature">
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-item-text">
+                        <span class="section-badge">Security</span>
+                        <h3 class="feature-item-title">Enhanced <span class="highlight">Protection</span></h3>
+                        <p class="feature-item-description">
+                            Our advanced security measures ensure your data remains private and your experience remains safe.
+                        </p>
+                    </div>
+                    <div class="feature-item-image">
+                        <img src="assets/screenshots/security-feature.png" alt="Security feature">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Work Section -->
+        <section class="work-section">
+            <div class="work-content">
+                <div class="section-heading">
+                    <span class="section-badge">BondChat</span>
+                    <h2 class="section-title">The GPT you <span class="highlight">need at work</span></h2>
+                    <p class="section-description">
+                        BondBridge enhances your workflow with seamless, anonymous communication and collaboration tools.
+                    </p>
+                </div>
+                
+                <div class="work-image">
+                    <img src="assets/gpt-work.png" alt="GPT at Work Interface">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3 class="grad">BondBridge</h3>
+                </div>
+                <p>Connect with people who share your interests and passions.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="support.html">Help Center</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 BondBridge. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script>
+        // Add animation for floating icons
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial position for floating icons
+            const floatingIcons = document.querySelectorAll('.floating-icon');
+            
+            // Subtle animation even when not hovering
+            let counter = 0;
+            setInterval(function() {
+                counter += 0.02;
+                
+                floatingIcons.forEach((icon, index) => {
+                    const amplitude = 8; // max movement in pixels
+                    const speed = 0.5 + (index * 0.1); // different speeds for each icon
+                    
+                    // Create slight floating effect with sine/cosine
+                    const xOffset = Math.sin(counter * speed) * amplitude;
+                    const yOffset = Math.cos(counter * speed) * amplitude;
+                    
+                    // Apply subtle transform
+                    icon.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+                });
+            }, 50);
+        });
+    </script>
+</body>
+</html> 

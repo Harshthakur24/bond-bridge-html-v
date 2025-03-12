@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BondBridge - Support</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Support Page Specific Styles */
+        .support-page {
+            padding-top: 96px;
+            padding-bottom: 64px;
+        }
+        
+        .support-heading {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .support-heading h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .support-heading p {
+            font-size: 18px;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto 96px;
+            text-align: center;
+            padding: 0 24px;
+        }
+        
+        .feature-image {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .feature-image img {
+            width: 90%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .feature-text {
+            width: 100%;
+        }
+        
+        .feature-title {
+            font-size: 30px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .feature-title .highlight {
+            background-color: rgba(115, 102, 254, 0.25);
+            padding: 2px 8px;
+            border-radius: 8px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        .feature-description {
+            color: #4b5563;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #e0e7ff;
+            color: #4f46e5;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 9999px;
+            margin-bottom: 8px;
+        }
+        
+        .faq-section {
+            max-width: 800px;
+            margin: 64px auto;
+            padding: 0 24px;
+        }
+        
+        .faq-heading {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .faq-heading h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .faq-item {
+            margin-bottom: 24px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 16px;
+            background-color: #f9fafb;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 16px;
+            border-top: 1px solid #e5e7eb;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        @media (min-width: 768px) {
+            .feature-item {
+                flex-direction: row;
+                text-align: left;
+            }
+            
+            .feature-item.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <h3 class="grad">BondBridge</h3>
+        </a>
+        
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="download.html" class="download-btn">Download Now</a>
+        </div>
+        
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="about.html">About</a>
+            <a href="download.html">Download</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="download.html" class="mobile-download-btn">Download Now</a>
+        </div>
+    </div>
+    
+    <!-- Support Page Content -->
+    <main class="support-page">
+        <div class="support-heading">
+            <h1>How to Use BondBridge</h1>
+            <p>Learn how to make the most of BondBridge to connect with communities and like-minded people.</p>
+        </div>
+        
+        <!-- Feature Items -->
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="assets/screenshots/mobile-communities.png" alt="Communities">
+            </div>
+            
+            <div class="feature-text">
+                <div class="badge">Step 1</div>
+                <h2 class="feature-title">Explore different <span class="highlight">Communities</span></h2>
+                <p class="feature-description">Browse through various communities based on your interests, location, and preferences. Find groups that align with your passions and goals.</p>
+            </div>
+        </div>
+        
+        <div class="feature-item reverse">
+            <div class="feature-image">
+                <img src="assets/screenshots/mobile-chat.png" alt="Chat">
+            </div>
+            
+            <div class="feature-text">
+                <div class="badge">Step 2</div>
+                <h2 class="feature-title">Join and <span class="highlight">Interact</span></h2>
+                <p class="feature-description">Join communities that interest you and start interacting with members. Participate in discussions, share your thoughts, and connect with like-minded individuals.</p>
+            </div>
+        </div>
+        
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="assets/screenshots/mobile-events.png" alt="Events">
+            </div>
+            
+            <div class="feature-text">
+                <div class="badge">Step 3</div>
+                <h2 class="feature-title">Attend <span class="highlight">Events</span></h2>
+                <p class="feature-description">Discover and attend events organized by your communities. Meet members in person, participate in activities, and build stronger connections.</p>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <div class="faq-heading">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I create a new account?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    To create a new account, download the BondBridge app from your app store, open it, and tap on "Sign Up". Follow the on-screen instructions to complete your profile setup.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I create my own community?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes, you can create your own community. Go to the Communities tab, tap on the "+" button, and follow the steps to set up your community, including name, description, and category.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I report inappropriate content?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    To report inappropriate content, tap the three dots (...) next to the content, select "Report", choose the reason for reporting, and submit. Our moderation team will review it promptly.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is BondBridge available on all platforms?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    BondBridge is currently available on iOS and Android mobile platforms. We're working on a web version that will be available soon.
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3 class="grad">BondBridge</h3>
+                </div>
+                <p>Connect with people who share your interests and passions.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="support.html">Help Center</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 BondBridge. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Toggle answer visibility
+                    answer.classList.toggle('active');
+                    
+                    // Toggle icon
+                    if (answer.classList.contains('active')) {
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

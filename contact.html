@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BondBridge - Contact Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-page {
+            padding-top: 96px;
+            padding-bottom: 96px;
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .contact-heading h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .contact-heading p {
+            font-size: 18px;
+            color: #6b7280;
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+        }
+        
+        .form-group {
+            position: relative;
+            margin-bottom: 24px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #00BCD4;
+            box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.2);
+        }
+        
+        .form-control.error {
+            border-color: #ef4444;
+        }
+        
+        .form-label {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            color: #6b7280;
+            transition: transform 0.3s, font-size 0.3s, color 0.3s;
+            pointer-events: none;
+        }
+        
+        .form-control:focus + .form-label,
+        .form-control:not(:placeholder-shown) + .form-label {
+            transform: translateY(-24px);
+            font-size: 12px;
+            color: #00BCD4;
+        }
+        
+        .form-control.error:focus + .form-label,
+        .form-control.error:not(:placeholder-shown) + .form-label {
+            color: #ef4444;
+        }
+        
+        .error-message {
+            font-size: 12px;
+            color: #ef4444;
+            margin-top: 4px;
+        }
+        
+        .contact-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(to right, #00BCD4, #007AFF);
+            color: white;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .contact-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .success-message {
+            text-align: center;
+            background-color: #dcfce7;
+            color: #166534;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 32px;
+            display: none;
+        }
+        
+        .success-message.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <h3 class="grad">BondBridge</h3>
+        </a>
+        
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="download.html" class="download-btn">Download Now</a>
+        </div>
+        
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="about.html">About</a>
+            <a href="download.html">Download</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="download.html" class="mobile-download-btn">Download Now</a>
+        </div>
+    </div>
+    
+    <!-- Contact Page Content -->
+    <main class="contact-page">
+        <div class="contact-container">
+            <div class="contact-heading">
+                <h1>Contact Us</h1>
+                <p>Have questions or feedback? We'd love to hear from you.</p>
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
+                    <label for="name" class="form-label">Full Name</label>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+                    <label for="email" class="form-label">Email Address</label>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder=" " required>
+                    <label for="subject" class="form-label">Subject</label>
+                    <div class="error-message" id="subjectError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder=" " required></textarea>
+                    <label for="message" class="form-label">Your Message</label>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+                
+                <button type="submit" class="contact-btn" id="submitBtn">Send Message</button>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                <h3>Thank you for your message!</h3>
+                <p>We've received your inquiry and will get back to you shortly.</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3 class="grad">BondBridge</h3>
+                </div>
+                <p>Connect with people who share your interests and passions.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="support.html">Help Center</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 BondBridge. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script>
+        // Contact Form Validation and Submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Error elements
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const subjectError = document.getElementById('subjectError');
+            const messageError = document.getElementById('messageError');
+            
+            // Input elements
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            
+            // Validation functions
+            function validateName() {
+                if (nameInput.value.trim() === '') {
+                    nameInput.classList.add('error');
+                    nameError.textContent = 'Name is required';
+                    return false;
+                }
+                nameInput.classList.remove('error');
+                nameError.textContent = '';
+                return true;
+            }
+            
+            function validateEmail() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value)) {
+                    emailInput.classList.add('error');
+                    emailError.textContent = 'Please enter a valid email address';
+                    return false;
+                }
+                emailInput.classList.remove('error');
+                emailError.textContent = '';
+                return true;
+            }
+            
+            function validateSubject() {
+                if (subjectInput.value.trim() === '') {
+                    subjectInput.classList.add('error');
+                    subjectError.textContent = 'Subject is required';
+                    return false;
+                }
+                subjectInput.classList.remove('error');
+                subjectError.textContent = '';
+                return true;
+            }
+            
+            function validateMessage() {
+                if (messageInput.value.trim() === '') {
+                    messageInput.classList.add('error');
+                    messageError.textContent = 'Message is required';
+                    return false;
+                }
+                messageInput.classList.remove('error');
+                messageError.textContent = '';
+                return true;
+            }
+            
+            // Add input event listeners
+            nameInput.addEventListener('input', validateName);
+            emailInput.addEventListener('input', validateEmail);
+            subjectInput.addEventListener('input', validateSubject);
+            messageInput.addEventListener('input', validateMessage);
+            
+            // Form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate all fields
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+                const isSubjectValid = validateSubject();
+                const isMessageValid = validateMessage();
+                
+                if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+                    // Simulate form submission
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    
+                    // Simulate API call delay
+                    setTimeout(function() {
+                        contactForm.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                        successMessage.classList.add('visible');
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(function() {
+                            successMessage.classList.remove('visible');
+                        }, 5000);
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
