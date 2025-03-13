@@ -1772,7 +1772,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.4s ease;
     }
     .hero-bridge-icon {
         position: absolute;
@@ -1783,6 +1782,7 @@
         align-items: center;
         justify-content: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease;
     }
     .hero-bridge-icon-blue {
         background-color: #3b82f6;
@@ -1828,14 +1828,30 @@
         margin-bottom: 32px;
         line-height: 1.6;
     }
+    
+    /* Only keep the circle hover effects */
     .hero-bridge-left:hover .hero-bridge-purple-circle {
         transform: translate(-50%, -50%) scale(1.02);
     }
     .hero-bridge-left:hover .hero-bridge-inner-circle {
         transform: translate(-50%, -50%) scale(1.05);
     }
-    .hero-bridge-left:hover .hero-bridge-image {
-        transform: scale(1.08);
+    
+    /* Icon scatter effects on hover */
+    .hero-bridge-left:hover .hero-bridge-icon-blue {
+        transform: translateX(-50%) translateY(-80px);
+    }
+    .hero-bridge-left:hover .hero-bridge-icon-pink {
+        transform: translateX(80px);
+    }
+    .hero-bridge-left:hover .hero-bridge-icon-cyan {
+        transform: translateX(80px) translateY(60px);
+    }
+    .hero-bridge-left:hover .hero-bridge-icon-green {
+        transform: translateX(-80px);
+    }
+    .hero-bridge-left:hover .hero-bridge-icon-magenta {
+        transform: translateY(80px);
     }
     </style>
 </head>
@@ -1971,7 +1987,6 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    transition: transform 0.4s ease;
                 }
                 .hero-bridge-icon {
                     position: absolute;
@@ -1982,6 +1997,7 @@
                     align-items: center;
                     justify-content: center;
                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.4s ease;
                 }
                 .hero-bridge-icon-blue {
                     background-color: #3b82f6;
@@ -2027,17 +2043,33 @@
                     margin-bottom: 32px;
                     line-height: 1.6;
                 }
+                
+                /* Only keep the circle hover effects */
                 .hero-bridge-left:hover .hero-bridge-purple-circle {
                     transform: translate(-50%, -50%) scale(1.02);
                 }
                 .hero-bridge-left:hover .hero-bridge-inner-circle {
                     transform: translate(-50%, -50%) scale(1.05);
                 }
-                .hero-bridge-left:hover .hero-bridge-image {
-                    transform: scale(1.08);
+                
+                /* Icon scatter effects on hover */
+                .hero-bridge-left:hover .hero-bridge-icon-blue {
+                    transform: translateX(-50%) translateY(-80px);
+                }
+                .hero-bridge-left:hover .hero-bridge-icon-pink {
+                    transform: translateX(80px);
+                }
+                .hero-bridge-left:hover .hero-bridge-icon-cyan {
+                    transform: translateX(80px) translateY(60px);
+                }
+                .hero-bridge-left:hover .hero-bridge-icon-green {
+                    transform: translateX(-80px);
+                }
+                .hero-bridge-left:hover .hero-bridge-icon-magenta {
+                    transform: translateY(80px);
                 }
             </style>
-            <div class="hero-bridge-container">
+            <div class="hero-bridge-container" style="scale: 0.97;">
                 <!-- Left: Circle with Image and Icons -->
                 <div class="hero-bridge-left">
                     <!-- Dashed Circle -->
