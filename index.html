@@ -3,12 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BondBridge - Home</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Bond Bridge - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9fafb;
+            color: #1f2937;
+            line-height: 1.5;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header Styles - Updated to match Image 1 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 48px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h3 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .grad, .gradient-brand {
+            background: linear-gradient(to right, #7c3aed, #db2777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1f2937;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #7c3aed;
+        }
+        
+        .download-btn {
+            background-color: #7c3aed;
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background-color: #6d28d9;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #1f2937;
+        }
+        
         /* Landing Page Specific Styles */
-        /* Hero Section */
+        /* Hero Section - Updated to match Image 1 */
         .landing-hero {
             position: relative;
             width: 100%;
@@ -17,7 +104,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 112px 32px 40px;
+            padding: 48px 32px 40px;
             overflow-x: hidden;
         }
         
@@ -31,7 +118,7 @@
         }
         
         .hero-logo img {
-            width: 100%;
+            width: 100px;
             object-fit: contain;
             height: 96px;
         }
@@ -106,14 +193,11 @@
         .hero-text .gradient-brand {
             display: block;
             font-size: 40px;
-            background: linear-gradient(to top left, #D220FF, #1E17D0);
+            background: linear-gradient(to right, #7c3aed, #db2777);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
-            background-size: 200% 100%;
-            background-position: 100% 73%;
-            margin-top: 8px;
             line-height: 1.3;
         }
         
@@ -145,16 +229,10 @@
             }
         }
         
-        @media (min-width: 1024px) {
-            .hero-text p {
-                text-align: justify;
-            }
-        }
-        
         .get-started-btn {
             display: flex;
-            width: 208px;
-            padding: 12px 0;
+            width: 200px;
+            padding: 12px 24px;
             background-color: #111827;
             color: white;
             border-radius: 9999px;
@@ -162,14 +240,13 @@
             text-decoration: none;
             justify-content: center;
             align-items: center;
-            gap: 24px;
+            gap: 12px;
             margin: 24px auto 0;
-            transition: all 0.4s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         
         .get-started-btn:hover {
-            gap: 8px;
-            background-color: #9333ea;
+            background-color: #7c3aed;
         }
         
         @media (min-width: 1024px) {
@@ -201,311 +278,351 @@
             height: auto;
         }
         
-        @media (min-width: 1024px) {
-            .hero-image {
-                margin-right: -20vw;
+        /* Footer Styles - Updated to match Image 2 */
+        footer {
+            background-color: #111827;
+            color: #f3f4f6;
+            padding: 48px 32px 24px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        @media (min-width: 640px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
-        .background-liquid {
+        @media (min-width: 1024px) {
+            .footer-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 16px;
+        }
+        
+        .footer-logo h3 {
+            font-size: 24px;
+            margin-bottom: 0;
+        }
+        
+        .footer-section p {
+            color: #9ca3af;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #7c3aed;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #374151;
+        }
+        
+        .copyright p {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        /* New Footer Styles - Based on Image 2 */
+        .footer-new {
+            background-color: #0f172a;
+            color: #f9fafb;
+            padding: 48px 32px 24px;
+        }
+        
+        .footer-new-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 48px;
+        }
+        
+        .footer-left {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-right {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        
+        .footer-column {
+            min-width: 180px;
+        }
+        
+        .footer-logo-new {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .footer-logo-new img {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+        
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-location {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-location i {
+            margin-right: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-email {
+            display: flex;
+            align-items: center;
+            color: #94a3b8;
+        }
+        
+        .footer-email i {
+            margin-right: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #334155;
+            margin: 32px 0;
+        }
+        
+        .footer-column h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #f9fafb;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #94a3b8;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #7c3aed;
+        }
+        
+        .footer-subscribe {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-subscribe h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .footer-subscribe p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-subscribe-form {
+            display: flex;
+            margin-bottom: 24px;
+        }
+        
+        .footer-subscribe-form input {
+            flex: 1;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background-color: transparent;
+            color: #f9fafb;
+            font-size: 14px;
+        }
+        
+        .footer-subscribe-button {
+            background-color: #f9fafb;
+            color: #0f172a;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-subscribe-button:hover {
+            background-color: #e2e8f0;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .footer-social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #7c3aed;
+            border-radius: 50%;
+            color: #f9fafb;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-social-icon:hover {
+            background-color: #6d28d9;
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
+            margin-top: 32px;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-overlay {
+            display: none;
             position: fixed;
             top: 0;
-            right: 0;
-            z-index: -10;
-            width: 50%;
-            height: 90vh;
-            object-fit: cover;
-        }
-        
-        /* Interactive Section */
-        .interactive-section {
-            position: relative;
-            padding: 80px 24px;
-            overflow: hidden;
-            margin-top: 40px;
-        }
-        
-        .floating-icons {
-            position: absolute;
+            left: 0;
             width: 100%;
             height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
             top: 0;
-            left: 0;
-            pointer-events: none;
+            right: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            background: white;
+            z-index: 999;
+            padding: 24px;
+            transition: right 0.3s ease;
         }
         
-        .floating-icon {
-            position: absolute;
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s ease-in-out;
+        .mobile-menu.active {
+            right: 0;
         }
         
-        .floating-icon img {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 24px;
+            width: 100%;
+            text-align: right;
         }
         
-        .floating-icon:nth-child(1) {
-            top: 15%;
-            left: 5%;
-            background-color: #3b82f6;
-        }
-        
-        .floating-icon:nth-child(2) {
-            top: 30%;
-            right: 5%;
-            background: linear-gradient(to bottom right, #F58529, #DD2A7B, #8134AF);
-        }
-        
-        .floating-icon:nth-child(3) {
-            top: 60%;
-            right: 8%;
-            background-color: #06b6d4;
-        }
-        
-        .floating-icon:nth-child(4) {
-            top: 50%;
-            left: 3%;
-            background-color: #22c55e;
-        }
-        
-        .floating-icon:nth-child(5) {
-            top: 70%;
-            left: 8%;
-            background-color: #ec4899;
-        }
-        
-        .interactive-section:hover .floating-icon:nth-child(1) {
-            transform: translate(-40px, -24px);
-        }
-        
-        .interactive-section:hover .floating-icon:nth-child(2) {
-            transform: translate(40px, -16px);
-        }
-        
-        .interactive-section:hover .floating-icon:nth-child(3) {
-            transform: translate(40px, 24px);
-        }
-        
-        .interactive-section:hover .floating-icon:nth-child(4) {
-            transform: translate(-40px, 0);
-        }
-        
-        .interactive-section:hover .floating-icon:nth-child(5) {
-            transform: translate(-40px, 24px);
-        }
-        
-        .interactive-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .mobile-nav-links {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            position: relative;
-            z-index: 10;
+            gap: 16px;
         }
         
-        .interactive-content img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 48px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
+        .mobile-nav-links a {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1f2937;
+            padding: 8px 0;
         }
         
-        .interactive-content img:hover {
-            transform: translateY(-8px);
-        }
-        
-        /* Features Section */
-        .features-section {
-            padding: 80px 24px;
-            background-color: #f9fafb;
-            margin-top: 40px;
-        }
-        
-        .section-heading {
-            text-align: center;
-            margin-bottom: 64px;
-        }
-        
-        .section-badge {
-            display: inline-block;
-            background-color: #e0e7ff;
-            color: #4f46e5;
-            padding: 4px 12px;
-            border-radius: 9999px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        
-        .section-title {
-            font-size: 28px;
-            font-weight: 700;
-            color: #111827;
-            line-height: 1.3;
-        }
-        
-        .section-title .highlight {
-            padding: 2px 8px;
-            background-color: rgba(115, 102, 254, 0.25);
+        .mobile-download-btn {
+            background-color: #7c3aed;
+            color: white;
+            padding: 12px 24px;
             border-radius: 8px;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        
-        @media (min-width: 768px) {
-            .section-title {
-                font-size: 32px;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .section-title {
-                font-size: 36px;
-            }
-        }
-        
-        .section-description {
-            color: #6b7280;
-            font-size: 16px;
-            max-width: 640px;
-            margin: 16px auto 0;
-            line-height: 1.6;
-        }
-        
-        @media (min-width: 768px) {
-            .section-description {
-                font-size: 18px;
-            }
-        }
-        
-        .feature-items {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .feature-item {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 80px;
+            font-weight: 600;
             text-align: center;
-            padding: 0 16px;
+            margin-top: 16px;
         }
         
-        @media (min-width: 768px) {
-            .feature-item {
-                flex-direction: row;
-                text-align: left;
-                gap: 60px;
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 24px;
             }
             
-            .feature-item.reverse {
-                flex-direction: row-reverse;
+            .nav-links {
+                display: none;
             }
-        }
-        
-        .feature-item-text {
-            flex: 1;
-        }
-        
-        .feature-item-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 16px;
-            line-height: 1.3;
-        }
-        
-        .feature-item-title .highlight {
-            padding: 2px 8px;
-            background-color: rgba(115, 102, 254, 0.25);
-            border-radius: 8px;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        
-        .feature-item-description {
-            color: #6b7280;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-        .feature-item-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            max-width: 90%;
-        }
-        
-        @media (min-width: 768px) {
-            .feature-item-image {
-                max-width: 100%;
+            
+            .mobile-menu-btn {
+                display: block;
             }
-        }
-        
-        .feature-item-image img {
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .feature-item-image img:hover {
-            transform: translateY(-8px);
-        }
-        
-        /* Work Section */
-        .work-section {
-            padding: 64px 24px 80px;
-            background-color: #f9fafb;
-            text-align: center;
-        }
-        
-        .work-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .work-image {
-            max-width: 800px;
-            width: 100%;
-            margin-top: 48px;
-        }
-        
-        .work-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .work-image img:hover {
-            transform: translateY(-8px);
+            
+            .get-started-btn {
+                margin: 24px auto 0;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header - Matches Image 1 -->
     <header>
         <a href="index.html" class="logo">
-            <h3 class="grad">BondBridge</h3>
+            <h3 class="grad">Bond Bridge</h3>
         </a>
         
         <div class="nav-links">
@@ -540,25 +657,25 @@
     
     <!-- Landing Page Content -->
     <main>
-        <!-- Hero Section - Perfectly converted from React component -->
+        <!-- Hero Section - Matches Image 1 -->
         <section class="landing-hero">
             <div class="hero-logo">
-                <img src="assets/landing/mid-logo.png" alt="BondBridge Logo">
-                <h2 class="grad">BondBridge</h2>
+                <img src="assets/icon-logo.png" alt="Bond Bridge Logo">
+                <h2 class="grad">Bond Bridge</h2>
             </div>
             
             <div class="hero-content">
                 <div class="hero-text">
                     <span class="hero-badge">Welcome To BondBridge</span>
                     <h1>
-                        Socialize Your Social Media With
-                        <span class="gradient-brand">BondBridge</span>
+                        Socialize Your Social Media
+                        <span class="gradient-brand">With BondBridge</span>
                     </h1>
                     <p>
-                        BondBridge is an anonymous social media app that lets you connect,
-                        share, and engage freely without revealing your identity. Build
-                        genuine connections, express yourself openly, and explore diverse
-                        conversations in a secure, judgment-free environment.
+                        BondBridge is an anonymous social media app that lets you connect, share, and
+                        engage freely without revealing your identity. Build genuine connections, express
+                        yourself openly, and explore diverse conversations in a secure, judgment-free
+                        environment.
                     </p>
                     <a href="download.html" class="get-started-btn">
                         <span>Get Started</span>
@@ -569,7 +686,7 @@
                 </div>
                 
                 <div class="hero-image">
-                    <img src="assets/landing/hero-image.png" alt="Illustration of people collaborating together">
+                    <img src="assets/landing/hero-image.png" alt="Illustration of people using social media">
                 </div>
             </div>
             
@@ -679,55 +796,106 @@
         </section>
     </main>
     
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <h3 class="grad">BondBridge</h3>
+    <!-- Footer - Updated to match Image 2 -->
+    <footer class="footer-new">
+        <div class="footer-new-container">
+            <div class="footer-left">
+                <div class="footer-logo-new">
+                    <img src="assets/logo-icon.png" alt="Bond Bridge Logo">
+                    <span class="footer-logo-text grad">Bond Bridge</span>
                 </div>
-                <p>Connect with people who share your interests and passions.</p>
+                
+                <div class="footer-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Gautam Buddha Uttar Pradesh</span>
+                </div>
+                
+                <div class="footer-email">
+                    <i class="fas fa-envelope"></i>
+                    <span>hellomoto2004@gmail.com</span>
+                </div>
             </div>
             
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="download.html">Download</a></li>
-                    <li><a href="support.html">Support</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul class="footer-links">
-                    <li><a href="support.html">Help Center</a></li>
-                    <li><a href="support.html">FAQs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
+            <div class="footer-right">
+                <div class="footer-column">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Other</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-subscribe">
+                    <h3>Stay Updated</h3>
+                    <p>Get the latest news & updates</p>
+                    
+                    <div class="footer-subscribe-form">
+                        <input type="email" placeholder="Your Email Address">
+                        <button class="footer-subscribe-button">Subscribe</button>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="copyright">
-            <p>&copy; 2025 BondBridge. All rights reserved.</p>
+        <div class="footer-divider"></div>
+        
+        <div class="footer-copyright">
+            Copyright © 2025 All rights reserved
         </div>
     </footer>
     
-    <script src="js/main.js"></script>
     <script>
-        // Add animation for floating icons
+        // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Initial position for floating icons
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+                mobileMenuOverlay.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+            
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            mobileMenuOverlay.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Add animation for floating icons
             const floatingIcons = document.querySelectorAll('.floating-icon');
             
             // Subtle animation even when not hovering
@@ -750,4 +918,4 @@
         });
     </script>
 </body>
-</html> 
+</html>
