@@ -180,28 +180,30 @@
         
         .card-bg {
             position: absolute;
-            top: -600px;
-            width: 800px;
-            height: 800px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-top: 160px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
             background-color: black;
-            border-radius: 245px;
+            border-radius: 12px 12px 50% 50% / 12px 12px 25% 25%;
         }
         
         .stars {
             display: flex;
-            color: white;
+            justify-content: center;
+            gap: 5px;
+            color: gold;
             z-index: 10;
             margin-top: 50px;
+            font-size: 20px;
         }
         
         .group-card img {
-            width: 100%;
-            height: auto;
-            margin-top: 80px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
             z-index: 20;
         }
         
@@ -216,6 +218,7 @@
             margin-top: 16px;
             color: #4b5563;
             z-index: 20;
+            padding: 0 15px;
         }
     </style>
 </head>
@@ -223,8 +226,8 @@
     <!-- Header -->
     <header>
         <a href="index.html" class="logo" style="gap: 7px;">
-            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="40" height="45">
-            <h3 class="grad">BondBridge</h3>
+            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="20" height="25">
+            <h3 class="grad" style="font-weight: bolder;">BondBridge</h3>
         </a>
         
         <div class="nav-links">
@@ -232,7 +235,7 @@
             <a href="about.html">About</a>
             <a href="support.html">Support</a>
             <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="download-btn">Download Now</a>
+            <a href="download.html" class="download-btn" style="background-color: #7c3aed; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: background-color 0.3s ease;">Download Now</a>
         </div>
         
         <button class="mobile-menu-btn">
@@ -253,7 +256,7 @@
             <a href="about.html">About</a>
             <a href="download.html">Download</a>
             <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="mobile-download-btn">Download Now</a>
+            <a href="download.html" class="mobile-download-btn" style="display: inline-block; background-color: #7c3aed; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; margin-top: 16px; transition: background-color 0.3s ease;">Download Now</a>
         </div>
     </div>
     
@@ -276,11 +279,11 @@
             </div>
             
             <!-- Community Groups - Cards -->
-            <div class="community-groups">
+            <div class="community-groups" style="scale: 0.9;">
                 <!-- Singing Group Card -->
                 <div class="group-card">
                     <div class="card-bg"></div>
-                    <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                    <div class="stars">★ ★ ★ ★ ★</div>
                     <img src="assets/about/singing.png" alt="Singing Group">
                     <h3>Singing Group</h3>
                     <p>Join our singing group to harmonize, perform, improve vocals, and share the joy of music together.</p>
@@ -289,7 +292,7 @@
                 <!-- Sports Group Card -->
                 <div class="group-card">
                     <div class="card-bg"></div>
-                    <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                    <div class="stars">★ ★ ★ ★ ★</div>
                     <img src="assets/about/sports.png" alt="Sports Group">
                     <h3>Sports Group</h3>
                     <p>Join our sports group to play, compete, stay active, build skills, and connect with fellow enthusiasts.</p>
@@ -298,7 +301,7 @@
                 <!-- Adventure Group Card -->
                 <div class="group-card">
                     <div class="card-bg"></div>
-                    <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                    <div class="stars">★ ★ ★ ★ ★</div>
                     <img src="assets/about/adventure.png" alt="Adventure Group">
                     <h3>Adventure Group</h3>
                     <p>Join our adventure group to explore, discover new places, embrace challenges, and create experiences with explorers.</p>
@@ -1025,13 +1028,13 @@
         <div class="footer-new-container">
             <div class="footer-left">
                 <div class="footer-logo-new">
-                    <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15">
-                    <span class="footer-logo-text grad">BondBridge</span>
+                    <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15" style="scale: 0.7;">
+                    <span class="footer-logo-text grad" style="font-weight: bolder;">BondBridge</span>
                 </div>
                 
                 <div class="footer-location">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Gautam Buddha Uttar Pradesh</span>
+                    <span>New York, USA</span>
                 </div>
                 
                 <div class="footer-email">
@@ -1070,16 +1073,16 @@
                     
                     <div class="footer-social">
                         <a href="#" class="footer-social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
                             <i class="fab fa-facebook"></i>
                         </a>
                         <a href="#" class="footer-social-icon">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
                         </a>
                         <a href="#" class="footer-social-icon">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-youtube"></i>
                         </a>
                     </div>
                 </div>
