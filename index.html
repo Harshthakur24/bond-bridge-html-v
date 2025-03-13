@@ -1714,6 +1714,129 @@
       font-size: 0.875rem;
       color: #4b5563;
     }
+
+    .hero-bridge-section {
+        padding: 80px 0;
+        background-color: #f9fafb;
+        overflow: hidden;
+    }
+    .hero-bridge-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hero-bridge-left {
+        flex: 1;
+        min-width: 300px;
+        position: relative;
+        height: 600px;
+    }
+    .hero-bridge-dashed-circle {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        border: 2px dashed rgba(209, 213, 219, 0.6);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .hero-bridge-purple-circle {
+        position: absolute;
+        width: 75%;
+        height: 75%;
+        background-color: #9061F9;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease;
+    }
+    .hero-bridge-inner-circle {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        background-color: #f3e8ff;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    .hero-bridge-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+    .hero-bridge-icon {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .hero-bridge-icon-blue {
+        background-color: #3b82f6;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hero-bridge-icon-pink {
+        background-color: #ec4899;
+        top: 30%;
+        right: 10%;
+    }
+    .hero-bridge-icon-cyan {
+        background-color: #06b6d4;
+        bottom: 20%;
+        right: 25%;
+    }
+    .hero-bridge-icon-green {
+        background-color: #10b981;
+        bottom: 35%;
+        left: 10%;
+    }
+    .hero-bridge-icon-magenta {
+        background-color: #f472b6;
+        bottom: 15%;
+        left: 25%;
+    }
+    .hero-bridge-right {
+        flex: 1;
+        min-width: 300px;
+        padding-left: 40px;
+    }
+    .hero-bridge-heading {
+        font-size: 48px;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 24px;
+        line-height: 1.2;
+    }
+    .hero-bridge-description {
+        font-size: 18px;
+        color: #4b5563;
+        margin-bottom: 32px;
+        line-height: 1.6;
+    }
+    .hero-bridge-left:hover .hero-bridge-purple-circle {
+        transform: translate(-50%, -50%) scale(1.02);
+    }
+    .hero-bridge-left:hover .hero-bridge-inner-circle {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+    .hero-bridge-left:hover .hero-bridge-image {
+        transform: scale(1.08);
+    }
     </style>
 </head>
 <body>
@@ -1774,8 +1897,8 @@
                     </p>
                     <a href="download.html" class="get-started-btn">
                         <span>Get Started</span>
-                        <span class="arrow-icon">
-                            <i class="fas fa-arrow-right fa-xs"></i>
+                        <span class="arrow-icon" style="scale: 1.9; margin-top: 2px;">
+                            <i class="fas fa-arrow-right fa-xs" style="scale: 0.6;"></i>
                         </span>
                     </a>
                 </div>
@@ -1789,54 +1912,209 @@
         </section>
         
         <!-- Interactive Image Section -->
-        <div class="interactive-section">
-            <div class="circle-container">
-                <div class="dashed-circle"></div>
-                <div class="purple-circle">
-                    <div class="inner-circle">
-                        <div class="profile-image">
-                            <img src="assets/landing/girl-on-phone-1.png" alt="Person using phone">
-                        </div>
+        <section class="hero-bridge-section">
+            <style>
+                .hero-bridge-section {
+                    padding: 80px 0;
+                    background-color: #f9fafb;
+                    overflow: hidden;
+                }
+                .hero-bridge-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .hero-bridge-left {
+                    flex: 1;
+                    min-width: 300px;
+                    position: relative;
+                    height: 600px;
+                }
+                .hero-bridge-dashed-circle {
+                    position: absolute;
+                    width: 90%;
+                    height: 90%;
+                    border: 2px dashed rgba(209, 213, 219, 0.6);
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .hero-bridge-purple-circle {
+                    position: absolute;
+                    width: 75%;
+                    height: 75%;
+                    background-color: #9061F9;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: transform 0.3s ease;
+                }
+                .hero-bridge-inner-circle {
+                    position: absolute;
+                    width: 60%;
+                    height: 60%;
+                    background-color: #f3e8ff;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    overflow: hidden;
+                    transition: transform 0.3s ease;
+                }
+                .hero-bridge-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.4s ease;
+                }
+                .hero-bridge-icon {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                .hero-bridge-icon-blue {
+                    background-color: #3b82f6;
+                    top: 10%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .hero-bridge-icon-pink {
+                    background-color: #ec4899;
+                    top: 30%;
+                    right: 10%;
+                }
+                .hero-bridge-icon-cyan {
+                    background-color: #06b6d4;
+                    bottom: 20%;
+                    right: 25%;
+                }
+                .hero-bridge-icon-green {
+                    background-color: #10b981;
+                    bottom: 35%;
+                    left: 10%;
+                }
+                .hero-bridge-icon-magenta {
+                    background-color: #f472b6;
+                    bottom: 15%;
+                    left: 25%;
+                }
+                .hero-bridge-right {
+                    flex: 1;
+                    min-width: 300px;
+                    padding-left: 40px;
+                }
+                .hero-bridge-heading {
+                    font-size: 48px;
+                    font-weight: 700;
+                    color: #1f2937;
+                    margin-bottom: 24px;
+                    line-height: 1.2;
+                }
+                .hero-bridge-description {
+                    font-size: 18px;
+                    color: #4b5563;
+                    margin-bottom: 32px;
+                    line-height: 1.6;
+                }
+                .hero-bridge-left:hover .hero-bridge-purple-circle {
+                    transform: translate(-50%, -50%) scale(1.02);
+                }
+                .hero-bridge-left:hover .hero-bridge-inner-circle {
+                    transform: translate(-50%, -50%) scale(1.05);
+                }
+                .hero-bridge-left:hover .hero-bridge-image {
+                    transform: scale(1.08);
+                }
+            </style>
+            <div class="hero-bridge-container">
+                <!-- Left: Circle with Image and Icons -->
+                <div class="hero-bridge-left">
+                    <!-- Dashed Circle -->
+                    <div class="hero-bridge-dashed-circle"></div>
+                    
+                    <!-- Purple Circle -->
+                    <div class="hero-bridge-purple-circle"></div>
+                    
+                    <!-- Inner Circle with Image -->
+                    <div class="hero-bridge-inner-circle">
+                        <img src="assets/landing/girl-on-phone-1.png" alt="Person using BondBridge" class="hero-bridge-image">
+                    </div>
+                    
+                    <!-- Floating Icons -->
+                    <!-- Icon 1 - Top Blue -->
+                    <div class="hero-bridge-icon hero-bridge-icon-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    
+                    <!-- Icon 2 - Right Pink -->
+                    <div class="hero-bridge-icon hero-bridge-icon-pink">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </div>
+                    
+                    <!-- Icon 3 - Bottom Cyan -->
+                    <div class="hero-bridge-icon hero-bridge-icon-cyan">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    
+                    <!-- Icon 4 - Left Green -->
+                    <div class="hero-bridge-icon hero-bridge-icon-green">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    
+                    <!-- Icon 5 - Bottom Left Pink -->
+                    <div class="hero-bridge-icon hero-bridge-icon-magenta">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
                     </div>
                 </div>
-                <!-- Floating Icons -->
-                <div class="floating-icon icon-blue">
-                    <img src="assets/icons/floating/triangle.png" alt="Triangle icon">
-                </div>
-                <div class="floating-icon icon-pink">
-                    <img src="assets/icons/floating/instagram.png" alt="Instagram icon">
-                </div>
-                <div class="floating-icon icon-cyan">
-                    <img src="assets/icons/floating/safe-home.png" alt="Safe home icon">
-                </div>
-                <div class="floating-icon icon-green">
-                    <img src="assets/icons/floating/verify.png" alt="Verify icon">
-                </div>
-                <div class="floating-icon icon-magenta">
-                    <img src="assets/icons/floating/wifi-square.png" alt="Wifi icon">
+                
+                <!-- Right: Text Content -->
+                <div class="hero-bridge-right">
+                    <h1 class="hero-bridge-heading">
+                        Bridge the Gap,<br>
+                        Build Bonds
+                    </h1>
+                    
+                    <p class="hero-bridge-description">
+                        BondBridge lets you connect anonymously, fostering real relationships and open conversations without revealing your identity. Build trust, share freely.
+                    </p>
+                    
+                    <a href="#" class="cta-button">
+                        <span>Join Now</span>
+                        <span class="arrow-container" style="scale: 0.7;">
+                            <svg class="arrow-icon" style="scale: 4;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </a>
                 </div>
             </div>
-
-            <!-- Right Section -->
-            <div class="text-container">
-                <h1 class="heading">
-                    Bridge the Gap,<br>
-                    Build Bonds
-                </h1>
-                <p class="description">
-                    BondBridge lets you connect anonymously, fostering real relationships and open conversations without revealing your identity. Build trust, share freely.
-                </p>
-                <a href="#" class="cta-button">
-                    <span>Join Now</span>
-                    <span class="arrow-container">
-                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14"></path>
-                            <path d="m12 5 7 7-7 7"></path>
-                        </svg>
-                    </span>
-                </a>
-            </div>
-        </div>
+        </section>
         
         <!-- Features Section -->
         <section class="features-section">
