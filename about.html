@@ -8,6 +8,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* About Page Specific Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9fafb;
+            color: #1f2937;
+            line-height: 1.5;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header Styles - Updated to match Image 1 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 48px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h3 {
+            font-size: 24px;
+            font-weight: 600;
+        }
         .about-hero {
             padding-top: 96px;
             position: relative;
@@ -69,6 +109,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-decoration: none;
             transition: transform 0.3s, background 0.3s;
+        }
+        .grad, .gradient-brand {
+            background: linear-gradient(to right, #7c3aed, #db2777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .download-link:hover {
@@ -176,14 +222,15 @@
 <body>
     <!-- Header -->
     <header>
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" style="gap: 7px;">
+            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="40" height="45">
             <h3 class="grad">BondBridge</h3>
         </a>
         
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="support.html">Support</a>
             <a href="about.html">About</a>
+            <a href="support.html">Support</a>
             <a href="contact.html">Contact Us</a>
             <a href="download.html" class="download-btn">Download Now</a>
         </div>
@@ -259,51 +306,837 @@
             </div>
         </section>
     </main>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What You Can Do Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+        .section-container {
+            padding: 4rem 1.5rem;
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .title-underline {
+            display: block;
+            width: 8rem;
+            height: 0.5rem;
+            background-color: #a5b4fc;
+            border-radius: 9999px;
+            margin: 0.5rem auto 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .feature-highlight {
+            display: block;
+            color: #4f46e5;
+        }
+
+        .feature-description {
+            color: #4b5563;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            max-width: 20rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Media queries for responsive layout */
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        
+
+        .section-container {
+            padding: 4rem 1.5rem;
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .title-underline {
+            display: block;
+            width: 8rem;
+            height: 0.5rem;
+            background-color: #a5b4fc;
+            border-radius: 9999px;
+            margin: 0.5rem auto 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .feature-highlight {
+            display: block;
+            color: #4f46e5;
+        }
+
+        .feature-description {
+            color: #4b5563;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            max-width: 20rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-section {
+    padding: 40px;
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left: FAQ List */
+.faq-list {
+    width: 40%;
+    background: white;
+    padding: 10px;
+}
+
+.faq-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.faq-item.active {
+    background: #FAFBFF;
+    color: #333;
+}
+
+.faq-icon {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #A5A6F6;
+}
+
+.faq-item.active .faq-icon {
+    background-color: #5D5FEF;
+}
+
+/* Right: Answer Section */
+.faq-answer {
+    width: 60%;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+.faq-answer h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.faq-answer p {
+    color: #666;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+        /* Media queries for responsive layout */
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-container">
+        <h2 class="section-title">
+            What you can do
+            <span class="title-underline"></span>
+        </h2>
+
+        <!-- Feature Cards -->
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <img 
+                    src="assets/about/your-tribe.png" 
+                    alt="Discover" 
+                    class="feature-image"
+                >
+                <h3 class="feature-title">
+                    Discover
+                    <span class="feature-highlight">Your Tribe</span>
+                </h3>
+                <p class="feature-description">Meet people in your area who share your passion.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <img 
+                    src="assets/about/interest.png" 
+                    alt="Find Your Interest" 
+                    class="feature-image"
+                >
+                <h3 class="feature-title">
+                    Find Your
+                    <span class="feature-highlight">Interest</span>
+                </h3>
+                <p class="feature-description">Explore new hobbies and passions that match your interests.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <img 
+                    src="assets/about/best-life.png" 
+                    alt="Live Your Best Life" 
+                    class="feature-image"
+                >
+                <h3 class="feature-title">
+                    Live Your
+                    <span class="feature-highlight">Best Life</span>
+                </h3>
+                <p class="feature-description">Enjoy every moment, follow your passion, and thrive daily.</p>
+            </div>
+        </div>
+    </section>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Values Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .values-section {
+            padding: 4rem 1.5rem;
+            background-color: white;
+            text-align: left;
+            max-width: 72rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 2.5rem;
+        }
+
+        .section-heading {
+            margin-bottom: 2rem;
+        }
+
+        .subtitle {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #4b5563;
+        }
+
+        .title {
+            font-size: 2.25rem;
+            font-weight: 600;
+            max-width: 36rem;
+            margin-top: 0.5rem;
+            line-height: 1.25;
+            color: #311B92;
+        }
+
+        .highlight {
+            display: block;
+            width: fit-content;
+            position: relative;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: rgba(79, 70, 229, 0.2);
+            z-index: -1;
+        }
+
+        .description {
+            color: #6b7280;
+            font-size: 1rem;
+            margin-top: 1rem;
+            max-width: 48rem;
+        }
+
+        .mission-vision-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            max-height: 10rem;
+            object-fit: contain;
+            object-position: left;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #7e57c2;
+        }
+
+        .card-description {
+            color: #4b5563;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Media queries for responsive layout */
+        @media (min-width: 768px) {
+            .values-section {
+                grid-template-columns: 2fr 3fr;
+                column-gap: 2rem;
+                align-items: start;
+            }
+
+            .mission-vision-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .card-image {
+                height: 200px;
+            }
+        }
+         /* New Footer Styles - Based on Image 2 */
+         .footer-new {
+            background-color: #0f172a;
+            color: #f9fafb;
+            padding: 48px 32px 24px;
+        }
+        
+        .footer-new-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 48px;
+        }
+        
+        .footer-left {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-right {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        
+        .footer-column {
+            min-width: 180px;
+        }
+        
+        .footer-logo-new {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .footer-logo-new img {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+        
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-location {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-location i {
+            margin-right: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-email {
+            display: flex;
+            align-items: center;
+            color: #94a3b8;
+        }
+        
+        .footer-email i {
+            margin-right: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #334155;
+            margin: 32px 0;
+        }
+        
+        .footer-column h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #f9fafb;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #94a3b8;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #7c3aed;
+        }
+        
+        .footer-subscribe {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-subscribe h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .footer-subscribe p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-subscribe-form {
+            display: flex;
+            margin-bottom: 24px;
+        }
+        
+        .footer-subscribe-form input {
+            flex: 1;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background-color: transparent;
+            color: #f9fafb;
+            font-size: 14px;
+        }
+        
+        .footer-subscribe-button {
+            background-color: #f9fafb;
+            color: #0f172a;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-subscribe-button:hover {
+            background-color: #e2e8f0;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .footer-social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #7c3aed;
+            border-radius: 50%;
+            color: #f9fafb;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-social-icon:hover {
+            background-color: #6d28d9;
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
+            margin-top: 32px;
+        }
+    </style>
+</head>
+<body>
+    <section class="values-section">
+        <!-- Heading -->
+        <div class="section-heading">
+            <h3 class="subtitle">OUR VALUES</h3>
+            <h2 class="title">
+                BondBridge Upholds Anonymity as Its
+                <span class="highlight">Core Principle</span>
+            </h2>
+            <p class="description">
+                At BondBridge, we believe that true connections thrive when people are
+                free to express themselves without fear of judgment. Our platform is a
+                haven for those seeking meaningful conversations, fresh perspectives,
+                and genuine relationships — all while remaining anonymous.
+            </p>
+            <p class="description" style="margin-top: 1rem;">
+                We've built BondBridge to break down social barriers and provide
+                a digital space where your voice, thoughts, and ideas matter more than
+                your name or background.
+            </p>
+        </div>
+
+        <!-- Mission and Vision -->
+        <div class="mission-vision-container">
+            <div class="card">
+                <img
+                    src="assets/about/mission.png"
+                    alt="Mission"
+                    class="card-image"
+                />
+                <div>
+                    <h4 class="card-title">
+                        Our Mission
+                    </h4>
+                    <p class="card-description">
+                        To create an inclusive platform that empowers users to share,
+                        connect, and engage anonymously while feeling safe and respected.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="assets/about/vision.png"
+                    alt="Vision"
+                    class="card-image"
+                />
+                <div>
+                    <h4 class="card-title">
+                        Our Vision
+                    </h4>
+                    <p class="card-description">
+                        To be the leading anonymous social media app that fosters genuine
+                        human connections through privacy, trust, and innovation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-section" style="margin-left: 100px;">
+        <div class="content-grid">
+            <div>
+                <h3 class="subtitle">PARTNERS</h3>
+                <h2 class="title">
+                    Ask our <span class="highlight">happy customers</span> about our
+                    quality
+                </h2>
+            </div>
+
+            <p class="description">
+                At BondBridge, diverse anonymous voices foster genuine connections
+                through open dialogue, sharing unique perspectives freely, beyond
+                social labels and identities.
+            </p>
+        </div>
+
+        <!-- Partner Images -->
+        <div class="partners-image-container">
+            <img
+                src="assets/about/people-customers.png"
+                alt="Partners List"
+                class="partners-image"
+            />
+        </div>
+    </section>
+    <section class="faq-section" style="margin-left: 200px; margin-top: 50px;">
+        <div class="faq-container">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-wrapper">
+                <!-- Left: Questions List -->
+                <div class="faq-list">
+                    <div class="faq-item active" data-index="0">
+                        <span class="faq-icon"></span>
+                        <span class="faq-question">What is a Payment Gateway?</span>
+                    </div>
+                    <div class="faq-item" data-index="1">
+                        <span class="faq-icon"></span>
+                        <span class="faq-question">Do I need to pay to Instapay when no transactions happen?</span>
+                    </div>
+                    <div class="faq-item" data-index="2">
+                        <span class="faq-icon"></span>
+                        <span class="faq-question">What platforms does ACME payment gateway support?</span>
+                    </div>
+                    <div class="faq-item" data-index="3">
+                        <span class="faq-icon"></span>
+                        <span class="faq-question">Does ACME provide international payments support?</span>
+                    </div>
+                    <div class="faq-item" data-index="4">
+                        <span class="faq-icon"></span>
+                        <span class="faq-question">Is there any setup fee or annual maintenance fee?</span>
+                    </div>
+                </div>
+
+                <!-- Right: Answer Section -->
+                <div class="faq-answer">
+                    <h3 id="faq-question">What is a Payment Gateway?</h3>
+                    <p id="faq-answer">A payment gateway is a technology that captures and transfers payment data from the customer to the acquirer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <h3 class="grad">BondBridge</h3>
+    <footer class="footer-new">
+        <div class="footer-new-container">
+            <div class="footer-left">
+                <div class="footer-logo-new">
+                    <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15">
+                    <span class="footer-logo-text grad">BondBridge</span>
                 </div>
-                <p>Connect with people who share your interests and passions.</p>
+                
+                <div class="footer-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Gautam Buddha Uttar Pradesh</span>
+                </div>
+                
+                <div class="footer-email">
+                    <i class="fas fa-envelope"></i>
+                    <span>hellomoto2004@gmail.com</span>
+                </div>
             </div>
             
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="download.html">Download</a></li>
-                    <li><a href="support.html">Support</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul class="footer-links">
-                    <li><a href="support.html">Help Center</a></li>
-                    <li><a href="support.html">FAQs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
+            <div class="footer-right">
+                <div class="footer-column">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Other</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-subscribe">
+                    <h3>Stay Updated</h3>
+                    <p>Get the latest news & updates</p>
+                    
+                    <div class="footer-subscribe-form">
+                        <input type="email" placeholder="Your Email Address">
+                        <button class="footer-subscribe-button">Subscribe</button>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="copyright">
-            <p>&copy; 2025 BondBridge. All rights reserved.</p>
+        <div class="footer-divider"></div>
+        
+        <div class="footer-copyright">
+            Copyright © 2025 All rights reserved
         </div>
     </footer>
     
-    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const faqs = [
+        { question: "What is a Payment Gateway?", answer: "A payment gateway is a technology that captures and transfers payment data from the customer to the acquirer." },
+        { question: "Do I need to pay to Instapay when no transactions happen?", answer: "No, you do not need to pay Instapay when there is no transaction happening. You only pay when you get paid!" },
+        { question: "What platforms does ACME payment gateway support?", answer: "ACME payment gateway supports web, mobile apps, and POS systems for seamless transactions." },
+        { question: "Does ACME provide international payments support?", answer: "Yes, ACME allows businesses to accept payments from international customers via multiple currency options." },
+        { question: "Is there any setup fee or annual maintenance fee?", answer: "No, ACME does not charge any setup or annual maintenance fees. You only pay per transaction." }
+    ];
+
+    let activeIndex = 0;
+    let intervalId;
+
+    const faqItems = document.querySelectorAll(".faq-item");
+    const questionEl = document.getElementById("faq-question");
+    const answerEl = document.getElementById("faq-answer");
+
+    function setActiveFAQ(index) {
+        activeIndex = index;
+        questionEl.textContent = faqs[index].question;
+        answerEl.textContent = faqs[index].answer;
+        
+        faqItems.forEach(item => item.classList.remove("active"));
+        faqItems[index].classList.add("active");
+    }
+
+    faqItems.forEach((item, index) => {
+        item.addEventListener("click", function () {
+            clearInterval(intervalId);
+            setActiveFAQ(index);
+        });
+    });
+
+    function startAutoRotation() {
+        intervalId = setInterval(() => {
+            let nextIndex = (activeIndex + 1) % faqs.length;
+            setActiveFAQ(nextIndex);
+        }, 5000);
+    }
+
+    setActiveFAQ(0);
+    startAutoRotation();
+});
+
+    </script>
 </body>
 </html> 

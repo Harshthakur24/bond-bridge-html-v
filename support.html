@@ -8,6 +8,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Support Page Specific Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9fafb;
+            color: #1f2937;
+            line-height: 1.5;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header Styles - Updated to match Image 1 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 48px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h3 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
         .support-page {
             padding-top: 96px;
             padding-bottom: 64px;
@@ -116,6 +157,12 @@
             overflow: hidden;
         }
         
+        .grad, .gradient-brand {
+            background: linear-gradient(to right, #7c3aed, #db2777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         .faq-question {
             padding: 16px;
             background-color: #f9fafb;
@@ -146,19 +193,201 @@
                 flex-direction: row-reverse;
             }
         }
+
+         /* New Footer Styles - Based on Image 2 */
+         .footer-new {
+            background-color: #0f172a;
+            color: #f9fafb;
+            padding: 48px 32px 24px;
+        }
+        
+        .footer-new-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 48px;
+        }
+        
+        .footer-left {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-right {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        
+        .footer-column {
+            min-width: 180px;
+        }
+        
+        .footer-logo-new {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .footer-logo-new img {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+        
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-location {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-location i {
+            margin-right: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-email {
+            display: flex;
+            align-items: center;
+            color: #94a3b8;
+        }
+        
+        .footer-email i {
+            margin-right: 12px;
+            color: #94a3b8;
+        }
+        
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #334155;
+            margin: 32px 0;
+        }
+        
+        .footer-column h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #f9fafb;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #94a3b8;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #7c3aed;
+        }
+        
+        .footer-subscribe {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-subscribe h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .footer-subscribe p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-subscribe-form {
+            display: flex;
+            margin-bottom: 24px;
+        }
+        
+        .footer-subscribe-form input {
+            flex: 1;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background-color: transparent;
+            color: #f9fafb;
+            font-size: 14px;
+        }
+        
+        .footer-subscribe-button {
+            background-color: #f9fafb;
+            color: #0f172a;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-subscribe-button:hover {
+            background-color: #e2e8f0;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .footer-social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #7c3aed;
+            border-radius: 50%;
+            color: #f9fafb;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-social-icon:hover {
+            background-color: #6d28d9;
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
+            margin-top: 32px;
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" style="gap: 7px;">
+            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="40" height="45">
             <h3 class="grad">BondBridge</h3>
         </a>
         
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="support.html">Support</a>
             <a href="about.html">About</a>
+            <a href="support.html">Support</a>
             <a href="contact.html">Contact Us</a>
             <a href="download.html" class="download-btn">Download Now</a>
         </div>
@@ -207,7 +436,7 @@
         
         <div class="feature-item reverse">
             <div class="feature-image">
-                <img src="assets/screenshots/mobile-chat.png" alt="Chat">
+                <img src="assets/screenshots/anonymity.png" alt="Chat">
             </div>
             
             <div class="feature-text">
@@ -219,7 +448,7 @@
         
         <div class="feature-item">
             <div class="feature-image">
-                <img src="assets/screenshots/mobile-events.png" alt="Events">
+                <img src="assets/screenshots/mobile-communities.png" alt="Events">
             </div>
             
             <div class="feature-text">
@@ -278,46 +507,75 @@
     </main>
     
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <h3 class="grad">BondBridge</h3>
+    <footer class="footer-new">
+        <div class="footer-new-container">
+            <div class="footer-left">
+                <div class="footer-logo-new">
+                    <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15">
+                    <span class="footer-logo-text grad">BondBridge</span>
                 </div>
-                <p>Connect with people who share your interests and passions.</p>
+                
+                <div class="footer-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Gautam Buddha Uttar Pradesh</span>
+                </div>
+                
+                <div class="footer-email">
+                    <i class="fas fa-envelope"></i>
+                    <span>hellomoto2004@gmail.com</span>
+                </div>
             </div>
             
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="download.html">Download</a></li>
-                    <li><a href="support.html">Support</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul class="footer-links">
-                    <li><a href="support.html">Help Center</a></li>
-                    <li><a href="support.html">FAQs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
+            <div class="footer-right">
+                <div class="footer-column">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Other</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-subscribe">
+                    <h3>Stay Updated</h3>
+                    <p>Get the latest news & updates</p>
+                    
+                    <div class="footer-subscribe-form">
+                        <input type="email" placeholder="Your Email Address">
+                        <button class="footer-subscribe-button">Subscribe</button>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="copyright">
-            <p>&copy; 2025 BondBridge. All rights reserved.</p>
+        <div class="footer-divider"></div>
+        
+        <div class="footer-copyright">
+            Copyright © 2025 All rights reserved
         </div>
     </footer>
     
