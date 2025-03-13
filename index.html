@@ -629,112 +629,209 @@
         
         /* Interactive Section */
         .interactive-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            background-color: #f9fafb;
+            gap: 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .circle-container {
             position: relative;
-            padding: 80px 24px;
-            overflow: hidden;
-            margin-top: 40px;
+            width: 450px;
+            height: 450px;
+            flex-shrink: 0;
         }
-        
-        /* Fix the initial positioning of icons */
-.floating-icon {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, -50%);
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
 
-/* Position each icon around the circle */
-.icon-1 {
-    top: 15%;
-    left: 5%;
-    background-color: #3b82f6;
-}
-
-.icon-2 {
-    top: 30%;
-    right: 8%; /* Use right instead of left: 92% */
-    background: linear-gradient(to bottom right, #F58529, #DD2A7B, #8134AF);
-}
-
-.icon-3 {
-    bottom: 40%; /* Use bottom instead of top: 60% */
-    right: 10%; /* Use right instead of left: 90% */
-    background-color: #06b6d4;
-}
-
-.icon-4 {
-    top: 50%;
-    left: 5%; /* Change from -5% to positive value */
-    background-color: #22c55e;
-}
-
-.icon-5 {
-    bottom: 30%; /* Use bottom instead of top: 70% */
-    left: 2%;
-    background-color: #ec4899;
-}
-
-/* Fix the hover transformations */
-.image-container.active .icon-1 {
-    transform: translate(-100%, -100%);
-}
-
-.image-container.active .icon-2 {
-    transform: translate(50%, -100%);
-}
-
-.image-container.active .icon-3 {
-    transform: translate(50%, 50%);
-}
-
-.image-container.active .icon-4 {
-    transform: translate(-100%, -50%);
-}
-
-.image-container.active .icon-5 {
-    transform: translate(-100%, 50%);
-}
-        
-        .floating-icon:nth-child(1) {
-            top: 15%;
-            left: 5%;
-            background-color: #3b82f6;
+        .dashed-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px dashed rgba(209, 213, 219, 0.6);
+            z-index: 1;
         }
-        
-        .floating-icon:nth-child(2) {
-            top: 30%;
-            right: 5%;
-            background: linear-gradient(to bottom right, #F58529, #DD2A7B, #8134AF);
-        }
-        
-        .floating-icon:nth-child(3) {
-            top: 60%;
-            right: 8%;
-            background-color: #06b6d4;
-        }
-        
-        .floating-icon:nth-child(4) {
+
+        .purple-circle {
+            position: absolute;
             top: 50%;
-            left: 3%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            background-color: #9061F9;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inner-circle {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background-color: #dab2ff;
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        .profile-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .floating-icon {
+            position: absolute;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            z-index: 4;
+        }
+
+        .floating-icon img {
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
+        }
+
+        .icon-blue {
+            background-color: #3b82f6;
+            top: 10%;
+            left: 5%;
+        }
+
+        .icon-pink {
+            background: linear-gradient(to bottom right, #F58529, #DD2A7B, #8134AF);
+            top: 20%;
+            right: 5%;
+        }
+
+        .icon-cyan {
+            background-color: #06b6d4;
+            bottom: 25%;
+            right: 5%;
+        }
+
+        .icon-green {
             background-color: #22c55e;
+            bottom: 45%;
+            left: 0%;
         }
-        
-        .floating-icon:nth-child(5) {
-            top: 70%;
-            left: 8%;
+
+        .icon-magenta {
             background-color: #ec4899;
+            bottom: 15%;
+            left: 10%;
         }
-        
-        
-        
-        /*  */
+
+        .text-container {
+            max-width: 28rem;
+        }
+
+        .heading {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .description {
+            font-size: 1.125rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: #111827;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            width: fit-content;
+            transition: all 0.3s ease;
+        }
+
+        .arrow-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 50%;
+        }
+
+        .arrow-icon {
+            width: 1rem;
+            height: 1rem;
+            color: #111827;
+        }
+
+        .cta-button:hover {
+            background-color: #9333ea;
+        }
+
+        @media (max-width: 1024px) {
+            .interactive-section {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .circle-container {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .heading {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            
+            .description {
+                text-align: center;
+            }
+            
+            .cta-button {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .circle-container {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .floating-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
         /* Features Section */
         .features-section {
             padding: 80px 24px;
@@ -983,7 +1080,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transform: translate(-50%, -50%);
             transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
@@ -1670,17 +1766,11 @@
             <div class="hero-content">
                 <div class="hero-text" style="text-align: left;">
                     <h1 style="font-size: 45px;">
-                        
                         Welcome to <span class="gradient-brand" style="margin-left: 0px; font-size: 50px; ">BondBridge,</span>
                         a new way to connect <span class="gradient-brand" style="margin-left: 0px; font-size:45px;">online</span>
-                        
                     </h1>
-                   
                     <p style="text-align: justify;">
-                        BondBridge is an anonymous social media app that lets you connect, share, and
-                        engage freely without revealing your identity. Build genuine connections, express
-                        yourself openly, and explore diverse conversations in a secure, judgment-free
-                        environment.
+                        BondBridge is an anonymous social media app that lets you connect, share, and engage freely without revealing your identity. Build genuine connections, express yourself openly, and explore diverse conversations in a secure, judgment-free environment.
                     </p>
                     <a href="download.html" class="get-started-btn">
                         <span>Get Started</span>
@@ -1698,60 +1788,53 @@
             <img src="assets/landing/liquid-bg.png" alt="Background decoration" class="background-liquid">
         </section>
         
-        <div class="section-container" style="display: flex; align-items: center; justify-content: center; padding: 2.5rem 1.5rem; background-color: #f9fafb;">
-            <div class="content-wrapper">
-                <!-- Left Section - Image with Floating Icons -->
-                <div class="image-container" id="imageContainer">
-                    <!-- Dashed Circle Outline -->
-                    <div class="dashed-circle"></div>
-    
-                    <!-- Inner Circle -->
-                    <div class="inner-circle" id="innerCircle">
-                        <!-- Profile Image -->
-                        <div class="profile-image" id="profileImage">
+        <!-- Interactive Image Section -->
+        <div class="interactive-section">
+            <div class="circle-container">
+                <div class="dashed-circle"></div>
+                <div class="purple-circle">
+                    <div class="inner-circle">
+                        <div class="profile-image">
                             <img src="assets/landing/girl-on-phone-1.png" alt="Person using phone">
                         </div>
                     </div>
-    
-                    <!-- Floating Icons -->
-                    <div class="floating-icon icon-1">
-                        <img src="assets/icons/floating/triangle.png" alt="">
-                    </div>
-                    <div class="floating-icon icon-2">
-                        <img src="assets/icons/floating/instagram.png" alt="">
-                    </div>
-                    <div class="floating-icon icon-3">
-                        <img src="assets/icons/floating/safe-home.png" alt="">
-                    </div>
-                    <div class="floating-icon icon-4">
-                        <img src="assets/icons/floating/verify.png" alt="">
-                    </div>
-                    <div class="floating-icon icon-5">
-                        <img src="assets/icons/floating/wifi-square.png" alt="">
-                    </div>
                 </div>
-    
-                <!-- Right Section -->
-                <div class="text-container">
-                    <h1 class="heading">
-                        Bridge the Gap,<br>
-                        Build Bonds
-                    </h1>
-                    <p class="description">
-                        BondBridge lets you connect anonymously, fostering real
-                        relationships and open conversations without revealing your
-                        identity. Build trust, share freely.
-                    </p>
-                    <a href="/download" class="cta-button">
-                        <span>Join Now</span>
-                        <span class="arrow-container" >
-                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="scale: 3;">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
-                            </svg>
-                        </span>
-                    </a>
+                <!-- Floating Icons -->
+                <div class="floating-icon icon-blue">
+                    <img src="assets/icons/floating/triangle.png" alt="Triangle icon">
                 </div>
+                <div class="floating-icon icon-pink">
+                    <img src="assets/icons/floating/instagram.png" alt="Instagram icon">
+                </div>
+                <div class="floating-icon icon-cyan">
+                    <img src="assets/icons/floating/safe-home.png" alt="Safe home icon">
+                </div>
+                <div class="floating-icon icon-green">
+                    <img src="assets/icons/floating/verify.png" alt="Verify icon">
+                </div>
+                <div class="floating-icon icon-magenta">
+                    <img src="assets/icons/floating/wifi-square.png" alt="Wifi icon">
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="text-container">
+                <h1 class="heading">
+                    Bridge the Gap,<br>
+                    Build Bonds
+                </h1>
+                <p class="description">
+                    BondBridge lets you connect anonymously, fostering real relationships and open conversations without revealing your identity. Build trust, share freely.
+                </p>
+                <a href="#" class="cta-button">
+                    <span>Join Now</span>
+                    <span class="arrow-container">
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
         
@@ -1769,8 +1852,8 @@
                 <div class="feature-item">
                     <div class="feature-item-text">
                         <span class="section-badge">Privacy</span>
-                        <h3 class="feature-item-title">Complete <span class="highlight">Anonymity</span></h3>
-                        <p class="feature-item-description">
+                        <h3 class="feature-item-title" style="font-size: 2.5rem;">Complete <span class="highlight">Anonymity</span></h3>
+                        <p class="feature-item-description" style="font-size: 1.25rem;">
                             Express yourself freely without fear of judgment. Your identity remains protected, allowing for genuine interactions.
                         </p>
                     </div>
@@ -1782,8 +1865,8 @@
                 <div class="feature-item reverse">
                     <div class="feature-item-text">
                         <span class="section-badge">Community</span>
-                        <h3 class="feature-item-title">Interest-based <span class="highlight">Groups</span></h3>
-                        <p class="feature-item-description">
+                        <h3 class="feature-item-title" style="font-size: 2.5rem;">Interest-based <span class="highlight">Groups</span></h3>
+                        <p class="feature-item-description" style="font-size: 1.25rem;">
                             Find like-minded individuals and join communities that share your interests, passions, and goals.
                         </p>
                     </div>
@@ -1795,8 +1878,8 @@
                 <div class="feature-item">
                     <div class="feature-item-text">
                         <span class="section-badge">Additional</span>
-                        <h3 class="feature-item-title">Available on <span class="highlight">Web Mode</span></h3>
-                        <p class="feature-item-description">
+                        <h3 class="feature-item-title" style="font-size: 2.5rem;">Available on <span class="highlight">Web Mode</span></h3>
+                        <p class="feature-item-description" style="font-size: 1.25rem;">
                             Our advanced security measures ensure your data remains private and your experience remains safe.
                         </p>
                     </div>
@@ -1806,6 +1889,8 @@
                 </div>
             </div>
         </section>
+        
+       
         
         <!-- Work Section -->
         <section class="work-section">
@@ -1917,129 +2002,335 @@
             </div>
           </section>
 
-          <div class="wrapper">
-            <div class="about-badge">About BondBridge</div>
-            
-            <h1 class="main-title">Why BondBridge?</h1>
-            
-            <p class="description">
-              Download BondBridge to share thoughts, connect anonymously, explore vibrant communities, and enjoy secure, judgment-free conversations. Privacy guaranteed!
-            </p>
-            
-            <!-- Feature 1 -->
-            <div class="feature">
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#6941C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-              </div>
-              <div class="feature-content">
-                <h3 class="feature-title">Secure & Private Messaging</h3>
-                <p class="feature-desc">Encrypted chats with no data stored.</p>
-              </div>
-            </div>
-            
-            <!-- Feature 2 -->
-            <div class="feature">
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#6941C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <polyline points="16 11 18 13 22 9"></polyline>
-                </svg>
-              </div>
-              <div class="feature-content">
-                <h3 class="feature-title">Meet Like-minded Individuals</h3>
-                <p class="feature-desc">Connect with people based on shared interests, not identities.</p>
-              </div>
-            </div>
-            
-            <!-- Feature 3 -->
-            <div class="feature">
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#6941C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-                  <path d="m16 10-4 4-2-2"></path>
-                </svg>
-              </div>
-              <div class="feature-content">
-                <h3 class="feature-title">Freedom of Expression</h3>
-                <p class="feature-desc">Share your thoughts openly without fear of judgment.</p>
-              </div>
-            </div>
-            
-            <!-- Circle graphic -->
-            <div class="circle-container">
-              <div class="dashed-circle"></div>
-              <div class="purple-circle"></div>
-              
-              <!-- Floating Cards -->
-              <div class="floating-card card-brands">
-                <div class="card-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </div>
-                <div class="card-content">
-                  <div class="card-percentage">85%</div>
-                  <div class="card-label">Brands Joined</div>
-                </div>
-              </div>
-            </div>
-          </div>
+         
 
-          <div class="section-container">
-            <!-- Section Heading -->
-            <div class="section-header">
-                <span class="section-tag">Users Feedback</span>
-                <h2 class="section-title">Voices of BondBridge</h2>
-                <p class="section-description">
-                    Discover why users love BondBridge, real stories and feedback from 
-                    people enjoying secure, anonymous connections and vibrant community 
-                    interactions on every day!
+        
+        <!-- New Why BondBridge Section -->
+        <section style="background-color: #f3f4ff; padding: 80px 20px; margin-top: 80px; position: relative; overflow: hidden;">
+            <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 40px;">
+                <!-- Left Content -->
+                <div style="flex: 1; min-width: 300px; max-width: 600px;">
+                    <div style="display: inline-block; background-color: #f3e8ff; color: #9333ea; padding: 8px 20px; border-radius: 30px; margin-bottom: 20px; font-weight: 600; font-size: 14px;">
+                        About BondBridge
+                    </div>
+                    
+                    <h2 style="font-size: 42px; font-weight: 800; color: #111827; margin-bottom: 24px; line-height: 1.2;">
+                        Why BondBridge?
+                    </h2>
+                    
+                    <p style="font-size: 18px; color: #4b5563; margin-bottom: 40px; line-height: 1.6;">
+                        Download BondBridge to share thoughts, connect anonymously, explore vibrant communities, and enjoy secure, judgment-free conversations. Privacy guaranteed!
+                    </p>
+                    
+                    <!-- Feature 1 -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 24px; gap: 16px;">
+                        <div style="background-color: #f9f5ff; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9061F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 4px;">Secure & Private Messaging</h3>
+                            <p style="color: #4b5563; font-size: 16px;">Encrypted chats with no data stored.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 24px; gap: 16px;">
+                        <div style="background-color: #f9f5ff; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9061F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <polyline points="16 11 18 13 22 9"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 4px;">Meet Like-minded Individuals</h3>
+                            <p style="color: #4b5563; font-size: 16px;">Connect with people based on shared interests, not identities.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="background-color: #f9f5ff; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9061F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                                <path d="m16 10-4 4-2-2"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 4px;">Freedom of Expression</h3>
+                            <p style="color: #4b5563; font-size: 16px;">Share your thoughts openly without fear of judgment.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Circle with Image -->
+                <div style="flex: 1; min-width: 300px; position: relative; height: 500px;">
+                    <!-- Dashed Circle -->
+                    <div style="position: absolute; width: 90%; height: 90%; border: 2px dashed rgba(209, 213, 219, 0.6); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                    
+                    <!-- Purple Circle -->
+                    <div style="position: absolute; width: 75%; height: 75%; background-color: #9061F9; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                    
+                    <!-- Inner Circle with Image -->
+                    <div style="position: absolute; width: 60%; height: 60%; background-color: #dab2ff; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); overflow: hidden;">
+                        <img src="assets/landing/girl-on-phone-1.png" alt="Person using BondBridge" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    
+                    <!-- Brands Joined Card -->
+                    <div style="position: absolute; top: 15%; right: 5%; background-color: white; padding: 12px 16px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 40px; height: 40px; background-color: #9061F9; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m5 12 7-7 7 7"></path>
+                                <path d="M12 19V5"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-size: 24px; font-weight: 700; color: #111827; line-height: 1.2;">85%</div>
+                            <div style="font-size: 14px; color: #6b7280;">Brands Joined</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Match Rate Card -->
+                    <div style="position: absolute; bottom: 15%; left: 5%; background-color: white; padding: 12px 16px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 40px; height: 40px; background-color: #9061F9; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-size: 24px; font-weight: 700; color: #111827; line-height: 1.2;">85%</div>
+                            <div style="font-size: 14px; color: #6b7280;">Match Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Why Choose Us Section - Purple Background with 4 Columns -->
+         <section style="background-color: #5D3B9C; color: white; padding: 60px 20px; margin: 80px auto; max-width: 1400px; border-radius: 20px;">
+            <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+                <!-- Column 1 -->
+                <div style="flex: 1; min-width: 250px; padding: 20px;">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <div style="width: 70px; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-server" style="font-size: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; text-align: center;">Why Choose Us</h3>
+                    <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.9); text-align: center;">
+                        An anonymous social app for sharing, chatting, and exploring communities without compromising your privacy.
+                    </p>
+                </div>
+                
+                <!-- Column 2 -->
+                <div style="flex: 1; min-width: 250px; padding: 20px;">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <div style="width: 70px; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-eye-slash" style="font-size: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; text-align: center;">No Data Tracking</h3>
+                    <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.9); text-align: center;">
+                        Your privacy is our priority. No cookies, no data storage, no data sharing.
+                    </p>
+                </div>
+                
+                <!-- Column 3 -->
+                <div style="flex: 1; min-width: 250px; padding: 20px;">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <div style="width: 70px; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-lock" style="font-size: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; text-align: center;">True Anonymity</h3>
+                    <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.9); text-align: center;">
+                        Engage, share, and connect without revealing your identity. Just enjoy your privacy.
+                    </p>
+                </div>
+                
+                <!-- Column 4 -->
+                <div style="flex: 1; min-width: 250px; padding: 20px;">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <div style="width: 70px; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-users" style="font-size: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; text-align: center;">Best People</h3>
+                    <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.9); text-align: center;">
+                        Bond with people worldwide in seconds and say what you feel without judgment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Feedback Section with Purple Background -->
+        <section style="background-color: #5D3B9C; color: white; padding: 80px 20px 100px; margin-top: 80px;">
+            <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <div style="display: inline-block; background-color: rgba(255, 255, 255, 0.2); padding: 8px 20px; border-radius: 30px; margin-bottom: 20px;">
+                    <span style="font-size: 16px; font-weight: 500;">Users Feedback</span>
+                </div>
+                
+                <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 20px;">Voices of BondBridge</h2>
+                
+                <p style="font-size: 18px; max-width: 800px; margin: 0 auto 60px; line-height: 1.6;">
+                    Discover why users love BondBridge, real stories and feedback from people enjoying secure, 
+                    anonymous connections and vibrant community interactions on every day!
                 </p>
-            </div>
-            
-            <!-- Feedback Cards -->
-            <div class="testimonials-grid">
-                <!-- Card 1 -->
-                <div class="testimonial-card">
-                    <!-- Profile Image -->
-                    <img src="/people/people-1.png" alt="Mat Renshaw" class="profile-image">
-                    <!-- Testimonial Content -->
-                    <div class="testimonial-content">
-                        <h3 class="user-name">Mat Renshaw</h3>
-                        <p class="user-feedback">
-                            Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                        </p>
-                    </div>
-                </div>
                 
-                <!-- Card 2 -->
-                <div class="testimonial-card">
-                    <img src="/people/people-2.png" alt="Alex Ellis" class="profile-image">
-                    <div class="testimonial-content">
-                        <h3 class="user-name">Alex Ellis</h3>
-                        <p class="user-feedback">
-                            Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                        </p>
+                <!-- Testimonials in a single row -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 50px;">
+                    <!-- Testimonial 1 -->
+                    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 30%; min-width: 300px;">
+                        <img src="assets/people/people-1.png" alt="Mat Renshaw" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: -35px; margin-left: 20px; z-index: 2; border: 3px solid #5D3B9C;">
+                        <div style="background-color: white; color: #333; padding: 25px; padding-top: 45px; border-radius: 15px; width: 100%; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                            <h3 style="font-size: 20px; margin-bottom: 10px; color: #1f2937;">Mat Renshaw</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">
+                                Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="testimonial-card">
-                    <img src="/people/people-3.png" alt="Cooper Short" class="profile-image">
-                    <div class="testimonial-content">
-                        <h3 class="user-name">Cooper Short</h3>
-                        <p class="user-feedback">
-                            Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                        </p>
+                    
+                    <!-- Testimonial 2 -->
+                    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 30%; min-width: 300px;">
+                        <img src="assets/people/people-2.png" alt="Alex Ellis" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: -35px; margin-left: 20px; z-index: 2; border: 3px solid #5D3B9C;">
+                        <div style="background-color: white; color: #333; padding: 25px; padding-top: 45px; border-radius: 15px; width: 100%; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                            <h3 style="font-size: 20px; margin-bottom: 10px; color: #1f2937;">Alex Ellis</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">
+                                Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 30%; min-width: 300px;">
+                        <img src="assets/people/people-3.png" alt="Cooper Short" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: -35px; margin-left: 20px; z-index: 2; border: 3px solid #5D3B9C;">
+                        <div style="background-color: white; color: #333; padding: 25px; padding-top: 45px; border-radius: 15px; width: 100%; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                            <h3 style="font-size: 20px; margin-bottom: 10px; color: #1f2937;">Cooper Short</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">
+                                Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Number of Currently Active Users Section -->
+        <section style="background-color: #f3e8ff; padding: 80px 20px; margin-top: 80px; position: relative; overflow: hidden;">
+            <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 40px;">
+                <!-- Left Content -->
+                <div style="flex: 1; min-width: 300px;">
+                    <div style="display: inline-block; background-color: #f3e8ff; color: #9333ea; padding: 8px 20px; border-radius: 30px; margin-bottom: 20px; font-weight: 600; font-size: 14px;">
+                        About BondBridge
+                    </div>
+                    
+                    <h2 style="font-size: 42px; font-weight: 800; color: #111827; margin-bottom: 24px; line-height: 1.2;">
+                        Number of Currently Active Users
+                    </h2>
+                    
+                    <p style="font-size: 18px; color: #4b5563; margin-bottom: 40px; line-height: 1.6; max-width: 600px;">
+                        Join thousands of active users on BondBridge, where anonymous connections thrive. Engage in real-time conversations, explore diverse communities, and experience a secure platform trusted by a growing global community every day!
+                    </p>
+                    
+                    <a href="#" style="display: inline-flex; align-items: center; gap: 12px; background-color: #111827; color: white; padding: 14px 32px; border-radius: 9999px; font-weight: 600; text-decoration: none; font-size: 16px;">
+                        Join Now
+                        <div style="width: 24px; height: 24px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Right Content - Stats Cards -->
+                <div style="flex: 1; min-width: 300px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <!-- Card 1 -->
+                    <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 16px; margin-bottom: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">8,550 +</div>
+                        <div style="color: #6b7280;">Secure Connections</div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 16px; margin-bottom: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
+                                <path d="M15 3h6v6"></path>
+                                <path d="M10 14 21 3"></path>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            </svg>
+                        </div>
+                        <div style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">160 +</div>
+                        <div style="color: #6b7280;">Thriving Communities</div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 16px; margin-bottom: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                        </div>
+                        <div style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">3,500 +</div>
+                        <div style="color: #6b7280;">Conversations Started</div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 16px; margin-bottom: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">500 +</div>
+                        <div style="color: #6b7280;">Daily Engagements</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download App Section with Gradient Background -->
+        <section style="padding: 40px 24px; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 100%; max-width: 1200px; background: linear-gradient(to right, #4A8FE9, #000000, #DA23C8); border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); padding: 40px 20px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img 
+                    src="assets/icon-logo.png" 
+                    alt="BondBridge Logo" 
+                    style="width: 100px; height: auto;"
+                >
+
+                <h2 style="font-size: 36px; font-weight: 700; margin-top: 16px; line-height: 1.3; background: linear-gradient(90deg, #4A8FE9, #FFFFFF, #DA23C8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+                    BondBridge
+                </h2>
+
+                <div style="width: 80px; height: 2px; background-color: white; opacity: 0.6; margin-top: 8px;"></div>
+
+                <div style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; justify-content: center;">
+                    <a href="download.html">
+                        <img 
+                            src="assets/landing/download-apple.png" 
+                            alt="Download on the App Store" 
+                            style="height: 56px; width: auto;"
+                        >
+                    </a>
+                    <a href="download.html">
+                        <img 
+                            src="assets/landing/download-google.png" 
+                            alt="Get it on Google Play" 
+                            style="height: 56px; width: auto;"
+                        >
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        
     </main>
     
     <!-- Footer - Updated to match Image 2 -->
@@ -2116,37 +2407,39 @@
     </footer>
     
     <script>
-         document.addEventListener('DOMContentLoaded', function() {
-      const features = document.querySelectorAll('.flex.items-center.gap-4.p-4');
-      
-      features.forEach((feature, index) => {
-        feature.addEventListener('mouseenter', () => {
-          // Add active class logic here if needed
+        // JavaScript for interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.flex.items-center.gap-4.p-4');
+            
+            features.forEach((feature, index) => {
+                feature.addEventListener('mouseenter', () => {
+                    // Add active class logic here if needed
+                });
+            });
         });
-      });
-    });
 
-const imageContainer = document.getElementById('imageContainer');
+        const imageContainer = document.getElementById('imageContainer');
 
-// Add hover event listeners
-imageContainer.addEventListener('mouseenter', () => {
-    imageContainer.classList.add('active');
-});
+        // Add hover event listeners
+        imageContainer.addEventListener('mouseenter', () => {
+            imageContainer.classList.add('active');
+        });
 
-imageContainer.addEventListener('mouseleave', () => {
-    imageContainer.classList.remove('active');
-});
+        imageContainer.addEventListener('mouseleave', () => {
+            imageContainer.classList.remove('active');
+        });
 
-// For touch devices
-imageContainer.addEventListener('touchstart', () => {
-    imageContainer.classList.add('active');
-});
+        // For touch devices
+        imageContainer.addEventListener('touchstart', () => {
+            imageContainer.classList.add('active');
+        });
 
-imageContainer.addEventListener('touchend', () => {
-    setTimeout(() => {
-        imageContainer.classList.remove('active');
-    }, 1000);
-});
+        imageContainer.addEventListener('touchend', () => {
+            setTimeout(() => {
+                imageContainer.classList.remove('active');
+            }, 1000);
+        });
+
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
