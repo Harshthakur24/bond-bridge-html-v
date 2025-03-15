@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
         /* About Page Specific Styles */
         * {
             margin: 0;
@@ -111,7 +112,8 @@
             transition: transform 0.3s, background 0.3s;
         }
         .grad, .gradient-brand {
-            background: linear-gradient(to right, #7c3aed, #db2777);
+            background: linear-gradient(to top right, #3b01b7 , #5e00ff, #ba19eb, #dd0cc8);
+            font-family: 'League Spartan';
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -464,6 +466,8 @@
         .faq-section {
     padding: 40px;
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 900px;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -645,7 +649,7 @@
         }
 
         .highlight {
-            display: block;
+            display: inline-block;
             width: fit-content;
             position: relative;
         }
@@ -959,13 +963,12 @@
         </div>
     </section>
 
-    <section class="partners-section" style="margin-left: 100px;">
+    <section class="partners-section" style="margin-left : auto; margin-right: auto; width: 80%;">
         <div class="content-grid">
             <div>
                 <h3 class="subtitle">PARTNERS</h3>
                 <h2 class="title">
-                    Ask our <span class="highlight">happy customers</span> about our
-                    quality
+                    Ask our <span class="highlight">happy customers</span> about our quality
                 </h2>
             </div>
 
@@ -977,15 +980,16 @@
         </div>
 
         <!-- Partner Images -->
-        <div class="partners-image-container">
+        <div class="partners-image-container" style="margin-left: auto; margin-right: auto; width: 100%;">
             <img
                 src="assets/about/people-customers.png"
                 alt="Partners List"
                 class="partners-image"
+                style="margin-left: auto; margin-right: auto; width: 100%; margin-top: 20px;"
             />
         </div>
     </section>
-    <section class="faq-section" style="margin-left: 200px; margin-top: 50px;">
+    <section class="faq-section" style=" margin-top: 50px;">
         <div class="faq-container">
             <h2 class="faq-title">Frequently Asked Questions</h2>
 
@@ -1029,7 +1033,7 @@
             <div class="footer-left">
                 <div class="footer-logo-new">
                     <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15" style="scale: 0.7;">
-                    <span class="footer-logo-text grad" style="font-weight: bolder;">BondBridge</span>
+                    <span class="footer-logo-text grad" style="font-weight: 800;">BondBridge</span>
                 </div>
                 
                 <div class="footer-location">
