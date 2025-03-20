@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BondBridge - Download</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-        /* Download Page Specific Styles */
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +26,7 @@
             color: inherit;
         }
         
-        /* Header Styles - Updated to match Image 1 */
+        /* Header Styles */
         header {
             display: flex;
             justify-content: space-between;
@@ -49,91 +48,7 @@
             font-size: 24px;
             font-weight: 600;
         }
-        .download-page {
-            padding-top: 96px;
-            padding-bottom: 96px;
-        }
         
-        .download-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        .download-heading {
-            text-align: center;
-            margin-bottom: 64px;
-        }
-        
-        .download-heading h1 {
-            font-size: 36px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 16px;
-        }
-        
-        .download-heading p {
-            font-size: 18px;
-            color: #6b7280;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .download-options {
-            display: flex;
-            flex-direction: column;
-            gap: 48px;
-            margin-bottom: 64px;
-        }
-        
-        @media (min-width: 768px) {
-            .download-options {
-                flex-direction: row;
-                align-items: stretch;
-            }
-        }
-        
-        .download-option {
-            flex: 1;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 32px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .download-option:hover {
-            transform: translateY(-8px);
-        }
-        
-        .download-option h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        
-        .download-option p {
-            color: #6b7280;
-            margin-bottom: 24px;
-        }
-        
-        .download-option img {
-            width: 150px;
-            height: auto;
-            margin: 0 auto 24px;
-        }
-        
-        .download-btn-large {
-            display: inline-block;
-            padding: 12px 24px;
-            background: linear-gradient(to right, #A7D0FF, #4C00FF);
-            color: white;
-            font-weight: 700;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
         .grad, .gradient-brand {
             background: linear-gradient(to top right, #3b01b7 , #5e00ff, #ba19eb, #dd0cc8);
             font-family: 'League Spartan';
@@ -142,115 +57,241 @@
             background-clip: text;
         }
         
-        .download-btn-large:hover {
-            transform: scale(1.05);
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
         }
         
-        .get-app-section {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
+        .nav-links a {
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #7c3aed;
+        }
+        
+        .download-btn {
+            background-color: #7c3aed !important;
+            color: white !important;
+            padding: 10px 24px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 32px;
-        }
-        
-        .get-app-heading {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        
-        .get-app-heading h2 {
-            font-size: 24px;
             font-weight: 600;
-            margin-bottom: 8px;
+            transition: background-color 0.3s ease;
         }
         
-        .get-app-heading p {
+        .download-btn:hover {
+            background-color: #6d28d9 !important;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #4b5563;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80%;
+            height: 100%;
+            background-color: white;
+            z-index: 200;
+            padding: 24px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 199;
+        }
+        
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #4b5563;
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            cursor: pointer;
+        }
+        
+        .mobile-nav-links {
+            margin-top: 64px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .mobile-nav-links a {
+            color: #4b5563;
+            font-weight: 500;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav-links a:hover {
+            color: #7c3aed;
+        }
+        
+        /* Split Layout Styles */
+        .split-container {
+            display: flex;
+            min-height: calc(100vh - 112px); /* Adjusting for header */
+        }
+        
+        .download-form-section {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .hero-image-section {
+            flex: 1;
+            background-image: url('/api/placeholder/800/1000');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .download-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .download-title span {
             color: #6b7280;
         }
         
-        .option-tabs {
+        .download-subtitle {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+        
+        /* Download Form Styles */
+        .download-options {
             display: flex;
-            border-bottom: 1px solid #e5e7eb;
             margin-bottom: 24px;
         }
         
-        .option-tab {
-            flex: 1;
-            padding: 12px;
-            text-align: center;
-            cursor: pointer;
-            font-weight: 500;
-            transition: color 0.3s, border-color 0.3s;
-        }
-        
-        .option-tab.active {
-            color: #4f46e5;
-            border-bottom: 2px solid #4f46e5;
-        }
-        
-        .input-group {
-            margin-bottom: 24px;
-        }
-        
-        .input-field {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            outline: none;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        
-        .input-field:focus {
-            border-color: #4f46e5;
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
-        }
-        
-        .input-field.error {
-            border-color: #ef4444;
-        }
-        
-        .error-message {
-            color: #ef4444;
-            font-size: 14px;
-            margin-top: 4px;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(to right, #A7D0FF, #4C00FF);
-            color: white;
-            font-weight: 700;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        
-        .success-message {
-            text-align: center;
-            background-color: #dcfce7;
-            color: #166534;
-            padding: 16px;
-            border-radius: 8px;
-            margin-top: 24px;
+        .option-radio {
             display: none;
         }
         
-        .success-message.visible {
-            display: block;
+        .option-label {
+            margin-right: 24px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .radio-custom {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #d1d5db;
+            display: inline-block;
+            margin-right: 8px;
+            position: relative;
+        }
+        
+        .option-radio:checked + .radio-custom {
+            border-color: #7c3aed;
+        }
+        
+        .option-radio:checked + .radio-custom::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #7c3aed;
+        }
+        
+        .phone-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .phone-input:focus {
+            outline: none;
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+        }
+        
+        .share-app-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #7c3aed;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 40px;
+        }
+        
+        .share-app-btn:hover {
+            background-color: #6d28d9;
+        }
+        
+        .download-from-text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .app-store-buttons {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .app-store-btn {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .app-store-btn:hover {
+            transform: translateY(-4px);
+        }
+        
+        .app-store-btn img {
+            height: 56px;
+            width: auto;
         }
         
         /* Footer Styles */
@@ -433,13 +474,52 @@
             font-size: 14px;
             margin-top: 32px;
         }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .download-form-section {
+                padding: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 24px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .split-container {
+                flex-direction: column;
+            }
+            
+            .download-form-section {
+                padding: 40px 24px;
+                order: 2;
+            }
+            
+            .hero-image-section {
+                height: 300px;
+                order: 1;
+            }
+            
+            .download-title {
+                font-size: 36px;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <a href="index.html" class="logo" style="gap: 7px;">
-            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="20" height="25">
+            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="25" height="25" style="margin-top: -7px;">
             <h3 class="grad" style="font-weight: bolder;">BondBridge</h3>
         </a>
         
@@ -448,7 +528,7 @@
             <a href="about.html">About</a>
             <a href="support.html">Support</a>
             <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="download-btn" style="background-color: #7c3aed; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: background-color 0.3s ease;">Download Now</a>
+            <a href="download.html" class="download-btn">Download Now</a>
         </div>
         
         <button class="mobile-menu-btn">
@@ -473,69 +553,61 @@
         </div>
     </div>
     
-    <!-- Download Page Content -->
-    <main class="download-page">
-        <div class="download-container">
-            <div class="download-heading">
-                <h1>Download BondBridge</h1>
-                <p>Get the BondBridge app on your device and start connecting with communities that share your interests.</p>
-            </div>
+    <!-- Split Layout Content -->
+    <div class="split-container">
+        <!-- Left Side - Download Form -->
+        <div class="download-form-section">
+            <h1 class="download-title">Get <span class="grad">BondBridge</span></h1>
+            <p class="download-subtitle">We will send you a link, open it on your phone to download the app.</p>
             
-            <!-- Download Options -->
             <div class="download-options">
-                <!-- iOS Option -->
-                <div class="download-option">
-                    <img src="assets/icons/apple-logo.png" alt="Apple Logo">
-                    <h2>iOS App</h2>
-                    <p>Download BondBridge for iPhone and iPad devices.</p>
-                    <a href="#" class="download-btn-large">Download for iOS</a>
-                </div>
+                <label class="option-label">
+                    <input type="radio" name="contact-option" class="option-radio" checked>
+                    <span class="radio-custom"></span>
+                    Phone
+                </label>
                 
-                <!-- Android Option -->
-                <div class="download-option">
-                    <img src="assets/icons/android-logo.png" alt="Android Logo">
-                    <h2>Android App</h2>
-                    <p>Download BondBridge for Android smartphones and tablets.</p>
-                    <a href="#" class="download-btn-large">Download for Android</a>
-                </div>
+                <label class="option-label">
+                    <input type="radio" name="contact-option" class="option-radio">
+                    <span class="radio-custom"></span>
+                    Email
+                </label>
             </div>
             
-            <!-- Get App Link Section -->
-            <div class="get-app-section">
-                <div class="get-app-heading">
-                    <h2>Get the App Link</h2>
-                    <p>We'll send you a direct link to download the app.</p>
-                </div>
-                
-                <div class="option-tabs">
-                    <div class="option-tab active" id="phoneTab">Send via SMS</div>
-                    <div class="option-tab" id="emailTab">Send via Email</div>
-                </div>
-                
-                <form id="getAppForm">
-                    <div class="input-group">
-                        <input type="text" id="contactInput" class="input-field" placeholder="Enter your phone number">
-                        <div class="error-message" id="inputError"></div>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn" id="submitBtn">Send App Link</button>
-                </form>
-                
-                <div class="success-message" id="successMessage">
-                    <h3>Link Sent!</h3>
-                    <p>We've sent you a link to download the BondBridge app.</p>
-                </div>
+            <div style="display: row; flex-direction: column; gap: 20px;">
+            <input type="text" class="phone-input" placeholder="Your Phone Number" style="width: 60%;">
+            
+            <button class="share-app-btn" style="margin-top: -10px; margin-left: 10px;">Download</button>
+            </div>
+            
+            <p class="download-from-text" style="margin-left: 10px;">Download App From</p>
+            
+            <div class="app-store-buttons" style="gap: 6px;">
+                <a href="#" class="app-store-btn">
+                    <img src="assets/landing/download-google.png" alt="Google Play" style="scale: 0.9;">
+                </a>
+                <a href="#" class="app-store-btn">
+                    <img src="assets/landing/download-apple.png" alt="App Store" style="scale: 0.9;">
+                </a>
+                <a href="#" class="app-store-btn">
+                    <img src="assets/landing/download-windows.png" alt="Windows" style="scale: 1.4; height: 80px; width: auto; margin-top: -13px; margin-left: 20px;">
+                </a>
             </div>
         </div>
-    </main>
+        
+        <!-- Right Side - Hero Image -->
+        <div class="hero-image-section">
+            <img src="assets/mobile-group.png" alt="" style="scale: 0.83;">
+        </div>
+    </div>
     
-    <!-- Footer - Updated to match Image 2 -->
+    <!-- Footer -->
     <footer class="footer-new">
         <div class="footer-new-container">
             <div class="footer-left">
                 <div class="footer-logo-new">
                     <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15" style="scale: 0.7;">
-                    <span class="footer-logo-text grad" style="font-weight: bolder;">BondBridge</span>
+                    <span class="footer-logo-text grad" style="font-weight: bolder; margin-top: 5px;">BondBridge</span>
                 </div>
                 
                 <div class="footer-location">
@@ -602,93 +674,50 @@
         </div>
     </footer>
     
-    <script src="js/main.js"></script>
     <script>
-        // Download Form Functionality
+        // Mobile Menu Functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const phoneTab = document.getElementById('phoneTab');
-            const emailTab = document.getElementById('emailTab');
-            const contactInput = document.getElementById('contactInput');
-            const getAppForm = document.getElementById('getAppForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const inputError = document.getElementById('inputError');
-            const successMessage = document.getElementById('successMessage');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
             
-            let selectedOption = 'phone';
-            
-            // Tab switching
-            phoneTab.addEventListener('click', function() {
-                phoneTab.classList.add('active');
-                emailTab.classList.remove('active');
-                selectedOption = 'phone';
-                contactInput.placeholder = 'Enter your phone number';
-                contactInput.value = '';
-                inputError.textContent = '';
-                contactInput.classList.remove('error');
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.style.display = 'block';
+                mobileMenuOverlay.style.display = 'block';
+                setTimeout(() => {
+                    mobileMenu.classList.add('active');
+                }, 10);
             });
             
-            emailTab.addEventListener('click', function() {
-                emailTab.classList.add('active');
-                phoneTab.classList.remove('active');
-                selectedOption = 'email';
-                contactInput.placeholder = 'Enter your email address';
-                contactInput.value = '';
-                inputError.textContent = '';
-                contactInput.classList.remove('error');
-            });
-            
-            // Validation function
-            function validateInput() {
-                const value = contactInput.value.trim();
-                if (!value) {
-                    inputError.textContent = 'This field is required';
-                    contactInput.classList.add('error');
-                    return false;
-                }
-                
-                if (selectedOption === 'email' && !/^\S+@\S+\.\S+$/.test(value)) {
-                    inputError.textContent = 'Enter a valid email address';
-                    contactInput.classList.add('error');
-                    return false;
-                }
-                
-                if (selectedOption === 'phone' && !/^[0-9+\s()-]+$/.test(value)) {
-                    inputError.textContent = 'Enter a valid phone number';
-                    contactInput.classList.add('error');
-                    return false;
-                }
-                
-                inputError.textContent = '';
-                contactInput.classList.remove('error');
-                return true;
+            function closeMenu() {
+                mobileMenu.classList.remove('active');
+                setTimeout(() => {
+                    mobileMenu.style.display = 'none';
+                    mobileMenuOverlay.style.display = 'none';
+                }, 300);
             }
             
-            // Input validation on change
-            contactInput.addEventListener('input', validateInput);
+            mobileMenuClose.addEventListener('click', closeMenu);
+            mobileMenuOverlay.addEventListener('click', closeMenu);
             
-            // Form submission
-            getAppForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                if (validateInput()) {
-                    // Simulate API call
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'Sending...';
-                    
-                    setTimeout(function() {
-                        contactInput.value = '';
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send App Link';
-                        successMessage.classList.add('visible');
-                        
-                        // Hide success message after 5 seconds
-                        setTimeout(function() {
-                            successMessage.classList.remove('visible');
-                        }, 5000);
-                    }, 1500);
+            // Form functionality
+            const phoneRadio = document.querySelectorAll('.option-radio')[0];
+            const emailRadio = document.querySelectorAll('.option-radio')[1];
+            const contactInput = document.querySelector('.phone-input');
+            
+            phoneRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    contactInput.placeholder = 'Your Phone Number';
+                }
+            });
+            
+            emailRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    contactInput.placeholder = 'Your Email Address';
                 }
             });
         });
     </script>
 </body>
-</html> 
+</html>
