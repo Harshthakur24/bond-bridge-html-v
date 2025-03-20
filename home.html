@@ -2072,7 +2072,7 @@
             <a href="about.html">About</a>
             <a href="download.html">Download</a>
             <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="mobile-download-btn">Download Now</a>
+            <a href="download.html" class="mobile-download-btn" style="display: inline-block; background-color: #7400A5; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; margin-top: 16px; transition: background-color 0.3s ease;">Download Now</a>
         </div>
     </div>
     
@@ -3177,6 +3177,108 @@ imageContainer.addEventListener('touchend', () => {
                     icon.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
                 });
             }, 50);
+        });
+    </script>
+     <script>
+        // Contact Form Validation and Submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Error elements
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const subjectError = document.getElementById('subjectError');
+            const messageError = document.getElementById('messageError');
+            
+            // Input elements
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            
+            // Validation functions
+            function validateName() {
+                if (nameInput.value.trim() === '') {
+                    nameInput.classList.add('error');
+                    nameError.textContent = 'Name is required';
+                    return false;
+                }
+                nameInput.classList.remove('error');
+                nameError.textContent = '';
+                return true;
+            }
+            
+            function validateEmail() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value)) {
+                    emailInput.classList.add('error');
+                    emailError.textContent = 'Please enter a valid email address';
+                    return false;
+                }
+                emailInput.classList.remove('error');
+                emailError.textContent = '';
+                return true;
+            }
+            
+            function validateSubject() {
+                if (subjectInput.value.trim() === '') {
+                    subjectInput.classList.add('error');
+                    subjectError.textContent = 'Subject is required';
+                    return false;
+                }
+                subjectInput.classList.remove('error');
+                subjectError.textContent = '';
+                return true;
+            }
+            
+            function validateMessage() {
+                if (messageInput.value.trim() === '') {
+                    messageInput.classList.add('error');
+                    messageError.textContent = 'Message is required';
+                    return false;
+                }
+                messageInput.classList.remove('error');
+                messageError.textContent = '';
+                return true;
+            }
+            
+            // Add input event listeners
+            nameInput.addEventListener('input', validateName);
+            emailInput.addEventListener('input', validateEmail);
+            subjectInput.addEventListener('input', validateSubject);
+            messageInput.addEventListener('input', validateMessage);
+            
+            // Form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate all fields
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+                const isSubjectValid = validateSubject();
+                const isMessageValid = validateMessage();
+                
+                if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+                    // Simulate form submission
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    
+                    // Simulate API call delay
+                    setTimeout(function() {
+                        contactForm.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                        successMessage.classList.add('visible');
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(function() {
+                            successMessage.classList.remove('visible');
+                        }, 5000);
+                    }, 1500);
+                }
+            });
         });
     </script>
 </body>
