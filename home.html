@@ -2104,7 +2104,7 @@
             <a href="download.html" class="download-btn">Download Now</a>
         </div>
         
-        <button class="mobile-menu-btna">
+        <button class="mobile-menu-btn">
             <i class="fas fa-bars"></i>
         </button>
     </header>
@@ -3294,8 +3294,52 @@ imageContainer.addEventListener('touchend', () => {
     }, 1000);
 });
 
-        
-        
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btna');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+                mobileMenuOverlay.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+            
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            mobileMenuOverlay.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Add animation for floating icons
+            const floatingIcons = document.querySelectorAll('.floating-icon');
+            
+            // Subtle animation even when not hovering
+            let counter = 0;
+            setInterval(function() {
+                counter += 0.02;
+                
+                floatingIcons.forEach((icon, index) => {
+                    const amplitude = 8; // max movement in pixels
+                    const speed = 0.5 + (index * 0.1); // different speeds for each icon
+                    
+                    // Create slight floating effect with sine/cosine
+                    const xOffset = Math.sin(counter * speed) * amplitude;
+                    const yOffset = Math.cos(counter * speed) * amplitude;
+                    
+                    // Apply subtle transform
+                    icon.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+                });
+            }, 50);
+        });
     </script> 
      
 </body>
