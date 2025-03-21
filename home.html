@@ -106,6 +106,7 @@
             position: relative;
             width: 100%;
             min-height: 100vh;
+            overflow-x: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -172,6 +173,45 @@
             .hero-text {
                 justify-self: start;
             }
+        }
+        .landing-hero,
+            .features-section,
+            .work-section,
+            .explore-section {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+
+              /* Ensure containers don't overflow */
+        .landing-hero,
+        .features-section,
+        .work-section,
+        .explore-section,
+        .why-bondbridge-section {
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        /* Adjust image scaling for mobile */
+        @media (max-width: 768px) {
+            .work-section img {
+                scale: 1 !important;
+                margin: 0 !important;
+            }
+            
+            .hero-image img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .feature-item-image img {
+                scale: 1 !important;
+            }
+        }
+        .work-section .work-content {
+            padding: 0 20px;
         }
         
         .hero-text h1 {
@@ -2012,10 +2052,19 @@
     .why-bondbridge-stat-card-top {
         top: 15%;
         right: 5%;
+        transition: transform 0.4s ease;
+        
     }
     .why-bondbridge-stat-card-bottom {
         bottom: 15%;
         left: 5%;
+        transition: transform 0.4s ease;
+    }
+    .why-bondbridge-inner-circle:hover ~ .why-bondbridge-stat-card-top {
+        transform: translateY(-20px) translateX(20px);
+    }
+    .why-bondbridge-inner-circle:hover ~ .why-bondbridge-stat-card-bottom {
+        transform: translateY(20px) translateX(-20px); 
     }
     .why-bondbridge-stat-icon {
         width: 40px;
@@ -2060,13 +2109,12 @@
     </header>
     
     <!-- Mobile Menu -->
-    <div class="mobile-menu-overlay"></div>
-    <div class="mobile-menu">
-        <button class="mobile-menu-close">
+    <div class="mobile-menu" style="position: fixed; top: 0; right: -100%; width: 80%; max-width: 300px; height: 100vh; background: white; z-index: 1000; transition: right 0.3s ease; box-shadow: -2px 0 5px rgba(0,0,0,0.1);">
+        <button class="mobile-menu-close" style="position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 24px; cursor: pointer;">
             <i class="fas fa-times"></i>
         </button>
         
-        <div class="mobile-nav-links">
+        <div class="mobile-nav-links" style="padding: 60px 20px 20px; display: flex; flex-direction: column; gap: 20px;">
             <a href="home.html">Home</a>
             <a href="support.html">Support</a>
             <a href="about.html">About</a>
@@ -2075,6 +2123,9 @@
             <a href="download.html" class="mobile-download-btn" style="display: inline-block; background-color: #7400A5; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; margin-top: 16px; transition: background-color 0.3s ease;">Download Now</a>
         </div>
     </div>
+    <div class="mobile-menu-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; display: none;"></div>
+
+
     
     <!-- Landing Page Content -->
     <main>
@@ -2130,7 +2181,7 @@
                     flex: 1;
                     min-width: 300px;
                     position: relative;
-                    height: 600px;
+                    height: 560px;
                 }
                 .hero-bridge-dashed-circle {
                     position: absolute;
@@ -2250,6 +2301,65 @@
                 .hero-bridge-left:hover .hero-bridge-icon-magenta {
                     transform: translateY(80px);
                 }
+
+                @media (max-width: 768px) {
+                    .hero-bridge-dashed-circle {
+                    position: absolute;
+                    width: 90%;
+                    height: 70%;
+                    border: 2px dashed rgba(209, 213, 219, 0.6);
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                }
+                .hero-bridge-purple-circle {
+                    position: absolute;
+                    width: 75%;
+                    height: 65%;
+                    background-color: #9061F9;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: transform 0.3s ease;
+                }
+                
+                .hero-bridge-inner-circle {
+                    position: absolute;
+                    width: 60%;
+                    height: 55%;
+                    background-color: #f3e8ff;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    overflow: hidden;
+                    transition: transform 0.3s ease;
+                }
+                    .hero-bridge-left {
+                        height: 350px; /* Reduced height for mobile */
+                        scale: 0.8; /* Smaller scale for mobile */
+                    }
+                    .hero-bridge-dashed-circle,
+                    .hero-bridge-purple-circle,
+                    .hero-bridge-inner-circle {
+                        width: 80%; /* Adjusted width for mobile */
+                        height: 80%; /* Adjusted height for mobile */
+                        border: 20px solid #5D3B9C; /* Added purple boundary for mobile */
+                    }
+                    .hero-bridge-icon {
+                        width: 40px; /* Smaller icon size for mobile */
+                        height: 40px; /* Smaller icon size for mobile */
+                    }
+                    .hero-bridge-heading {
+                        font-size: 36px; /* Smaller heading for mobile */
+                    }
+                    .hero-bridge-description {
+                        font-size: 16px; /* Smaller description for mobile */
+                    }
+                }
             </style>
             <div class="hero-bridge-container" style="scale: 0.97;">
                 <!-- Left: Circle with Image and Icons -->
@@ -2316,15 +2426,12 @@
                         BondBridge allows users to connect openly or anonymously, directly or in groups, without social or peer pressure. Build trust, share freely. 
                   </p>
                     
-                    <a href="download.html" class="cta-button">
-                        <span>Join Now</span>
-                        <span class="arrow-container" style="scale: 0.7;">
-                            <svg class="arrow-icon" style="scale: 4;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
-                            </svg>
-                        </span>
-                    </a>
+                  <a href="download.html" class="get-started-btn">
+                    <span>Join Now</span>
+                    <span class="arrow-icon" style="scale: 1.9; margin-top: 2px;">
+                        <i class="fas fa-arrow-right fa-xs" style="scale: 0.6;"></i>
+                    </span>
+                </a>
                 </div>
             </div>
         </section>
@@ -2332,7 +2439,7 @@
         <!-- Features Section -->
         <section class="features-section">
             <div class="section-heading">
-                <span class="section-badge"><strong>PRODUCT</strong></span>
+                <span class="section-badge" style="margin-bottom: 30px;"><strong>PRODUCT</strong></span>
                 <div style="position: relative; margin-bottom: 10px;">
                     <h2 class="section-title" style="position: relative; z-index: 1;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;">Unique </span><span class="highlight" style="position: relative; display: inline-block;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;"> Platform </span><span style="position: absolute; top: -14px; right: -105px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2; border: 1px solid rgba(255, 255, 255, 0.3); white-space: nowrap;">
                             <strong>BondBridge</strong>
@@ -2352,9 +2459,11 @@
                             <div style="position: absolute; top: -15px; right: 30px; margin-right: 52px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2;">
                             <strong>BondSecure </strong></div>
                         </div>
-                        <p class="feature-item-description" style="font-size: 1rem; color: #000000;">
+                        <p class="feature-item-description" style="font-size: 1rem; color: #000000; text-align: justify; width: 80%;">
                             Express thoughts and ideas freely, without fears of judgments. Identities remain protected. Complete anonymity guaranteed.
                       </p>
+                      
+
                     </div>
                     <div class="feature-item-image">
                         <img src="assets/screenshots/anonymity.png" alt="Anonymity feature" style="scale: 0.9;">
@@ -2369,7 +2478,7 @@
                             <div style="position: absolute; top: -16px; margin-right: 37px; right: 106px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2;">
                             <strong>BondGroup</strong> </div>
                         </div>
-                        <p class="feature-item-description" style="font-size: 1rem; color: #000000;">
+                        <p class="feature-item-description" style="font-size: 1rem; color: #000000; text-align: justify; width: 80%;">
                             Engage like-minded individuals and/or join communities that share common preferences, interests, passions or aspirations. 
                       </p>
                     </div>
@@ -2386,7 +2495,7 @@
                             <div style="position: absolute; top: -18px; right: 103px; margin-right: 4px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2;">
                             <strong>BondOnline</strong> </div>
                       </div>
-                        <p class="feature-item-description" style="font-size: 1rem; color: #000000;">
+                      <p class="feature-item-description" style="font-size: 1rem; color: #000000; text-align: justify; width: 80%;">
                             Download the mobile app or login online for the same secure, unique, interactive user experience at www.bondbridge.online. 
                       </p>
                     </div>
@@ -2403,12 +2512,12 @@
         <section class="work-section">
             <div class="work-content">
                 <div class="section-heading">
-                    <span class="section-badge">FEATURE</span>
+                    <span class="section-badge" style="margin-bottom: 30px; font-weight: bold;">FEATURE</span>
                     <h2 class="section-title" style="position: relative; font-size: 3rem;">Intuitive  <span class="highlight" style="position: relative; display: inline-block;">Chatbot   
                         <span style="position: absolute; top: -14px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2; border: 1px solid rgba(255, 255, 255, 0.3); white-space: nowrap; left: 192px;">
                         <strong>BondChat</strong> </span>
                     </span></h2>
-                    <p class="section-description" style="color: black; font-weight: 400;">
+                    <p class="section-description" style="color: black; font-weight: 400; text-align: justify;">
                         <strong>BondChat</strong> uses a specifically designed AI-Chatbot to communicate with users, suggesting potential connections based on common interests to help alleviate social awkwardness when making friends.</p>
                 </div>
                 
@@ -2578,6 +2687,7 @@
                     flex-shrink: 0;
                     transition: transform 0.3s ease, background-color 0.3s ease;
                 }
+                
                 .why-bondbridge-feature-icon:hover {
                     transform: translateY(-5px);
                     background-color: #f3e8ff;
@@ -2693,6 +2803,37 @@
                     font-size: 14px;
                     color: #6b7280;
                 }
+                @media (max-width: 768px) {
+                    .why-bondbridge-section {
+                        padding: 40px 0;
+                        background-color: #f9fafb;
+                        overflow: hidden;
+                        margin-top: 50px;
+                        position: relative;
+                    }
+                    .why-bondbridge-left {
+                        scale: 0.7; 
+                        height: 700px; 
+                        
+                    }
+                    .why-bondbridge-right {
+                        height: 350px;
+                    }
+                    .why-bondbridge-stat-card {
+                        padding: 8px 12px;
+                        transform: scale(0.9);
+                    }
+                    .why-bondbridge-stat-value {
+                        font-size: 18px;
+                    }
+                    .why-bondbridge-stat-label {
+                        font-size: 12px;
+                    }
+                    .why-bondbridge-image {
+                        margin-top: 20px;
+                        transform: translateY(-20px) scale(0.9);
+                    }
+                }
             </style>
             <div class="why-bondbridge-container">
                 <!-- Left Content -->
@@ -2749,7 +2890,7 @@
             </div>
             
                 <!-- Right Content - Circle with Image and Stats -->
-                <div class="why-bondbridge-right">
+                <div class="why-bondbridge-right" style="scale: 0.9;">
                     <!-- Dashed Circle -->
                     <div class="why-bondbridge-dashed-circle"></div>
                     
@@ -2796,8 +2937,8 @@
                 <!-- Column 1 -->
                 <div style="flex: 1; min-width: 250px; padding: 20px;">
                     <div style="text-align: center; margin-bottom: 20px;">
-                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                            <i class="fas fa-server" style="font-size: 28px; color: white;"></i>
+                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s ease;">
+                            <i class="fas fa-server" style="font-size: 28px; color: white; transition: transform 0.3s ease;" onmouseover="this.parentElement.style.transform='rotate(180deg)'" onmouseout="this.parentElement.style.transform='rotate(0deg)'"></i>
                         </div>
                     </div>
                     <div style="position: relative; margin-bottom: 20px;">
@@ -2813,8 +2954,8 @@
                 <!-- Column 2 -->
                 <div style="flex: 1; min-width: 250px; padding: 20px;">
                     <div style="text-align: center; margin-bottom: 20px;">
-                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                            <i class="fas fa-eye-slash" style="font-size: 28px; color: white;"></i>
+                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s ease;">
+                            <i class="fas fa-eye-slash" style="font-size: 28px; color: white; transition: transform 0.3s ease;" onmouseover="this.parentElement.style.transform='rotate(180deg)'" onmouseout="this.parentElement.style.transform='rotate(0deg)'"></i>
                         </div>
                     </div>
                     <div style="position: relative; margin-bottom: 20px;">
@@ -2828,8 +2969,8 @@
                 <!-- Column 3 -->
                 <div style="flex: 1; min-width: 250px; padding: 20px;">
                     <div style="text-align: center; margin-bottom: 20px;">
-                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                            <i class="fas fa-lock" style="font-size: 28px; color: white;"></i>
+                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s ease;">
+                            <i class="fas fa-lock" style="font-size: 28px; color: white; transition: transform 0.3s ease;" onmouseover="this.parentElement.style.transform='rotate(180deg)'" onmouseout="this.parentElement.style.transform='rotate(0deg)'"></i>
                         </div>
                     </div>
                     <div style="position: relative; margin-bottom: 20px;">
@@ -2844,8 +2985,8 @@
                 <!-- Column 4 -->
                 <div style="flex: 1; min-width: 250px; padding: 20px;">
                     <div style="text-align: center; margin-bottom: 20px;">
-                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                            <i class="fas fa-users" style="font-size: 28px; color: white;"></i>
+                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s ease;">
+                            <i class="fas fa-users" style="font-size: 28px; color: white; transition: transform 0.3s ease;" onmouseover="this.parentElement.style.transform='rotate(180deg)'" onmouseout="this.parentElement.style.transform='rotate(0deg)'"></i>
                         </div>
                     </div>
                     <div style="position: relative; margin-bottom: 20px;">
@@ -2919,15 +3060,12 @@
                     <p style="font-size: 17px; color: black; margin-bottom: 40px; line-height: 1.6; max-width: 600px; text-align: justify;">
                         Join the hundreds of active users live, on BondBridge, in a safe, secure, interactivee environment. Connect one on one, directly, anonymously or in one of the various interest groups. Download the app or sign in today! BondBridge - a new way to connect online! (Mobile or Browser Versions).</p>
                     
-                    <a href="download.html" style="display: inline-flex; align-items: center; gap: 12px; background-color: #111827; color: white; padding: 14px 32px; border-radius: 9999px; font-weight: 600; text-decoration: none; font-size: 16px;">
-                        Join Now
-                        <div style="width: 24px; height: 24px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
-                            </svg>
-                        </div>
-                    </a>
+                        <a href="download.html" class="get-started-btn">
+                            <span>Join Now</span>
+                            <span class="arrow-icon" style="scale: 1.9; margin-top: 2px;">
+                                <i class="fas fa-arrow-right fa-xs" style="scale: 0.6;"></i>
+                            </span>
+                        </a>
                 </div>
                 
                 <!-- Right Content - Stats Cards -->
@@ -3099,6 +3237,9 @@
             Copyright © 2025 All Rights Reserved
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
+    
     
     <script>
         // JavaScript for interactive features
@@ -3180,108 +3321,7 @@ imageContainer.addEventListener('touchend', () => {
                 });
             }, 50);
         });
-    </script>
-     <script>
-        // Contact Form Validation and Submission
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const successMessage = document.getElementById('successMessage');
-            
-            // Error elements
-            const nameError = document.getElementById('nameError');
-            const emailError = document.getElementById('emailError');
-            const subjectError = document.getElementById('subjectError');
-            const messageError = document.getElementById('messageError');
-            
-            // Input elements
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const subjectInput = document.getElementById('subject');
-            const messageInput = document.getElementById('message');
-            
-            // Validation functions
-            function validateName() {
-                if (nameInput.value.trim() === '') {
-                    nameInput.classList.add('error');
-                    nameError.textContent = 'Name is required';
-                    return false;
-                }
-                nameInput.classList.remove('error');
-                nameError.textContent = '';
-                return true;
-            }
-            
-            function validateEmail() {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(emailInput.value)) {
-                    emailInput.classList.add('error');
-                    emailError.textContent = 'Please enter a valid email address';
-                    return false;
-                }
-                emailInput.classList.remove('error');
-                emailError.textContent = '';
-                return true;
-            }
-            
-            function validateSubject() {
-                if (subjectInput.value.trim() === '') {
-                    subjectInput.classList.add('error');
-                    subjectError.textContent = 'Subject is required';
-                    return false;
-                }
-                subjectInput.classList.remove('error');
-                subjectError.textContent = '';
-                return true;
-            }
-            
-            function validateMessage() {
-                if (messageInput.value.trim() === '') {
-                    messageInput.classList.add('error');
-                    messageError.textContent = 'Message is required';
-                    return false;
-                }
-                messageInput.classList.remove('error');
-                messageError.textContent = '';
-                return true;
-            }
-            
-            // Add input event listeners
-            nameInput.addEventListener('input', validateName);
-            emailInput.addEventListener('input', validateEmail);
-            subjectInput.addEventListener('input', validateSubject);
-            messageInput.addEventListener('input', validateMessage);
-            
-            // Form submission
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Validate all fields
-                const isNameValid = validateName();
-                const isEmailValid = validateEmail();
-                const isSubjectValid = validateSubject();
-                const isMessageValid = validateMessage();
-                
-                if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-                    // Simulate form submission
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'Sending...';
-                    
-                    // Simulate API call delay
-                    setTimeout(function() {
-                        contactForm.reset();
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send Message';
-                        successMessage.classList.add('visible');
-                        
-                        // Hide success message after 5 seconds
-                        setTimeout(function() {
-                            successMessage.classList.remove('visible');
-                        }, 5000);
-                    }, 1500);
-                }
-            });
-        });
-    </script>
+    </script> 
+     
 </body>
 </html>
