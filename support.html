@@ -1,685 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BondBridge - Support</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-        /* Support Page Specific Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f9fafb;
-            color: #1f2937;
-            line-height: 1.5;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        /* Header Styles - Updated to match Image 1 */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 48px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo h3 {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .support-page {
-            padding-top: 96px;
-            padding-bottom: 64px;
-        }
-        
-        .support-heading {
-            text-align: center;
-            margin-bottom: 64px;
-        }
-        
-        .support-heading h1 {
-            font-size: 36px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 16px;
-        }
-        
-        .support-heading p {
-            font-size: 18px;
-            color: #6b7280;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .feature-item {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            gap: 48px;
-            max-width: 1200px;
-            margin: 0 auto 96px;
-            text-align: center;
-            padding: 0 24px;
-        }
-        
-        .feature-image {
-            width: 100%;
-            max-width: 400px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            border-radius: 16px;
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-        }
-        
-        .feature-image:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .feature-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(124, 58, 237, 0.05), rgba(219, 39, 119, 0.05));
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: 1;
-        }
-        
-        .feature-image:hover::before {
-            opacity: 1;
-        }
-        
-        .feature-image img {
-            width: 90%;
-            height: auto;
-            object-fit: contain;
-            transition: transform 0.5s ease;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .feature-image:hover img {
-            transform: scale(1.02);
-        }
-        
-        .feature-text {
-            width: 100%;
-        }
-        
-        .feature-title {
-            font-size: 30px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 16px;
-        }
-        
-        .feature-title .highlight {
-            background-color: rgba(115, 102, 254, 0.25);
-            padding: 2px 8px;
-            border-radius: 8px;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        
-        .feature-description {
-            color: #4b5563;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        
-        .badge {
-            display: inline-block;
-            padding: 4px 12px;
-            background-color: #e0e7ff;
-            color: #4f46e5;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 9999px;
-            margin-bottom: 8px;
-        }
-        
-        .faq-section {
-            max-width: 800px;
-            margin: 64px auto;
-            padding: 0 24px;
-        }
-        
-        .faq-heading {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        
-        .faq-heading h2 {
-            font-size: 30px;
-            font-weight: 700;
-            color: #333;
-        }
-        
-        .faq-item {
-            margin-bottom: 24px;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .grad, .gradient-brand {
-            background: linear-gradient(to top right, #3b01b7 , #5e00ff, #ba19eb, #dd0cc8);
-            font-family: 'League Spartan';
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .faq-question {
-            padding: 16px;
-            background-color: #f9fafb;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            padding: 16px;
-            border-top: 1px solid #e5e7eb;
-            display: none;
-        }
-        
-        .faq-answer.active {
-            display: block;
-        }
-        
-        @media (min-width: 768px) {
-            .feature-item {
-                flex-direction: row;
-                text-align: left;
-            }
-            
-            .feature-item.reverse {
-                flex-direction: row-reverse;
-            }
-        }
-
-         /* New Footer Styles - Based on Image 2 */
-         .footer-new {
-            background-color: #0f172a;
-            color: #f9fafb;
-            padding: 48px 32px 24px;
-        }
-        
-        .footer-new-container {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 48px;
-        }
-        
-        .footer-left {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .footer-right {
-            flex: 2;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 32px;
-        }
-        
-        .footer-column {
-            min-width: 180px;
-        }
-        
-        .footer-logo-new {
-            display: flex;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-        
-        .footer-logo-new img {
-            width: 40px;
-            height: 40px;
-            margin-right: 12px;
-            transition: transform 0.3s ease;
-        }
-        
-        .footer-logo-new:hover img {
-            transform: translateY(-5px);
-        }
-        
-        .footer-logo-text {
-            font-size: 20px;
-            font-weight: 600;
-        }
-        
-        .footer-location {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-location i {
-            margin-right: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-email {
-            display: flex;
-            align-items: center;
-            color: #94a3b8;
-        }
-        
-        .footer-email i {
-            margin-right: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-divider {
-            width: 100%;
-            height: 1px;
-            background-color: #334155;
-            margin: 32px 0;
-        }
-        
-        .footer-column h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #f9fafb;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-column ul li a {
-            color: #94a3b8;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: #7c3aed;
-        }
-        
-        .footer-subscribe {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .footer-subscribe h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        
-        .footer-subscribe p {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-        
-        .footer-subscribe-form {
-            display: flex;
-            margin-bottom: 24px;
-        }
-        
-        .footer-subscribe-form input {
-            flex: 1;
-            padding: 10px 16px;
-            border-radius: 8px;
-            border: 1px solid #334155;
-            background-color: transparent;
-            color: #f9fafb;
-            font-size: 14px;
-        }
-        
-        .footer-subscribe-button {
-            background-color: #f9fafb;
-            color: #0f172a;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 16px;
-            font-weight: 600;
-            font-size: 14px;
-            margin-left: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        
-        .footer-subscribe-button:hover {
-            background-color: #f0f0f0;
-            transform: translateY(-3px);
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 12px;
-        }
-        
-        .footer-social-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #7c3aed;
-            border-radius: 50%;
-            color: #f9fafb;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        
-        .footer-social-icon:hover {
-            background-color: #8344f0;
-            transform: translateY(-5px);
-        }
-        
-        .footer-copyright {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 14px;
-            margin-top: 32px;
-        }
-        
-        /* Logo hover animation */
-        .logo img {
-            transition: transform 0.3s ease;
-        }
-        
-        .logo:hover img {
-            transform: translateY(-5px);
-        }
-        
-        /* Download button hover animation */
-        .download-btna, .mobile-download-btna {
-            transition: transform 0.3s ease, background-color 0.3s ease !important;
-        }
-        
-        .download-btna:hover, .mobile-download-btna:hover {
-            transform: translateY(-3px);
-            background-color: #6d28d9 !important;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/support.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <a href="home.html" class="logo" style="gap: 7px;">
-            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="25" height="25" style="margin-top: -7px;">
-            <h3 class="grad" style="font-weight: bolder; margin-top: 3px;">BondBridge</h3>
-        </a>
-        
-        <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="download-btna" style="background-color: #7c3aed; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: background-color 0.3s ease;">Download Now</a>
-        </div>
-        
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+      <a href="home.html" class="logo" style="gap: 7px">
+        <img
+          src="assets/icon-logo.png"
+          alt="Bond Bridge Logo"
+          width="25"
+          height="25"
+          style="margin-top: -7px"
+        />
+        <h3 class="grad" style="font-weight: bolder; margin-top: 3px">
+          BondBridge
+        </h3>
+      </a>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="download.html" class="download-btna">Download Now</a>
+      </div>
+
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </header>
-    
+
     <!-- Mobile Menu -->
     <div class="mobile-menu-overlay"></div>
     <div class="mobile-menu">
-        <button class="mobile-menu-close">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="mobile-nav-links">
-            <a href="home.html">Home</a>
-            <a href="support.html">Support</a>
-            <a href="about.html">About</a>
-            <a href="download.html">Download</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="mobile-download-btna" style="display: inline-block; background-color: #7c3aed; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; margin-top: 16px; transition: background-color 0.3s ease;">Download Now</a>
-        </div>
+      <button class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="mobile-nav-links">
+        <a href="home.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="about.html">About</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="download.html" class="mobile-download-btna">Download Now</a>
+      </div>
     </div>
-    
+
     <!-- Support Page Content -->
     <main class="support-page">
-        <div class="support-heading">
-            <h1 style="font-weight: bolder; color: black;">How to Use <strong>BondBridge</strong></h1>
-            <p style="color: black;">Learn how to make the most of <strong>BondBridge</strong> to connect with communities and make new friends</p>
+      <div class="support-heading">
+        <h1 style="font-weight: bolder; color: black">
+          How to Use <strong>BondBridge</strong>
+        </h1>
+        <p style="color: black">
+          Learn how to make the most of <strong>BondBridge</strong> to connect
+          with communities and make new friends
+        </p>
+      </div>
+
+      <!-- Feature Items -->
+      <div class="feature-item">
+        <div class="feature-image">
+          <img
+            src="assets/screenshots/mobile-communities.png"
+            alt="Communities"
+          />
         </div>
-        
-        <!-- Feature Items -->
-        <div class="feature-item">
-            <div class="feature-image">
-                <img src="assets/screenshots/mobile-communities.png" alt="Communities">
+
+        <div class="feature-text">
+          <div class="badge"><strong>Step 1</strong></div>
+          <div style="position: relative; margin-bottom: 10px">
+            <h2
+              class="feature-title"
+              style="
+                font-size: 36px;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 0;
+              "
+            >
+              Explore Different <span class="highlight">Communities</span>
+            </h2>
+            <div
+              style="
+                position: absolute;
+                top: -15px;
+                right: -13px;
+                margin-right: 84px;
+                background-color: #7c3aed;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 600;
+                z-index: 2;
+              "
+            >
+              BondChat
             </div>
-            
-            <div class="feature-text">
-                <div class="badge"><strong>Step 1</strong></div>
-                <div style="position: relative; margin-bottom: 10px;">
-                    <h2 class="feature-title" style="font-size: 36px; position: relative; z-index: 1; margin-bottom: 0;">Explore Different <span class="highlight">Communities</span></h2>
-                    <div style="position: absolute; top: -15px; right: -13px; margin-right: 84px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2;">
-                        BondChat
-                    </div>
-                </div>
-                <p class="feature-description" style="color: black;">Browse through various communities based on your interests, location, and preferences. Search groups that you prefer or use BondChat to suggest groups based on your profile. </p>
-            </div>
+          </div>
+          <p class="feature-description" style="color: black">
+            Browse through various communities based on your interests,
+            location, and preferences. Search groups that you prefer or use
+            BondChat to suggest groups based on your profile.
+          </p>
         </div>
-        
-        <div class="feature-item reverse">
-            <div class="feature-image">
-                <img src="assets/screenshots/anonymity.png" alt="Chat">
-            </div>
-            
-            <div class="feature-text">
-                <div class="badge"><strong>Step 2</strong></div>
-                <div style="position: relative; margin-bottom: 10px;">
-                    <h2 class="feature-title" style="font-size: 36px; position: relative; z-index: 1; margin-bottom: 0;">Join and <span class="highlight">Interact</span></h2>
-                    <div style="position: absolute; top: -15px; right: -6px; margin-right: 319px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2;">
-                        BondChat
-                    </div>
-                </div>
-                <p class="feature-description" style="color: black;">Engage BondChat to communicate with as a friend, mentor or guide. Let BondChat suggest or even connect you to potential friends based on your profile or interests.</p>
-            </div>
+      </div>
+
+      <div class="feature-item reverse">
+        <div class="feature-image">
+          <img src="assets/screenshots/anonymity.png" alt="Chat" />
         </div>
-        
-        <div class="feature-item">
-            <div class="feature-image">
-                <img src="assets/screenshots/mobile-communities.png" alt="Events">
+
+        <div class="feature-text">
+          <div class="badge"><strong>Step 2</strong></div>
+          <div style="position: relative; margin-bottom: 10px">
+            <h2
+              class="feature-title"
+              style="
+                font-size: 36px;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 0;
+              "
+            >
+              Join and <span class="highlight">Interact</span>
+            </h2>
+            <div
+              style="
+                position: absolute;
+                top: -15px;
+                right: -6px;
+                margin-right: 319px;
+                background-color: #7c3aed;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 600;
+                z-index: 2;
+              "
+            >
+              BondChat
             </div>
-            
-            <div class="feature-text">
-                <div class="badge"><strong>Step 3</strong></div>
-                <div style="position: relative; margin-bottom: 10px;">
-                    <h2 class="feature-title" style="font-size: 36px; position: relative; z-index: 1; margin-bottom: 0;">Attend <span class="highlight">BondEvents</span></h2>
-                    <div style="position: absolute; top: -15px; right: -95px; margin-right: 368px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2;">
-                        BondChat
-                    </div>
-                </div>
-                <p class="feature-description" style="color: black;">Discover and attend events organized by your communities. Meet new members, make new friends, participate in activities, and build stronger connections. www.bondbridge.ai</p>
-            </div>
+          </div>
+          <p class="feature-description" style="color: black">
+            Engage BondChat to communicate with as a friend, mentor or guide.
+            Let BondChat suggest or even connect you to potential friends based
+            on your profile or interests.
+          </p>
         </div>
-        
-        <!-- FAQ Section -->
-        <div class="faq-section">
-            <div class="faq-heading">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    How do I create a new account?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    To create a new account, download the BondBridge app from your app store, open it, and tap on "Sign Up". Follow the on-screen instructions to complete your profile setup.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Can I create my own community?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Yes, you can create your own community. Go to the Communities tab, tap on the "+" button, and follow the steps to set up your community, including name, description, and category.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    How do I report inappropriate content?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    To report inappropriate content, tap the three dots (...) next to the content, select "Report", choose the reason for reporting, and submit. Our moderation team will review it promptly.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Is BondBridge available on all platforms?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    BondBridge is currently available on iOS and Android mobile platforms. We're working on a web version that will be available soon.
-                </div>
-            </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-image">
+          <img src="assets/screenshots/mobile-communities.png" alt="Events" />
         </div>
+
+        <div class="feature-text">
+          <div class="badge"><strong>Step 3</strong></div>
+          <div style="position: relative; margin-bottom: 10px">
+            <h2
+              class="feature-title"
+              style="
+                font-size: 36px;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 0;
+              "
+            >
+              Attend <span class="highlight">BondEvents</span>
+            </h2>
+            <div
+              style="
+                position: absolute;
+                top: -15px;
+                right: -95px;
+                margin-right: 368px;
+                background-color: #7c3aed;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 600;
+                z-index: 2;
+              "
+            >
+              BondChat
+            </div>
+          </div>
+          <p class="feature-description" style="color: black">
+            Discover and attend events organized by your communities. Meet new
+            members, make new friends, participate in activities, and build
+            stronger connections. www.bondbridge.ai
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <div class="faq-heading">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How do I create a new account?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            To create a new account, download the BondBridge app from your app
+            store, open it, and tap on "Sign Up". Follow the on-screen
+            instructions to complete your profile setup.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I create my own community?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, you can create your own community. Go to the Communities tab,
+            tap on the "+" button, and follow the steps to set up your
+            community, including name, description, and category.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How do I report inappropriate content?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            To report inappropriate content, tap the three dots (...) next to
+            the content, select "Report", choose the reason for reporting, and
+            submit. Our moderation team will review it promptly.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Is BondBridge available on all platforms?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            BondBridge is currently available on iOS and Android mobile
+            platforms. We're working on a web version that will be available
+            soon.
+          </div>
+        </div>
+      </div>
     </main>
-    
+
     <!-- Footer -->
     <footer class="footer-new">
-        <div class="footer-new-container">
-            <div class="footer-left">
-                <div class="footer-logo-new">
-                    <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15" style="scale: 0.7;">
-                    <span class="footer-logo-text grad" style="font-weight: bolder; margin-top: 5px;">BondBridge</span>
-                </div>
-                
-                <div class="footer-location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Chicago, IL USA</span>
-                </div>
-                
-                <div class="footer-email">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@bondbridge.ai</span>
-                </div>
-            </div>
-            
-            <div class="footer-right">
-                <div class="footer-column">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="support.html">Support</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Other</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-subscribe">
-                    <h3>Stay Updated</h3>
-                    <p>Get the latest news & updates</p>
-                    
-                    <div class="footer-subscribe-form">
-                        <input type="email" placeholder="Your Email Address">
-                        <button class="footer-subscribe-button">Subscribe</button>
-                    </div>
-                    
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div class="footer-new-container">
+        <div class="footer-left">
+          <div class="footer-logo-new">
+            <img
+              src="assets/icon-logo.png"
+              alt="Bond Bridge Logo"
+              width="10"
+              height="15"
+              style="scale: 0.7"
+            />
+            <span
+              class="footer-logo-text grad"
+              style="font-weight: bolder; margin-top: 5px"
+              >BondBridge</span
+            >
+          </div>
+
+          <div class="footer-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Chicago, IL USA</span>
+          </div>
+
+          <div class="footer-email">
+            <i class="fas fa-envelope"></i>
+            <span>info@bondbridge.ai</span>
+          </div>
         </div>
-        
-        <div class="footer-divider"></div>
-        
-        <div class="footer-copyright">
-            Copyright © 2025 All rights reserved
+
+        <div class="footer-right">
+          <div class="footer-column">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Other</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-subscribe">
+            <h3>Stay Updated</h3>
+            <p>Get the latest news & updates</p>
+
+            <div class="footer-subscribe-form">
+              <input type="email" placeholder="Your Email Address" />
+              <button class="footer-subscribe-button">Subscribe</button>
+            </div>
+
+            <div class="footer-social">
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-copyright">Copyright © 2025 All rights reserved</div>
     </footer>
-    
+
     <script src="js/main.js"></script>
     <script>
-        // FAQ Accordion Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
-                    const answer = this.nextElementSibling;
-                    const icon = this.querySelector('i');
-                    
-                    // Toggle answer visibility
-                    answer.classList.toggle('active');
-                    
-                    // Toggle icon
-                    if (answer.classList.contains('active')) {
-                        icon.classList.remove('fa-chevron-down');
-                        icon.classList.add('fa-chevron-up');
-                    } else {
-                        icon.classList.remove('fa-chevron-up');
-                        icon.classList.add('fa-chevron-down');
-                    }
-                });
-            });
+      // FAQ Accordion Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+            const icon = this.querySelector("i");
+
+            // Toggle answer visibility
+            answer.classList.toggle("active");
+
+            // Toggle icon
+            if (answer.classList.contains("active")) {
+              icon.classList.remove("fa-chevron-down");
+              icon.classList.add("fa-chevron-up");
+            } else {
+              icon.classList.remove("fa-chevron-up");
+              icon.classList.add("fa-chevron-down");
+            }
+          });
         });
+      });
     </script>
-</body>
-</html> 
+  </body>
+</html>

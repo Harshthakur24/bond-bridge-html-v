@@ -1,631 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BondBridge - Contact Us</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-         /* New Footer Styles - Based on Image 2 */
-         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f9fafb;
-            color: #1f2937;
-            line-height: 1.5;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        /* Header Styles - Updated to match Image 1 */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 48px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo h3 {
-            font-size: 24px;
-            font-weight: 600;
-        }
-         .footer-new {
-            background-color: #0f172a;
-            color: #f9fafb;
-            padding: 48px 32px 24px;
-        }
-        
-        .footer-new-container {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 48px;
-        }
-        
-        .footer-left {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .footer-right {
-            flex: 2;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 32px;
-        }
-        
-        .footer-column {
-            min-width: 180px;
-        }
-        
-        .footer-logo-new {
-            display: flex;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-        
-        .footer-logo-new img {
-            width: 40px;
-            height: 40px;
-            margin-right: 12px;
-        }
-        
-        .footer-logo-text {
-            font-size: 20px;
-            font-weight: 600;
-        }
-        
-        .footer-location {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-location i {
-            margin-right: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-email {
-            display: flex;
-            align-items: center;
-            color: #94a3b8;
-        }
-        
-        .footer-email i {
-            margin-right: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-divider {
-            width: 100%;
-            height: 1px;
-            background-color: #334155;
-            margin: 32px 0;
-        }
-        
-        .footer-column h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #f9fafb;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-column ul li a {
-            color: #94a3b8;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: #7c3aed;
-        }
-        
-        .footer-subscribe {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .footer-subscribe h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        
-        .footer-subscribe p {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-        
-        .footer-subscribe-form {
-            display: flex;
-            margin-bottom: 24px;
-        }
-        
-        .footer-subscribe-form input {
-            flex: 1;
-            padding: 10px 16px;
-            border-radius: 8px;
-            border: 1px solid #334155;
-            background-color: transparent;
-            color: #f9fafb;
-            font-size: 14px;
-        }
-        
-        .footer-subscribe-button {
-            background-color: #f9fafb;
-            color: #0f172a;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 16px;
-            font-weight: 600;
-            font-size: 14px;
-            margin-left: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        
-        .footer-subscribe-button:hover {
-            background-color: #e2e8f0;
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 12px;
-        }
-        
-        .footer-social-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #7c3aed;
-            border-radius: 50%;
-            color: #f9fafb;
-            transition: background-color 0.3s ease;
-        }
-        
-        .footer-social-icon:hover {
-            background-color: #6d28d9;
-        }
-        
-        .footer-copyright {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 14px;
-            margin-top: 32px;
-        }
-        /* Contact Page Specific Styles */
-        .contact-page {
-            padding-top: 96px;
-            padding-bottom: 96px;
-        }
-        
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        .contact-heading {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-        
-        .contact-heading h1 {
-            font-size: 36px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 16px;
-        }
-        
-        .contact-heading p {
-            font-size: 18px;
-            color: #6b7280;
-        }
-        
-        .contact-form {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 32px;
-        }
-        
-        .form-group {
-            position: relative;
-            margin-bottom: 24px;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 16px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            outline: none;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        
-        .form-control:focus {
-            border-color: #00BCD4;
-            box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.2);
-        }
-        
-        .form-control.error {
-            border-color: #ef4444;
-        }
-        
-        .form-label {
-            position: absolute;
-            left: 16px;
-            top: 16px;
-            color: #6b7280;
-            transition: transform 0.3s, font-size 0.3s, color 0.3s;
-            pointer-events: none;
-        }
-        
-        .form-control:focus + .form-label,
-        .form-control:not(:placeholder-shown) + .form-label {
-            transform: translateY(-24px);
-            font-size: 12px;
-            color: #00BCD4;
-        }
-        
-        .form-control.error:focus + .form-label,
-        .form-control.error:not(:placeholder-shown) + .form-label {
-            color: #ef4444;
-        }
-        
-        .error-message {
-            font-size: 12px;
-            color: #ef4444;
-            margin-top: 4px;
-        }
-        
-        .contact-btn {
-            width: 100%;
-            padding: 16px;
-            background: #7400A5;
-            color: white;
-            font-weight: 700;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s, opacity 0.3s;
-        }
-        .grad, .gradient-brand {
-            background: linear-gradient(to top right, #3b01b7 , #5e00ff, #ba19eb, #dd0cc8);
-            font-family: 'League Spartan';
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .contact-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .contact-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
-        .download-btna {
-            background-color: #7c3aed !important;
-            color: white !important;
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        
-        .download-btna:hover {
-            background-color: #641ae4 !important;
-        }
-        
-        
-        .success-message {
-            text-align: center;
-            background-color: #dcfce7;
-            color: #166534;
-            padding: 16px;
-            border-radius: 8px;
-            margin-top: 32px;
-            display: none;
-        }
-        
-        .success-message.visible {
-            display: block;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <a href="home.html" class="logo" style="gap: 7px;">
-            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="25" height="25" style="margin-top: -7px;">
-            <h3 class="grad" style="font-weight: bolder; margin-top: 3px;">BondBridge</h3>
-        </a>
-        
-        <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="download-btna">Download Now</a>
-        </div>
-        
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+      <a href="home.html" class="logo" style="gap: 7px">
+        <img
+          src="assets/icon-logo.png"
+          alt="Bond Bridge Logo"
+          width="25"
+          height="25"
+          style="margin-top: -7px"
+        />
+        <h3 class="grad" style="font-weight: bolder; margin-top: 3px">
+          BondBridge
+        </h3>
+      </a>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="download.html" class="download-btna">Download Now</a>
+      </div>
+
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </header>
-    
+
     <!-- Mobile Menu -->
-    
+
     <div class="mobile-menu">
-        <button class="mobile-menu-close">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="mobile-nav-links">
-            <a href="home.html">Home</a>
-            <a href="support.html">Support</a>
-            <a href="about.html">About</a>
-            <a href="download.html">Download</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="mobile-download-btna">Download Now</a>
-        </div>
+      <button class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="mobile-nav-links">
+        <a href="home.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="about.html">About</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="download.html" class="mobile-download-btna">Download Now</a>
+      </div>
     </div>
-    
+
     <!-- Contact Page Content -->
     <main class="contact-page">
-        <div class="contact-container">
-            <div class="contact-heading">
-                <h1 class="grad" style="font-weight: bolder; font-size: 70px; margin-bottom: -10px; margin-top: -30px;">Contact</h1>
-                <p class="" style="color: black;">Have questions or feedback? We'd love to hear from you.</p>
-            </div>
-            
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
-                    <label for="name" class="form-label">Full Name</label>
-                    <div class="error-message" id="nameError"></div>
-                </div>
-                
-                <div class="form-group">
-                    <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
-                    <label for="email" class="form-label">Email Address</label>
-                    <div class="error-message" id="emailError"></div>
-                </div>
-                
-                <div class="form-group">
-                    <input type="text" id="subject" name="subject" class="form-control" placeholder=" " required>
-                    <label for="subject" class="form-label">Subject</label>
-                    <div class="error-message" id="subjectError"></div>
-                </div>
-                
-                <div class="form-group">
-                    <textarea id="message" name="message" class="form-control" rows="5" placeholder=" " required></textarea>
-                    <label for="message" class="form-label">Your Message</label>
-                    <div class="error-message" id="messageError"></div>
-                </div>
-                
-                <button type="submit" class="contact-btn" id="submitBtn" style="background-color: #7400A5; color: white;">Send Message</button>
+      <div class="contact-container">
+        <div class="contact-heading">
+          <h1
+            class="grad"
+            style="
+              font-weight: bolder;
+              font-size: 70px;
+              margin-bottom: -10px;
+              margin-top: -30px;
+            "
+          >
+            Contact
+          </h1>
+          <p class="" style="color: black">
+            Have questions or feedback? We'd love to hear from you.
+          </p>
+        </div>
 
-            </form>
-            
-            <div class="success-message" id="successMessage">
-                <h3>Thank you for your message!</h3>
-                <p>We've received your inquiry and will get back to you shortly.</p>
-            </div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder=" "
+              required
+            />
+            <label for="name" class="form-label">Full Name</label>
+            <div class="error-message" id="nameError"></div>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder=" "
+              required
+            />
+            <label for="email" class="form-label">Email Address</label>
+            <div class="error-message" id="emailError"></div>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="form-control"
+              placeholder=" "
+              required
+            />
+            <label for="subject" class="form-label">Subject</label>
+            <div class="error-message" id="subjectError"></div>
+          </div>
+
+          <div class="form-group">
+            <textarea
+              id="message"
+              name="message"
+              class="form-control"
+              rows="5"
+              placeholder=" "
+              required
+            ></textarea>
+            <label for="message" class="form-label">Your Message</label>
+            <div class="error-message" id="messageError"></div>
+          </div>
+
+          <button
+            type="submit"
+            class="contact-btn"
+            id="submitBtn"
+            style="background-color: #7400a5; color: white"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <div class="success-message" id="successMessage">
+          <h3>Thank you for your message!</h3>
+          <p>We've received your inquiry and will get back to you shortly.</p>
         </div>
+      </div>
     </main>
-    
+
     <footer class="footer-new">
-        <div class="footer-new-container">
-            <div class="footer-left">
-                <div class="footer-logo-new">
-                    <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15" style="scale: 0.7;">
-                    <span class="footer-logo-text grad" style="font-weight: bolder; margin-top: 6px;">BondBridge</span>
-                </div>
-                
-                <div class="footer-location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>New York, USA</span>
-                </div>
-                
-                <div class="footer-email">
-                    <i class="fas fa-envelope"></i>
-                    <span>hellomoto2004@gmail.com</span>
-                </div>
-            </div>
-            
-            <div class="footer-right">
-                <div class="footer-column">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="support.html">Support</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Other</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-subscribe">
-                    <h3>Stay Updated</h3>
-                    <p>Get the latest news & updates</p>
-                    
-                    <div class="footer-subscribe-form">
-                        <input type="email" placeholder="Your Email Address">
-                        <button class="footer-subscribe-button">Subscribe</button>
-                    </div>
-                    
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div class="footer-new-container">
+        <div class="footer-left">
+          <div class="footer-logo-new">
+            <img
+              src="assets/icon-logo.png"
+              alt="Bond Bridge Logo"
+              width="10"
+              height="15"
+              style="scale: 0.7"
+            />
+            <span
+              class="footer-logo-text grad"
+              style="font-weight: bolder; margin-top: 6px"
+              >BondBridge</span
+            >
+          </div>
+
+          <div class="footer-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>New York, USA</span>
+          </div>
+
+          <div class="footer-email">
+            <i class="fas fa-envelope"></i>
+            <span>hellomoto2004@gmail.com</span>
+          </div>
         </div>
-        
-        <div class="footer-divider"></div>
-        
-        <div class="footer-copyright">
-            Copyright © 2025 All rights reserved
+
+        <div class="footer-right">
+          <div class="footer-column">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Other</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-subscribe">
+            <h3>Stay Updated</h3>
+            <p>Get the latest news & updates</p>
+
+            <div class="footer-subscribe-form">
+              <input type="email" placeholder="Your Email Address" />
+              <button class="footer-subscribe-button">Subscribe</button>
+            </div>
+
+            <div class="footer-social">
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-copyright">Copyright © 2025 All rights reserved</div>
     </footer>
-    
+
     <script src="js/main.js"></script>
     <script>
-        // Contact Form Validation and Submission
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const successMessage = document.getElementById('successMessage');
-            
-            // Error elements
-            const nameError = document.getElementById('nameError');
-            const emailError = document.getElementById('emailError');
-            const subjectError = document.getElementById('subjectError');
-            const messageError = document.getElementById('messageError');
-            
-            // Input elements
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const subjectInput = document.getElementById('subject');
-            const messageInput = document.getElementById('message');
-            
-            // Validation functions
-            function validateName() {
-                if (nameInput.value.trim() === '') {
-                    nameInput.classList.add('error');
-                    nameError.textContent = 'Name is required';
-                    return false;
-                }
-                nameInput.classList.remove('error');
-                nameError.textContent = '';
-                return true;
-            }
-            
-            function validateEmail() {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(emailInput.value)) {
-                    emailInput.classList.add('error');
-                    emailError.textContent = 'Please enter a valid email address';
-                    return false;
-                }
-                emailInput.classList.remove('error');
-                emailError.textContent = '';
-                return true;
-            }
-            
-            function validateSubject() {
-                if (subjectInput.value.trim() === '') {
-                    subjectInput.classList.add('error');
-                    subjectError.textContent = 'Subject is required';
-                    return false;
-                }
-                subjectInput.classList.remove('error');
-                subjectError.textContent = '';
-                return true;
-            }
-            
-            function validateMessage() {
-                if (messageInput.value.trim() === '') {
-                    messageInput.classList.add('error');
-                    messageError.textContent = 'Message is required';
-                    return false;
-                }
-                messageInput.classList.remove('error');
-                messageError.textContent = '';
-                return true;
-            }
-            
-            // Add input event listeners
-            nameInput.addEventListener('input', validateName);
-            emailInput.addEventListener('input', validateEmail);
-            subjectInput.addEventListener('input', validateSubject);
-            messageInput.addEventListener('input', validateMessage);
-            
-            // Form submission
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Validate all fields
-                const isNameValid = validateName();
-                const isEmailValid = validateEmail();
-                const isSubjectValid = validateSubject();
-                const isMessageValid = validateMessage();
-                
-                if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-                    // Simulate form submission
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'Sending...';
-                    
-                    // Simulate API call delay
-                    setTimeout(function() {
-                        contactForm.reset();
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send Message';
-                        successMessage.classList.add('visible');
-                        
-                        // Hide success message after 5 seconds
-                        setTimeout(function() {
-                            successMessage.classList.remove('visible');
-                        }, 5000);
-                    }, 1500);
-                }
-            });
+      // Contact Form Validation and Submission
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const successMessage = document.getElementById("successMessage");
+
+        // Error elements
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const subjectError = document.getElementById("subjectError");
+        const messageError = document.getElementById("messageError");
+
+        // Input elements
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const subjectInput = document.getElementById("subject");
+        const messageInput = document.getElementById("message");
+
+        // Validation functions
+        function validateName() {
+          if (nameInput.value.trim() === "") {
+            nameInput.classList.add("error");
+            nameError.textContent = "Name is required";
+            return false;
+          }
+          nameInput.classList.remove("error");
+          nameError.textContent = "";
+          return true;
+        }
+
+        function validateEmail() {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(emailInput.value)) {
+            emailInput.classList.add("error");
+            emailError.textContent = "Please enter a valid email address";
+            return false;
+          }
+          emailInput.classList.remove("error");
+          emailError.textContent = "";
+          return true;
+        }
+
+        function validateSubject() {
+          if (subjectInput.value.trim() === "") {
+            subjectInput.classList.add("error");
+            subjectError.textContent = "Subject is required";
+            return false;
+          }
+          subjectInput.classList.remove("error");
+          subjectError.textContent = "";
+          return true;
+        }
+
+        function validateMessage() {
+          if (messageInput.value.trim() === "") {
+            messageInput.classList.add("error");
+            messageError.textContent = "Message is required";
+            return false;
+          }
+          messageInput.classList.remove("error");
+          messageError.textContent = "";
+          return true;
+        }
+
+        // Add input event listeners
+        nameInput.addEventListener("input", validateName);
+        emailInput.addEventListener("input", validateEmail);
+        subjectInput.addEventListener("input", validateSubject);
+        messageInput.addEventListener("input", validateMessage);
+
+        // Form submission
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Validate all fields
+          const isNameValid = validateName();
+          const isEmailValid = validateEmail();
+          const isSubjectValid = validateSubject();
+          const isMessageValid = validateMessage();
+
+          if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+            // Simulate form submission
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+
+            // Simulate API call delay
+            setTimeout(function () {
+              contactForm.reset();
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Send Message";
+              successMessage.classList.add("visible");
+
+              // Hide success message after 5 seconds
+              setTimeout(function () {
+                successMessage.classList.remove("visible");
+              }, 5000);
+            }, 1500);
+          }
         });
+      });
     </script>
-</body>
-</html> 
+  </body>
+</html>

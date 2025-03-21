@@ -1,1143 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BondBridge - About Us</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-        /* About Page Specific Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f9fafb;
-            color: #1f2937;
-            line-height: 1.5;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        /* Header Styles - Updated to match Image 1 */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 48px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo h3 {
-            font-size: 24px;
-            font-weight: 600;
-        }
-        .about-hero {
-            padding-top: 96px;
-            position: relative;
-        }
-        
-        .about-hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            padding: 0 24px;
-        }
-        
-        @media (min-width: 768px) {
-            .about-hero-content {
-                text-align: left;
-            }
-        }
-        
-        .about-hero h2 {
-            font-size: 36px;
-            font-weight: 700;
-            color: #311B92;
-            max-width: 450px;
-            margin: 0 auto;
-        }
-        
-        @media (min-width: 768px) {
-            .about-hero h2 {
-                margin: 0;
-            }
-        }
-        
-        .about-hero p {
-            color: #4b5563;
-            font-size: 18px;
-            margin-top: 16px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        @media (min-width: 768px) {
-            .about-hero p {
-                margin-left: 0;
-            }
-        }
-        
-        .download-link {
-            display: block;
-            width: fit-content;
-            margin: 32px auto;
-            padding: 12px 24px;
-            color: white;
-            font-weight: 700;
-            border-radius: 8px;
-            background: linear-gradient(to bottom right, #A7D0FF, #4C00FF);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-decoration: none;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .grad, .gradient-brand {
-            background: linear-gradient(to top right, #3b01b7 , #5e00ff, #ba19eb, #dd0cc8);
-            font-family: 'League Spartan';
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .download-link:hover {
-            transform: scale(1.05);
-        }
-        
-        @media (min-width: 768px) {
-            .download-link {
-                margin-left: 0;
-            }
-        }
-        
-        .bg-illustration {
-            width: 100%;
-            z-index: 0;
-            opacity: 0.9;
-        }
-        
-        .bg-illustration img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-        
-        .community-groups {
-            position: relative;
-            z-index: 10;
-            margin-top: 48px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-            max-width: 1200px;
-            margin-left: 16px;
-            margin-right: 16px;
-        }
-        
-        @media (min-width: 768px) {
-            .community-groups {
-                grid-template-columns: repeat(3, 1fr);
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-        
-        .group-card {
-            position: relative;
-            height: 500px;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        
-        .group-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .card-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
-            background-color: black;
-            border-radius: 12px 12px 50% 50% / 12px 12px 25% 25%;
-        }
-        
-        .stars {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            color: gold;
-            z-index: 10;
-            margin-top: 50px;
-            font-size: 20px;
-        }
-        
-        .group-card img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-top: 20px;
-            z-index: 20;
-        }
-        
-        .group-card h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 20px;
-            z-index: 20;
-        }
-        
-        .group-card p {
-            margin-top: 16px;
-            color: #4b5563;
-            z-index: 20;
-            padding: 0 15px;
-        }
-        .download-btna {
-            background-color: #7c3aed !important;
-            color: white !important;
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        
-        .download-btna:hover {
-            background-color: #641ae4 !important;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <a href="index.html" class="logo" style="gap: 7px; margin-top: 2px">
-            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="25" height="25" style="margin-top: -9px;">
-            <h3 class="grad" style="font-weight: bolder; margin-top: 2px;">BondBridge</h3>
-        </a>
-        
-        <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="download-btna" style="background-color: #7c3aed; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: background-color 0.3s ease;">Download Now</a>
-        </div>
-        
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+      <a href="home.html" class="logo" style="gap: 7px">
+        <img
+          src="assets/icon-logo.png"
+          alt="Bond Bridge Logo"
+          width="25"
+          height="25"
+          style="margin-top: -7px"
+        />
+        <h3 class="grad" style="font-weight: bolder; margin-top: 3px">
+          BondBridge
+        </h3>
+      </a>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="download.html" class="download-btna">Download Now</a>
+      </div>
+
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </header>
-    
+
     <!-- Mobile Menu -->
     <div class="mobile-menu-overlay"></div>
     <div class="mobile-menu">
-        <button class="mobile-menu-close">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="mobile-nav-links">
-            <a href="home.html">Home</a>
-            <a href="support.html">Support</a>
-            <a href="about.html">About</a>
-            <a href="download.html">Download</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="mobile-download-btna" style="display: inline-block; background-color: #7c3aed; color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; margin-top: 16px; transition: background-color 0.3s ease;">Download Now</a>
-        </div>
+      <button class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="mobile-nav-links">
+        <a href="home.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="about.html">About</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="download.html" class="download-btn">Download Now</a>
+      </div>
     </div>
-    
-    <!-- About Page Content -->
-    <main>
-        <section class="about-hero">
-            <div class="about-hero-content">
-                <!-- Heading -->
-                <h2>BondChat creates newer possibilities to seek and build lasting friendships</h2>
-                
-                <p style="color: black;">People utlilize BondChat (tm) to meet new people, make new connections, and establish lasting relationships with people of common interests. Join one of the communities today! Download the mobile app or type www.bondbridge.online.</p>
-                <a href="download.html" class="download-link">Download Now</a> 
-                
-            </div>
-            
-            <!-- Background Illustration -->
-            <div class="bg-illustration">
-                <img src="assets/about/people-group.png" alt="Community Illustration">
-            </div>
-            
-            <!-- Community Groups - Cards -->
-            <div class="community-groups" style="scale: 0.9;">
-                <!-- Singing Group Card -->
-                <div class="group-card">
-                    <div class="card-bg"></div>
-                    <div class="stars">★ ★ ★ ★ ★</div>
-                    <img src="assets/about/singing.png" alt="Entertainment Group">
-                    <h3>Entertainment</h3>
-                    <p style="color: black;">Join the <strong>Entertainment</strong> group and connect with users who love music, theater, concerts, movies and more.</p>
-                </div>
-                
-                <!-- Sports Group Card -->
-                <div class="group-card">
-                    <div class="card-bg"></div>
-                    <div class="stars">★ ★ ★ ★ ★</div>
-                    <img src="assets/about/sports.png" alt="ESPN Sports Group">
-                    <h3>ESPN Sports</h3>
-                    <p style="color: black;">Join the <strong>ESPN Sports</strong> group and talk about sports, get workout tips or just get updates on the latest sport news.</p>
-                </div>
-                
-                <!-- Adventure Group Card -->
-                <div class="group-card">
-                    <div class="card-bg"></div>
-                    <div class="stars">★ ★ ★ ★ ★</div>
-                    <img src="assets/about/adventure.png" alt="Exploration Group">
-                    <h3>Exploration</h3>
-                    <p style="color: black;">Join the <strong>Exploration </strong>group to look at fresh places, talk to others about their experiences and to get traveling tips.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What You Can Do Section</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-        }
-        .section-container {
-            padding: 4rem 1.5rem;
-            background-color: #f9fafb;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .title-underline {
-            display: block;
-            width: 8rem;
-            height: 0.5rem;
-            background-color: #a5b4fc;
-            border-radius: 9999px;
-            margin: 0.5rem auto 0;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            max-width: 72rem;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .feature-image {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1/1;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #111827;
-        }
-
-        .feature-highlight {
-            display: block;
-            color: #4f46e5;
-        }
-
-        .feature-description {
-            color: #4b5563;
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-            max-width: 20rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Media queries for responsive layout */
-        @media (min-width: 768px) {
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        
-
-        .section-container {
-            padding: 4rem 1.5rem;
-            background-color: #f9fafb;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .title-underline {
-            display: block;
-            width: 8rem;
-            height: 0.5rem;
-            background-color: #a5b4fc;
-            border-radius: 9999px;
-            margin: 0.5rem auto 0;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            max-width: 72rem;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .feature-image {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1/1;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #111827;
-        }
-
-        .feature-highlight {
-            display: block;
-            color: #4f46e5;
-        }
-
-        .feature-description {
-            color: #4b5563;
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-            max-width: 20rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .faq-section {
-    padding: 40px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 900px;
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.faq-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.faq-wrapper {
-    display: flex;
-    gap: 20px;
-}
-
-/* Left: FAQ List */
-.faq-list {
-    width: 40%;
-    background: white;
-    padding: 10px;
-}
-
-.faq-item {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.faq-item.active {
-    background: #FAFBFF;
-    color: #333;
-}
-
-.faq-icon {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 10px;
-    background-color: #A5A6F6;
-}
-
-.faq-item.active .faq-icon {
-    background-color: #5D5FEF;
-}
-
-/* Right: Answer Section */
-.faq-answer {
-    width: 60%;
-    padding: 20px;
-    background: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-}
-
-.faq-answer h3 {
-    font-size: 20px;
-    color: #333;
-}
-
-.faq-answer p {
-    color: #666;
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-        /* Media queries for responsive layout */
-        @media (min-width: 768px) {
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    </style>
-<body>
-    <section class="section-container">
-        <h2 class="section-title">
-        <strong>What You Can Do</strong> </h2>
-
-        <!-- Feature Cards -->
-        <div class="features-grid">
-            <!-- Feature 1 -->
-            <div class="feature-card">
-                <img 
-                    src="assets/about/your-tribe.png" 
-                    alt="Discover" 
-                    class="feature-image"
-                >
-                <h3 class="feature-title">
-                    Discover
-                    <span class="feature-highlight">Your Tribe</span>
-                </h3>
-                <p class="feature-description">Meet people in your area who want to connect.</p>
-            </div>
-
-            <!-- Feature 2 -->
-            <div class="feature-card">
-                <img 
-                    src="assets/about/interest.png" 
-                    alt="Find Your Interest" 
-                    class="feature-image"
-                >
-                <h3 class="feature-title">
-                    Find Your
-                    <span class="feature-highlight">Interests</span></h3>
-                <p class="feature-description">Explore new ideas that match your interests.</p>
-            </div>
-
-            <!-- Feature 3 -->
-            <div class="feature-card">
-                <img 
-                    src="assets/about/best-life.png" 
-                    alt="Live Your Best Life" 
-                    class="feature-image"
-                >
-                <h3 class="feature-title">
-                    Live Your
-                    <span class="feature-highlight">Best Life</span>
-                </h3>
-                <p class="feature-description">Meet new  people from around the globe.</p>
-            </div>
-        </div>
-    </section>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Values Section</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            line-height: 1.5;
-        }
-
-        .values-section {
-            padding: 4rem 1.5rem;
-            background-color: white;
-            text-align: left;
-            max-width: 72rem;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 2.5rem;
-        }
-
-        .section-heading {
-            margin-bottom: 2rem;
-        }
-
-        .subtitle {
-            font-size: 0.875rem;
-            font-weight: 700;
-            color: #4b5563;
-        }
-
-        .title {
-            font-size: 2.25rem;
-            font-weight: 600;
-            max-width: 36rem;
-            margin-top: 0.5rem;
-            line-height: 1.25;
-            color: #311B92;
-        }
-
-        .highlight {
-            display: inline-block;
-            width: fit-content;
-            position: relative;
-        }
-
-        .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background-color: rgba(79, 70, 229, 0.2);
-            z-index: -1;
-        }
-
-        .description {
-            color: #6b7280;
-            font-size: 1rem;
-            margin-top: 1rem;
-            max-width: 48rem;
-        }
-
-        .mission-vision-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .card-image {
-            width: 100%;
-            height: auto;
-            max-height: 10rem;
-            object-fit: contain;
-            object-position: left;
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #7e57c2;
-        }
-
-        .card-description {
-            color: #4b5563;
-            font-size: 1rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Media queries for responsive layout */
-        @media (min-width: 768px) {
-            .values-section {
-                grid-template-columns: 2fr 3fr;
-                column-gap: 2rem;
-                align-items: start;
-            }
-
-            .mission-vision-container {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .card-image {
-                height: 200px;
-            }
-        }
-         /* New Footer Styles - Based on Image 2 */
-         .footer-new {
-            background-color: #0f172a;
-            color: #f9fafb;
-            padding: 48px 32px 24px;
-        }
-        
-        .footer-new-container {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 48px;
-        }
-        
-        .footer-left {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .footer-right {
-            flex: 2;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 32px;
-        }
-        
-        .footer-column {
-            min-width: 180px;
-        }
-        
-        .footer-logo-new {
-            display: flex;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-        
-        .footer-logo-new img {
-            width: 40px;
-            height: 40px;
-            margin-right: 12px;
-        }
-        
-        .footer-logo-text {
-            font-size: 20px;
-            font-weight: 600;
-        }
-        
-        .footer-location {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-location i {
-            margin-right: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-email {
-            display: flex;
-            align-items: center;
-            color: #94a3b8;
-        }
-        
-        .footer-email i {
-            margin-right: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer-divider {
-            width: 100%;
-            height: 1px;
-            background-color: #334155;
-            margin: 32px 0;
-        }
-        
-        .footer-column h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #f9fafb;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-column ul li a {
-            color: #94a3b8;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: #7c3aed;
-        }
-        
-        .footer-subscribe {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .footer-subscribe h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        
-        .footer-subscribe p {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-        
-        .footer-subscribe-form {
-            display: flex;
-            margin-bottom: 24px;
-        }
-        
-        .footer-subscribe-form input {
-            flex: 1;
-            padding: 10px 16px;
-            border-radius: 8px;
-            border: 1px solid #334155;
-            background-color: transparent;
-            color: #f9fafb;
-            font-size: 14px;
-        }
-        
-        .footer-subscribe-button {
-            background-color: #f9fafb;
-            color: #0f172a;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 16px;
-            font-weight: 600;
-            font-size: 14px;
-            margin-left: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        
-        .footer-subscribe-button:hover {
-            background-color: #e2e8f0;
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 12px;
-        }
-        
-        .footer-social-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #7c3aed;
-            border-radius: 50%;
-            color: #f9fafb;
-            transition: background-color 0.3s ease;
-        }
-        
-        .footer-social-icon:hover {
-            background-color: #6d28d9;
-        }
-        
-        .footer-copyright {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 14px;
-            margin-top: 32px;
-        }
-    </style>
-    <section class="values-section">
-        <!-- Heading -->
-        <div class="section-heading">
-            <h3 class="subtitle">OUR VALUES</h3>
-            <h2 class="title">
-                <strong>BondBridge</strong> Has Anonymity As A <span class="highlight"><strong>CORE Principle</strong></span>
-            </h2>
-            <p class="description" style="color: black;">
-                At <strong>BondBridge</strong> we believe that true connections thrive as users are
-                free to express ideas and make real connections without pressure. Our platform is a
-            secure place for those seeking  friendships without the usual social awkwardness. </p>
-            <p class="description" style="margin-top: 1rem; color: black;">
-                <strong>BondBridge</strong> allows users to connect over common ideas, hobbies and interests directly but also anonymously. The <strong>BondChat</strong> connects people, suggests friends and groups and communicates with users to help alleviate loneliness.</p>
-        </div>
-
-        <!-- Mission and Vision -->
-        <div class="mission-vision-container">
-            <div class="card">
-                <img
-                    src="assets/about/mission.png"
-                    alt="Mission"
-                    class="card-image"
-                />
-                <div>
-                    <h4 class="card-title">
-                    <strong>Our Mission</strong> </h4>
-                    <p class="card-description" style="color: black;">
-                        To provide users with an AI-driven, media platform where people can be social, in a secure, judgement free environment, and where ideas can flow freely and openly. </p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img
-                    src="assets/about/vision.png"
-                    alt="Vision"
-                    class="card-image"
-                />
-                <div>
-                    <h4 class="card-title">
-                    <strong>Our Vision</strong> </h4>
-                    <p class="card-description" style="color: black;">
-                        To create a product that allows users from all backrounds and interests to connect in  non-judgemental platforms in an effort to assist in reducing widespread loneliness. </p>
-                </div>
-            </div>
-        </div>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+        <h2>About <span class="grad">BondBridge</span></h2>
+        <p>
+          BondBridge is a community platform designed to foster meaningful
+          connections between like-minded individuals, bridging the gap between
+          online interaction and real-world relationships.
+        </p>
+        <a href="download.html" class="download-link">Download Now</a>
+      </div>
     </section>
 
-    <section class="partners-section" style="margin-left : auto; margin-right: auto; width: 80%;">
-        <div class="content-grid">
-            <div>
-                <h3 class="subtitle">PARTNERS</h3>
-                <h2 class="title"><strong>BondBridge</strong> <span class="highlight"><strong>Prime Network</strong></span> </h2>
-            </div>
-
-            <p class="description" style="color: black;">
-            Engage our prime network, aged 18-35. Interested Platform Partners can contact <strong>into@bondbridge.ai</strong></p>
+    <!-- Community Groups Section -->
+    <section class="community-groups">
+      <div class="group-card">
+        <div class="card-bg" style="background-color: #311b92"></div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
         </div>
-
-        <!-- Partner Images -->
-        <div class="partners-image-container" style="margin-left: auto; margin-right: auto; width: 100%; display: flex; flex-wrap: wrap; justify-content: center;">
-            <img src="assets/people/c4.jpg" alt="Partner 4" class="partner-image" style="border-radius: 50%; width: 80px; height: 80px; margin: 10px;">
-            <img src="assets/people/c1.jpg" alt="Partner 1" class="partner-image" style="border-radius: 50%; width: 80px; height: 80px; margin: 10px;">
-            <img src="assets/people/c2.jpg" alt="Partner 2" class="partner-image" style="border-radius: 50%; width: 80px; height: 80px; margin: 10px;">
-            <img src="assets/people/c3.jpg" alt="Partner 3" class="partner-image" style="border-radius: 50%; width: 80px; height: 80px; margin: 10px;">
-            <img src="assets/people/c8.jpg" alt="Partner 8" class="partner-image" style="border-radius: 50%; width: 80px; height: 80px; margin: 10px;">
-            <img src="assets/people/c7.jpg" alt="Partner 7" class="partner-image" style="border-radius: 50%; width: 80px; height: 80px; margin: 10px;">
-
-            <button class="become-partner-button" style="background-color: #7400A5; color: white; border: none; scale: 1.2; border-radius: 50%; padding: 10px; font-weight: bold; margin-top: 12px; margin-left: 10px; cursor: pointer; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
-                Become Partner
-              </button>
-              
-            
+        <div class="group-icon">
+          <img src="assets/icon-book.png" alt="Book Club" />
         </div>
+        <h3 class="group-title">Book Enthusiasts</h3>
+        <p class="group-members">5,208 Members</p>
+        <p class="group-desc">
+          Join fellow book lovers to discuss literature, share recommendations,
+          and attend virtual reading sessions. From classic to contemporary,
+          explore diverse genres and perspectives.
+        </p>
+        <a href="#" class="group-link">Join Group</a>
+      </div>
+
+      <div class="group-card">
+        <div class="card-bg" style="background-color: #f57c00"></div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="group-icon">
+          <img src="assets/icon-hike.png" alt="Hiking Club" />
+        </div>
+        <h3 class="group-title">Outdoor Explorers</h3>
+        <p class="group-members">3,572 Members</p>
+        <p class="group-desc">
+          Connect with adventure seekers who share your passion for hiking,
+          camping, and outdoor activities. Discover new trails, plan group
+          excursions, and share experiences.
+        </p>
+        <a href="#" class="group-link">Join Group</a>
+      </div>
+
+      <div class="group-card">
+        <div class="card-bg" style="background-color: #00796b"></div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="group-icon">
+          <img src="assets/icon-code.png" alt="Coding Club" />
+        </div>
+        <h3 class="group-title">Code Crafters</h3>
+        <p class="group-members">8,123 Members</p>
+        <p class="group-desc">
+          Join a community of developers, programmers, and tech enthusiasts.
+          Collaborate on projects, share knowledge, attend hackathons, and stay
+          updated on the latest trends.
+        </p>
+        <a href="#" class="group-link">Join Group</a>
+      </div>
     </section>
-    <section class="faq-section" style=" margin-top: 50px;">
-        <div class="faq-container">
-            <h2 class="faq-title">Frequently Asked Questions</h2>
 
-            <div class="faq-wrapper">
-                <!-- Left: Questions List -->
-                <div class="faq-list">
-                    <div class="faq-item active" data-index="0">
-                        <span class="faq-icon"></span>
-                        <span class="faq-question">How do I get the Mobile app?</span>
-                    </div>
-                    <div class="faq-item" data-index="1">
-                        <span class="faq-icon"></span>
-                        <span class="faq-question">Is there an online app version?</span>
-                    </div>
-                    <div class="faq-item" data-index="2">
-                        <span class="faq-icon"></span>
-                        <span class="faq-question">How Do I utilize BondChat AI? </span>
-                    </div>
-                    <div class="faq-item" data-index="3">
-                        <span class="faq-icon"></span>
-                        <span class="faq-question">Are  identities and data secure?</span>
-                    </div>
-                    <div class="faq-item" data-index="4">
-                        <span class="faq-icon"></span>
-                        <span class="faq-question">Is there a paid version of the app?</span>
-                    </div>
-                </div>
-
-                <!-- Right: Answer Section -->
-                <div class="faq-answer">
-                    <h3 id="faq-question">How To Get the Mobile App?</h3>
-                    <p id="faq-answer">Go to www.bondbridge.ai to download the app. A browser version is available at www.bondbridge.online</p>
-                </div>
-            </div>
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-grid">
+        <div class="about-image">
+          <img
+            src="assets/landing/about-image.jpg"
+            alt="BondBridge Community"
+          />
         </div>
+
+        <div class="about-text">
+          <h2>Our Mission</h2>
+          <p>
+            BondBridge was founded with a singular mission: to create genuine
+            connections in an increasingly disconnected world. We believe that
+            technology should bring people together, not isolate them.
+          </p>
+          <p>
+            Our platform connects individuals with similar interests,
+            facilitates meaningful conversations, and encourages meetups to
+            foster deeper relationships beyond the digital realm.
+          </p>
+          <h2>What Makes Us Different</h2>
+          <ul>
+            <li>
+              Community-focused approach with personalized recommendations
+            </li>
+            <li>
+              Emphasis on transitioning from online to in-person connections
+            </li>
+            <li>Advanced filtering to find people with shared interests</li>
+            <li>
+              Safety and verification measures to ensure authentic interactions
+            </li>
+            <li>AI-powered personalized community suggestions</li>
+          </ul>
+        </div>
+      </div>
     </section>
-    
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <img src="assets/landing/pattern-bg.png" alt="" class="stats-bg" />
+      <div class="stats-container">
+        <div class="stats-heading">
+          <h2>BondBridge <span class="grad">in Numbers</span></h2>
+          <p>
+            Our growing community continues to build strong connections across
+            the globe
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="stat-number">5M+</h3>
+            <p class="stat-text">Active Users</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h3 class="stat-number">10K+</h3>
+            <p class="stat-text">Communities</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 class="stat-number">25K+</h3>
+            <p class="stat-text">Events Monthly</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="stat-number">50+</h3>
+            <p class="stat-text">Countries</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <div class="team-heading">
+        <h2>Meet Our <span class="grad">Team</span></h2>
+        <p>
+          The passionate individuals behind BondBridge who are committed to
+          fostering genuine connections
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-image">
+            <img src="assets/team/ceo.jpg" alt="CEO" />
+          </div>
+          <h3 class="team-name">Alex Mitchell</h3>
+          <p class="team-role">Founder & CEO</p>
+          <p class="team-bio">
+            Alex founded BondBridge after experiencing firsthand the challenge
+            of building genuine connections in new cities. With a background in
+            social psychology and tech entrepreneurship, he leads our vision and
+            strategy.
+          </p>
+          <div class="team-social">
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image">
+            <img src="assets/team/cto.jpg" alt="CTO" />
+          </div>
+          <h3 class="team-name">Mia Chen</h3>
+          <p class="team-role">CTO</p>
+          <p class="team-bio">
+            Mia leads our engineering team with over 15 years of experience in
+            building scalable platforms. She's passionate about using AI and
+            technology to strengthen human connections rather than replace them.
+          </p>
+          <div class="team-social">
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image">
+            <img src="assets/team/cdo.jpg" alt="CDO" />
+          </div>
+          <h3 class="team-name">Dev Patel</h3>
+          <p class="team-role">Chief Design Officer</p>
+          <p class="team-bio">
+            Dev oversees the user experience and design strategy at BondBridge.
+            With a background in psychology and human-computer interaction, he
+            ensures our platform feels intuitive, welcoming, and engaging for
+            all users.
+          </p>
+          <div class="team-social">
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-dribbble"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer-new">
-        <div class="footer-new-container">
-            <div class="footer-left">
-                <div class="footer-logo-new">
-                    <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15" style="scale: 0.7;">
-                    <span class="footer-logo-text grad" style="font-weight: 800;">BondBridge</span>
-                </div>
-                
-                <div class="footer-location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Chicago, IL USA</span>
-                </div>
-                
-                <div class="footer-email">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@bondbridge.ai</span>
-                </div>
-            </div>
-            
-            <div class="footer-right">
-                <div class="footer-column">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="support.html">Support</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Other</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-subscribe">
-                    <h3>Stay Updated</h3>
-                    <p>Get the latest news & updates</p>
-                    
-                    <div class="footer-subscribe-form">
-                        <input type="email" placeholder="Your Email Address">
-                        <button class="footer-subscribe-button">Subscribe</button>
-                    </div>
-                    
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div class="footer-new-container">
+        <div class="footer-left">
+          <div class="footer-logo-new">
+            <img
+              src="assets/icon-logo.png"
+              alt="Bond Bridge Logo"
+              width="10"
+              height="15"
+              style="scale: 0.7"
+            />
+            <span
+              class="footer-logo-text grad"
+              style="font-weight: bolder; margin-top: 5px"
+              >BondBridge</span
+            >
+          </div>
+
+          <div class="footer-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>San Francisco, CA USA</span>
+          </div>
+
+          <div class="footer-email">
+            <i class="fas fa-envelope"></i>
+            <span>info@bondbridge.ai</span>
+          </div>
         </div>
-        
-        <div class="footer-divider"></div>
-        
-        <div class="footer-copyright">
-            Copyright © 2025 All Rights Reserved
+
+        <div class="footer-right">
+          <div class="footer-column">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Other</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-subscribe">
+            <h3>Stay Updated</h3>
+            <p>Get the latest news & updates</p>
+
+            <div class="footer-subscribe-form">
+              <input type="email" placeholder="Your Email Address" />
+              <button class="footer-subscribe-button">Subscribe</button>
+            </div>
+
+            <div class="footer-social">
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-copyright">Copyright © 2025 All rights reserved</div>
     </footer>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const faqs = [
-        { question: "How do I get the Mobile app?", answer: "Download the mobile app from the Google or Apple store." },
-        { question: "Is there an online app version?", answer: "Yes, go to www.bondbridge.online and sign up today!" },
-        { question: "How do I utilize BondChat AI?", answer: "Click on the BondChat feature then type or ask questions." },
-        { question: "Are identities and data secure?", answer: "Yes, all data exists within a safe, secure environment." },
-        { question: "Is there a paid version of the app?", answer: "Yes, the paid version for the app will be available soon." }
-    ];
 
-    let activeIndex = 0;
-    let intervalId;
-
-    const faqItems = document.querySelectorAll(".faq-item");
-    const questionEl = document.getElementById("faq-question");
-    const answerEl = document.getElementById("faq-answer");
-
-    function setActiveFAQ(index) {
-        activeIndex = index;
-        questionEl.textContent = faqs[index].question;
-        answerEl.textContent = faqs[index].answer;
-        
-        faqItems.forEach(item => item.classList.remove("active"));
-        faqItems[index].classList.add("active");
-    }
-
-    faqItems.forEach((item, index) => {
-        item.addEventListener("click", function () {
-            clearInterval(intervalId);
-            setActiveFAQ(index);
-        });
-    });
-
-    function startAutoRotation() {
-        intervalId = setInterval(() => {
-            let nextIndex = (activeIndex + 1) % faqs.length;
-            setActiveFAQ(nextIndex);
-        }, 5000);
-    }
-
-    setActiveFAQ(0);
-    startAutoRotation();
-});
-
-    </script>
-</body>
-</html> 
+    <script src="js/main.js"></script>
+  </body>
+</html>
