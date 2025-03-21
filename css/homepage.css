@@ -30,6 +30,12 @@
   flex-direction: column;
 }
 
+.landing-hero-contenthero-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .landing-hero-content .landing-hero-text p {
   color: #000000;
   text-align: justify;
@@ -49,6 +55,7 @@
   text-align: justify;
   font-size: 48px;
   line-height: 1em;
+  height: 2.6em;
   font-family: "League Spartan";
 }
 
