@@ -30,6 +30,15 @@
   flex-direction: column;
 }
 
+.feature-item-descriptiona {
+  color: #000000;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  
+}
+
 .landing-hero-contenthero-image{
   display: flex;
   justify-content: center;
