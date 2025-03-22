@@ -35,11 +35,18 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    gap: 7px;
+}
+
+.logo img {
+    margin-top: -7px;
 }
 
 .logo h3 {
     font-size: 24px;
     font-weight: 600;
+    font-weight: bolder;
+    margin-top: -1px;
 }
 
 .grad, .gradient-brand {
@@ -173,6 +180,17 @@ header {
     background-position: center;
 }
 
+.hero-image-section img:first-of-type {
+    scale: 1.1;
+    margin-top: 150px;
+    margin-left: 220px;
+}
+
+.hero-image-section img:last-of-type {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
 .download-title {
     font-size: 48px;
     font-weight: 700;
@@ -249,18 +267,28 @@ header {
     box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
 }
 
+.phone-input-container {
+    display: row;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.phone-input-container .phone-input {
+    width: 60%;
+}
+
 .share-app-btn {
-    display: inline-block;
-    padding: 14px 32px;
     background-color: #7c3aed;
     color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 16px;
-    border-radius: 8px;
-    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 40px;
+    margin-top: -10px;
+    margin-left: 10px;
 }
 
 .share-app-btn:hover {
@@ -268,14 +296,17 @@ header {
 }
 
 .download-from-text {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 16px;
+    font-size: 16px;
+    color: #6b7280;
+    margin-top: 32px;
+    font-weight: 500;
+    margin-left: 10px;
 }
 
 .app-store-buttons {
     display: flex;
-    gap: 16px;
+    margin-top: 16px;
+    gap: 6px;
 }
 
 .app-store-btn {
@@ -284,12 +315,28 @@ header {
 }
 
 .app-store-btn:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
 }
 
 .app-store-btn img {
-    height: 56px;
+    height: 50px;
     width: auto;
+}
+
+.app-store-btn img[alt="Google Play"] {
+    scale: 0.9;
+}
+
+.app-store-btn img[alt="App Store"] {
+    scale: 0.9;
+}
+
+.app-store-btn img[alt="Windows"] {
+    scale: 1.4;
+    height: 80px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: 20px;
 }
 
 /* Footer Styles */
@@ -334,11 +381,14 @@ header {
     width: 40px;
     height: 40px;
     margin-right: 12px;
+    scale: 0.7;
 }
 
 .footer-logo-text {
     font-size: 20px;
     font-weight: 600;
+    font-weight: bolder;
+    margin-top: 5px;
 }
 
 .footer-location {
@@ -498,13 +548,11 @@ header {
     }
 
     .download-form-section {
-        padding: 40px 24px;
-        order: 2;
+        padding: 32px 24px;
     }
 
     .hero-image-section {
-        height: 300px;
-        order: 1;
+        min-height: 400px;
     }
 
     .download-title {

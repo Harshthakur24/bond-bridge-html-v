@@ -35,11 +35,18 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    gap: 7px;
+}
+
+.logo img {
+    margin-top: -7px;
 }
 
 .logo h3 {
     font-size: 24px;
     font-weight: 600;
+    font-weight: bolder;
+    margin-top: 3px;
 }
 
 /* Footer Styles */
@@ -84,11 +91,14 @@ header {
     width: 40px;
     height: 40px;
     margin-right: 12px;
+    scale: 0.7;
 }
 
 .footer-logo-text {
     font-size: 20px;
     font-weight: 600;
+    font-weight: bolder;
+    margin-top: 6px;
 }
 
 .footer-location {
@@ -245,37 +255,40 @@ header {
     font-weight: 700;
     color: #333;
     margin-bottom: 16px;
+    font-weight: bolder;
+    font-size: 70px;
+    margin-bottom: -10px;
+    margin-top: -30px;
 }
 
 .contact-heading p {
     font-size: 18px;
     color: #6b7280;
+    color: black;
 }
 
 .contact-form {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 32px;
+    display: grid;
+    grid-gap: 24px;
+    margin-bottom: 32px;
 }
 
 .form-group {
     position: relative;
-    margin-bottom: 24px;
 }
 
 .form-control {
     width: 100%;
-    padding: 16px;
+    padding: 12px 16px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
 
 .form-control:focus {
-    border-color: #00BCD4;
-    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.2);
+    outline: none;
+    border-color: #7c3aed;
 }
 
 .form-control.error {
@@ -285,17 +298,16 @@ header {
 .form-label {
     position: absolute;
     left: 16px;
-    top: 16px;
+    top: 12px;
     color: #6b7280;
-    transition: transform 0.3s, font-size 0.3s, color 0.3s;
+    transition: all 0.3s ease;
     pointer-events: none;
 }
 
 .form-control:focus+.form-label,
 .form-control:not(:placeholder-shown)+.form-label {
-    transform: translateY(-24px);
-    font-size: 12px;
-    color: #00BCD4;
+    transform: translateY(-24px) scale(0.8);
+    color: #7c3aed;
 }
 
 .form-control.error:focus+.form-label,
@@ -304,21 +316,23 @@ header {
 }
 
 .error-message {
-    font-size: 12px;
     color: #ef4444;
+    font-size: 14px;
     margin-top: 4px;
+    min-height: 20px;
 }
 
 .contact-btn {
-    width: 100%;
-    padding: 16px;
-    background: #7400A5;
-    color: white;
-    font-weight: 700;
+    padding: 12px 24px;
     border: none;
     border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: background-color 0.3s ease;
+    margin-top: 16px;
+    background-color: #7400a5;
+    color: white;
 }
 
 .grad, .gradient-brand {
@@ -330,7 +344,7 @@ header {
 }
 
 .contact-btn:hover {
-    transform: translateY(-2px);
+    background-color: #6d28d9;
 }
 
 .contact-btn:disabled {
@@ -351,13 +365,23 @@ header {
     background-color: #641ae4 !important;
 }
 
+.mobile-download-btna {
+    display: inline-block;
+    background-color: #7c3aed;
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 16px;
+    transition: background-color 0.3s ease;
+}
 
 .success-message {
-    text-align: center;
-    background-color: #dcfce7;
-    color: #166534;
-    padding: 16px;
+    background-color: #ecfdf5;
+    border: 1px solid #10b981;
     border-radius: 8px;
+    padding: 24px;
+    text-align: center;
     margin-top: 32px;
     display: none;
 }

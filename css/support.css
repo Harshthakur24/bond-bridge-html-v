@@ -35,11 +35,18 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    gap: 7px;
+}
+
+.logo img {
+    margin-top: -7px;
 }
 
 .logo h3 {
     font-size: 24px;
     font-weight: 600;
+    font-weight: bolder;
+    margin-top: 3px;
 }
 
 .support-page {
@@ -57,6 +64,8 @@ header {
     font-weight: 700;
     color: #333;
     margin-bottom: 16px;
+    font-weight: bolder;
+    color: black;
 }
 
 .support-heading p {
@@ -64,6 +73,7 @@ header {
     color: #6b7280;
     max-width: 800px;
     margin: 0 auto;
+    color: black;
 }
 
 .feature-item {
@@ -132,6 +142,10 @@ header {
     font-weight: 700;
     color: #333;
     margin-bottom: 16px;
+    font-size: 36px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
 }
 
 .feature-title .highlight {
@@ -146,6 +160,7 @@ header {
     color: #4b5563;
     font-size: 18px;
     line-height: 1.6;
+    color: black;
 }
 
 .badge {
@@ -157,6 +172,38 @@ header {
     font-weight: 600;
     border-radius: 9999px;
     margin-bottom: 8px;
+}
+
+.feature-title-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.bondchat-badge {
+    position: absolute;
+    top: -15px;
+    background-color: #7c3aed;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.bondchat-badge-1 {
+    right: -13px;
+    margin-right: 84px;
+}
+
+.bondchat-badge-2 {
+    right: -6px;
+    margin-right: 319px;
+}
+
+.bondchat-badge-3 {
+    right: -95px;
+    margin-right: 368px;
 }
 
 .faq-section {
@@ -265,15 +312,18 @@ header {
     height: 40px;
     margin-right: 12px;
     transition: transform 0.3s ease;
+    scale: 0.7;
 }
 
 .footer-logo-new:hover img {
-    transform: translateY(-5px);
+    transform: rotate(10deg);
 }
 
 .footer-logo-text {
     font-size: 20px;
     font-weight: 600;
+    font-weight: bolder;
+    margin-top: 5px;
 }
 
 .footer-location {
@@ -373,12 +423,11 @@ header {
     font-size: 14px;
     margin-left: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .footer-subscribe-button:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-3px);
+    background-color: #e2e8f0;
 }
 
 .footer-social {
@@ -395,12 +444,11 @@ header {
     background-color: #7c3aed;
     border-radius: 50%;
     color: #f9fafb;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .footer-social-icon:hover {
-    background-color: #8344f0;
-    transform: translateY(-5px);
+    background-color: #6d28d9;
 }
 
 .footer-copyright {
@@ -410,39 +458,36 @@ header {
     margin-top: 32px;
 }
 
-/* Logo hover animation */
 .logo img {
     transition: transform 0.3s ease;
 }
 
 .logo:hover img {
-    transform: translateY(-5px);
+    transform: rotate(360deg);
 }
 
-/* Download button hover animation */
+/* Download Button Styles */
 .download-btna, .mobile-download-btna {
-    transition: transform 0.3s ease, background-color 0.3s ease !important;
+    background-color: #7c3aed !important;
+    color: white !important;
 }
 
 .download-btna:hover, .mobile-download-btna:hover {
-    transform: translateY(-3px);
-    background-color: #6d28d9 !important;
+    background-color: #641ae4 !important;
 }
 
 .download-btna {
-    background-color: #7c3aed;
-    color: white !important;
     padding: 10px 24px;
     border-radius: 8px;
     font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 .mobile-download-btna {
     display: inline-block;
-    background-color: #7c3aed;
-    color: white !important;
     padding: 10px 24px;
     border-radius: 8px;
     font-weight: 600;
     margin-top: 16px;
+    transition: background-color 0.3s ease;
 }

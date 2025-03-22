@@ -1,85 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BondBridge - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/homepage.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/homepage.css" />
+  </head>
+  <body>
     <!-- Header - Matches Image 1 -->
     <header>
-        <a href="index.html" class="logo" style="gap: 7px;">
-            <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="25" height="25" style="margin-top: -7px;">
-            <h3 class="grad" style="font-weight: bolder;">BondBridge</h3>
-        </a>
-        
-        <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="download-btn">Download Now</a>
-        </div>
-        
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+      <a href="index.html" class="logo">
+        <img
+          src="assets/icon-logo.png"
+          alt="Bond Bridge Logo"
+          width="25"
+          height="25"
+        />
+        <h3 class="grad">BondBridge</h3>
+      </a>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="download.html" class="download-btn">Download Now</a>
+      </div>
+
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </header>
-    
+
     <!-- Mobile Menu -->
-    <div class="mobile-menu" style="position: fixed; top: 0; right: -100%; width: 80%; max-width: 300px; height: 100vh; background: white; z-index: 1000; transition: right 0.3s ease; box-shadow: -2px 0 5px rgba(0,0,0,0.1);">
-        <button class="mobile-menu-close" style="position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 24px; cursor: pointer;">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="mobile-nav-links" style="padding: 60px 20px 20px; display: flex; flex-direction: column; gap: 20px;">
-            <a href="home.html">Home</a>
-            <a href="support.html">Support</a>
-            <a href="about.html">About</a>
-            <a href="download.html">Download</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="download.html" class="download-btn">Download Now</a>
-        </div>
+    <div class="mobile-menu">
+      <button class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="mobile-nav-links">
+        <a href="home.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="about.html">About</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="download.html" class="download-btn">Download Now</a>
+      </div>
     </div>
-    <div class="mobile-menu-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; display: none;"></div>
+    <div class="mobile-menu-overlay"></div>
 
-
-    
     <!-- Landing Page Content -->
     <main>
-        <section class="landing-hero">
-            <div class="landing-hero-logo">
-              <img src="assets/icon-logo.png" alt="Bond Bridge Logo">
-              <h2 class="grad">BondBridge</h2>
-            </div>
-            <div class="landing-hero-content">
-              <div class="landing-hero-text" >
-                <h1>
-                  Welcome to <span class="gradient-brand">BondBridge, </span>a new way to connect <span class="gradient-brand">online</span>
-                </h1>
-                <p>
-                  BondBridge is an AI driven, interactive social media app that allows users to connect, share, and communicate securely. Build genuine connections, express ideas freely, and explore lasting new friendships in a safe, secure, judgment-free environment. BondBridge, a new way to connect online.
-                </p>
-                <a href="download.html" class="get-started-btn">
-                  <span>Get Started</span>
-                  <span class="arrow-icon" style="scale: 1.9; margin-top: 2px;">
-                    <i class="fas fa-arrow-right fa-xs" style="scale: 0.6;"></i>
-                  </span>
-                </a>
-              </div>
-              <div class="hero-image">
-                <img src="assets/landing/hero-image.png" alt="Illustration of people using social media">
-              </div>
-            </div>
-            <img src="assets/landing/liquid-bg.png" alt="Background decoration" class="background-liquid">
-          </section>
+      <section class="landing-hero">
+        <div class="landing-hero-logo">
+          <img src="assets/icon-logo.png" alt="Bond Bridge Logo" />
+          <h2 class="grad">BondBridge</h2>
+        </div>
+        <div class="landing-hero-content">
+          <div class="landing-hero-text">
+            <h1>
+              Welcome to <span class="gradient-brand">BondBridge, </span>a new
+              way to connect <span class="gradient-brand">online</span>
+            </h1>
+            <p>
+              BondBridge is an AI driven, interactive social media app that
+              allows users to connect, share, and communicate securely. Build
+              genuine connections, express ideas freely, and explore lasting new
+              friendships in a safe, secure, judgment-free environment.
+              BondBridge, a new way to connect online.
+            </p>
+            <a href="download.html" class="get-started-btn">
+              <span>Get Started</span>
+              <span class="arrow-icon">
+                <i class="fas fa-arrow-right fa-xs"></i>
+              </span>
+            </a>
+          </div>
+          <div class="hero-image">
+            <img
+              src="assets/landing/hero-image.png"
+              alt="Illustration of people using social media"
+            />
+          </div>
+        </div>
+        <img
+          src="assets/landing/liquid-bg.png"
+          alt="Background decoration"
+          class="background-liquid"
+        />
+      </section>
 
-
-
-        <!-- Hero Section - Matches Image 1 -->
-         <!-- <section class="landing-hero">
+      <!-- Hero Section - Matches Image 1 -->
+      <!-- <section class="landing-hero">
             <div class="hero-logo">
               <img src="assets/icon-logo.png" alt="Bond Bridge Logo" style="scale: 0.7; margin-top: -20px;">
               <h2 class="grad" style="font-weight: bolder; margin-top: -10px;">BondBridge</h2>
@@ -111,765 +127,1479 @@
             </div>
             <img src="assets/landing/liquid-bg.png" alt="Background decoration" class="background-liquid">
           </section> -->
-        
-        <!-- Interactive Image Section -->
-        <section class="hero-bridge-section">
-            <div class="hero-bridge-container" style="scale: 0.97;">
-                <!-- Left: Circle with Image and Icons -->
-                <div class="hero-bridge-left" style="scale: 0.9;">
-                    <!-- Dashed Circle -->
-                    <div class="hero-bridge-dashed-circle"></div>
-                    
-                    <!-- Purple Circle -->
-                    <div class="hero-bridge-purple-circle"></div>
-                    
-                    <!-- Inner Circle with Image -->
-                    <div class="hero-bridge-inner-circle">
-                        <img src="assets/landing/girl-on-phone-1.png" alt="Person using BondBridge" style="width: 100%; height: 100%; object-fit: contain;" class="hero-bridge-image">
-                    </div>
-    
-                    <!-- Floating Icons -->
-                    <!-- Icon 1 - Top Blue -->
-                    <div class="hero-bridge-icon hero-bridge-icon-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    
-                    <!-- Icon 2 - Right Pink -->
-                    <div class="hero-bridge-icon hero-bridge-icon-pink">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </div>
-                    
-                    <!-- Icon 3 - Bottom Cyan -->
-                    <div class="hero-bridge-icon hero-bridge-icon-cyan">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
-                    </div>
-                    
-                    <!-- Icon 4 - Left Green -->
-                    <div class="hero-bridge-icon hero-bridge-icon-green">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                    </div>
-                    
-                    <!-- Icon 5 - Bottom Left Pink -->
-                    <div class="hero-bridge-icon hero-bridge-icon-magenta">
-                        <img src="assets/icons/floating/wifi-square.png" alt="Heart Icon" width="24" height="24" style="scale: 1.4;">
-                        </img>
-                    </div>
-                </div>
-    
-                <!-- Right: Text Content -->
-                <div class="hero-bridge-right">
-                    <h1 class="hero-bridge-heading">
-                        Bridge the Gaps,<br>
-                        Build new Bonds
-                  </h1>
-                    
-                    <p class="hero-bridge-description" style="color: #000000;">
-                        BondBridge allows users to connect openly or anonymously, directly or in groups, without social or peer pressure. Build trust, share freely. 
-                  </p>
-                    
-                  <a href="download.html" class="get-started-btn">
-                    <span>Join Now</span>
-                    <span class="arrow-icon" style="scale: 1.9; margin-top: 2px;">
-                        <i class="fas fa-arrow-right fa-xs" style="scale: 0.6;"></i>
-                    </span>
-                </a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Features Section -->
-        <section class="features-section">
-            <div class="section-heading">
-                <span class="section-badge" style="margin-bottom: 30px;"><strong>PRODUCT</strong></span>
-                <div style="position: relative; margin-bottom: 10px;">
-                    <h2 class="section-title" style="position: relative; z-index: 1;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;">Unique </span><span class="highlight" style="position: relative; display: inline-block;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;"> Platform </span><span style="position: absolute; top: -14px; right: -105px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2; border: 1px solid rgba(255, 255, 255, 0.3); white-space: nowrap;">
-                            <strong>BondBridge</strong>
-                    </span>
-                    </span></h2>
-                </div>
-                <p class="section-description" style="color: black; font-weight: 400; text-align: justify;">
-                BondBridge offers unique, AI driven platforms like BondChat (TM), which connects users through a proprietary algorithm based on the users' preferences and interests, designed to alleviate <strong>loneliness</strong>. </p>
-            </div>
-            
-            <div class="feature-items">
-                <div class="feature-item">
-                    <div class="feature-item-text">
-                        <span class="section-badge"><strong>SECURITY</strong></span>
-                        <div style="position: relative; margin-bottom: 10px;">
-                         <h2 class="section-title" style="position: relative; z-index: 1;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;">Connect  </span><span class="highlight" style="position: relative; display: inline-block;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;"> Discreetly </span><span style="position: absolute; top: -14px; right: -105px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2; border: 1px solid rgba(255, 255, 255, 0.3); white-space: nowrap;">
-                            <strong>BondSecure </strong>
-                    </span>
-                    </span></h2>
-                        </div>
-                        <p class="feature-item-description" style="font-size: 16px;scale: 1.1; color: #000000; text-align: justify; width: 80%; text-align: justify; margin-left: 24px;">
-                            Express thoughts and ideas freely, without fears of judgments. Identities remain protected. Complete anonymity guaranteed.
-                      </p>
-                      
 
-                    </div>
-                    <div class="feature-item-image">
-                        <img src="assets/screenshots/anonymity.png" alt="Anonymity feature" style="scale: 0.9;">
-                    </div>
-                </div>
-                
-                <div class="feature-item reverse">
-                    <div class="feature-item-text">
-                        <span class="section-badge"><strong>COMMUNITY</strong></span>
-                        <div style="position: relative; margin-bottom: 10px;">
-                            <h2 class="section-title" style="position: relative; z-index: 1;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;">Engage  </span><span class="highlight" style="position: relative; display: inline-block;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;"> Socially </span><span style="position: absolute; top: -14px; right: -105px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2; border: 1px solid rgba(255, 255, 255, 0.3); white-space: nowrap;">
-                                <strong>BondGroup</strong>
-                        </span>
-                        </span></h2>
-                        </div>
-                        <p class="feature-item-description" style="font-size: 1rem;scale: 1.1; margin-left: 24px; color: #000000; text-align: justify; width: 80%; word-spacing: 2px;">
-                            Engage like-minded individuals and/or join communities that share common preferences, interests, passions or aspirations.
-                        </p>
-                        
-                    </div>
-                    <div class="feature-item-image">
-                        <img src="assets/screenshots/mobile-communities.png" alt="Community feature" style="scale: 0.9;">
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-item-text">
-                        <span class="section-badge">FLEXIBILITY</span>
-                        <div style="position: relative; margin-bottom: 10px;">
-                            <h2 class="section-title" style="position: relative; z-index: 1;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;">Online </span><span class="highlight" style="position: relative; display: inline-block;"><span class="feature-item-title" style="font-size: 2.5rem; position: relative; z-index: 1; margin-bottom: 0;"> Webmode </span><span style="position: absolute; top: -14px; right: -105px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2; border: 1px solid rgba(255, 255, 255, 0.3); white-space: nowrap;">
-                                <strong>BondOnline</strong>
-                        </span>
-                        </span></h2>
-                      </div>
-                      <p class="feature-item-description" style="font-size: 1rem; color: #000000; margin-left: 24px; scale: 1.1; text-align: justify; width: 80%;">
-                            Download the mobile app or login online for the same secure, unique, interactive user experience at www.bondbridge.online. 
-                      </p>
-                    </div>
-                    <div class="feature-item-image">
-                        <img src="assets/landing/web-mode.png" alt="Security feature" style="scale: 0.9;">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-       
-        
-        <!-- Work Section -->
-        <section class="work-section">
-            <div class="work-content">
-                <div class="section-heading">
-                    <span class="section-badge" style="margin-bottom: 30px; font-weight: bold;">FEATURE</span>
-                    <h2 class="section-title" style="position: relative; font-size: 3rem;">Intuitive  <span class="highlight" style="position: relative; display: inline-block;">Chatbot   
-                        <span style="position: absolute; top: -14px; background-color: #7c3aed; color: white; padding: 5px 15px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 2; border: 1px solid rgba(255, 255, 255, 0.3); white-space: nowrap; left: 192px;">
-                        <strong>BondChat</strong> </span>
-                    </span></h2>
-                    <p class="section-description" style="color: black; font-weight: 400; text-align: justify; word-spacing: 1px;">
-                        <strong>BondChat</strong> uses a specifically designed AI-Chatbot to communicate with users, suggesting potential connections based on common interests to help alleviate social awkwardness when making friends.</p>
-                </div>
-                
-                <!-- <div class="work-image"> -->
-                    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                        <img 
-                          src="assets/homepageimage.png" 
-                          alt="GPT at Work Interface" 
-                          style="
-                            scale: 0.5; 
-                            margin-top: -180px; 
-                            margin-bottom: -180px; 
-                            max-width: 100%;
-                            @media screen and (max-width: 768px) {
-                              scale: 0.3;
-                              margin-top: -100px;
-                              margin-bottom: -100px;
-                            }
-                          "
-                        >
-                      </div>
-                <!-- </div> -->
-            </div>
-        </section>
+      <!-- Interactive Image Section -->
+      <section class="hero-bridge-section">
+        <div class="hero-bridge-container">
+          <!-- Left: Circle with Image and Icons -->
+          <div class="hero-bridge-left">
+            <!-- Dashed Circle -->
+            <div class="hero-bridge-dashed-circle"></div>
 
-        <section class="explore-section">
-            <!-- Section Heading -->
-            <h1 class="section-heading">Explore Intriguing Communities</h1>
-            <p class="section-description" style="color: #000000;">
-              Join BondBridge to connect with a diverse community of users directly or discreetly, within a wide variety of interesting pre-determined and/or user initiated communities. Sign up today to explore!</p>
-            
-            <!-- First row: 4 items -->
-            <div class="communities-grid">
-              <div class="community-item">
-                <img src="assets/icons/icon_adventures.png" alt="Adventures" class="community-icon">
-                <p class="community-name">Adventures</p>
-              </div>
-              <div class="community-item">
-                <img src="assets/icons/icon_music.png" alt="Music" class="community-icon">
-                <p class="community-name">Entertainment</p>
-              </div>
-              <div class="community-item">
-                <img src="assets/icons/icon_games.png" alt="Games" class="community-icon">
-                <p class="community-name">Gaming</p>
-              </div>
-              <div class="community-item">
-                <img src="assets/icons/icon_technology.png" alt="Technology" class="community-icon">
-                <p class="community-name">Technology</p>
-              </div>
+            <!-- Purple Circle -->
+            <div class="hero-bridge-purple-circle"></div>
+
+            <!-- Inner Circle with Image -->
+            <div class="hero-bridge-inner-circle">
+              <img
+                src="assets/landing/girl-on-phone-1.png"
+                alt="Person using BondBridge"
+                class="hero-bridge-image"
+              />
             </div>
-            
-            
-            
-            <!-- Community Stats Section -->
-            <div class="stats-section">
-              <div class="stat-item">
-                <span class="stat-value">
-                  +50M
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                  </svg>
+
+            <!-- Floating Icons -->
+            <!-- Icon 1 - Top Blue -->
+            <div class="hero-bridge-icon hero-bridge-icon-blue">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+
+            <!-- Icon 2 - Right Pink -->
+            <div class="hero-bridge-icon hero-bridge-icon-pink">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+
+            <!-- Icon 3 - Bottom Cyan -->
+            <div class="hero-bridge-icon hero-bridge-icon-cyan">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+
+            <!-- Icon 4 - Left Green -->
+            <div class="hero-bridge-icon hero-bridge-icon-green">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+
+            <!-- Icon 5 - Bottom Left Pink -->
+            <div class="hero-bridge-icon hero-bridge-icon-magenta">
+              <img
+                src="assets/icons/floating/wifi-square.png"
+                alt="Heart Icon"
+                width="24"
+                height="24"
+              />
+            </div>
+          </div>
+
+          <!-- Right: Text Content -->
+          <div class="hero-bridge-right">
+            <h1 class="hero-bridge-heading">
+              Bridge the Gaps,<br />
+              Build new Bonds
+            </h1>
+
+            <p class="hero-bridge-description">
+              BondBridge allows users to connect openly or anonymously, directly
+              or in groups, without social or peer pressure. Build trust, share
+              freely.
+            </p>
+
+            <a href="download.html" class="get-started-btn">
+              <span>Join Now</span>
+              <span class="arrow-icon">
+                <i class="fas fa-arrow-right fa-xs"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="section-heading">
+          <span class="section-badge product-badge"
+            ><strong>PRODUCT</strong></span
+          >
+          <div class="heading-wrapper">
+            <h2 class="section-title">
+              <span class="feature-item-title">Unique </span
+              ><span class="highlight"
+                ><span class="feature-item-title"> Platform </span
+                ><span class="platform-badge">
+                  <strong>BondBridge</strong>
                 </span>
-                <p class="stat-label">Download Goal</p>
+              </span>
+            </h2>
+          </div>
+          <p class="section-description product-description">
+            BondBridge offers unique, AI driven platforms like BondChat (TM),
+            which connects users through a proprietary algorithm based on the
+            users' preferences and interests, designed to alleviate
+            <strong>loneliness</strong>.
+          </p>
+        </div>
+
+        <div class="feature-items">
+          <div class="feature-item">
+            <div class="feature-item-text">
+              <span class="section-badge"><strong>SECURITY</strong></span>
+              <div class="heading-wrapper">
+                <h2 class="section-title">
+                  <span class="feature-item-title">Connect </span
+                  ><span class="highlight"
+                    ><span class="feature-item-title"> Discreetly </span
+                    ><span class="platform-badge feature-badge">
+                      <strong>BondSecure </strong>
+                    </span>
+                  </span>
+                </h2>
               </div>
-              
-              <!-- Divider -->
-              <div class="divider"></div>
-              
-              <div class="stat-item">
-                <span class="stat-value">
-                  +100M
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </span>
-                <p class="stat-label">Members Goal</p>
-              </div>
-              
-              <!-- Divider -->
-              <div class="divider"></div>
-              
-              <div class="stat-item">
-                <span class="stat-value">
-                  +25#
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.9 19.7a3 3 0 0 0-4.2-4.2"></path>
-                    <path d="M9.1 19.7a3 3 0 0 1-4.2-4.2"></path>
-                    <path d="M13.1 9.1a3 3 0 0 1 4.2-4.2"></path>
-                    <path d="M10.9 15.9a3 3 0 0 0-4.2-4.2"></path>
-                    <path d="M13.1 15.9a3 3 0 0 1 4.2-4.2"></path>
-                    <path d="M10.9 9.1a3 3 0 0 1-4.2-4.2"></path>
-                  </svg>
-                </span>
-                <p class="stat-label">Communitity Goal</p>
-              </div>
+              <p class="feature-item-description security-description">
+                Express thoughts and ideas freely, without fears of judgments.
+                Identities remain protected. Complete anonymity guaranteed.
+              </p>
             </div>
-          </section>
+            <div class="feature-item-image">
+              <img
+                src="assets/screenshots/anonymity.png"
+                alt="Anonymity feature"
+              />
+            </div>
+          </div>
 
-         
+          <div class="feature-item reverse">
+            <div class="feature-item-text">
+              <span class="section-badge"><strong>COMMUNITY</strong></span>
+              <div class="heading-wrapper">
+                <h2 class="section-title">
+                  <span class="feature-item-title">Engage </span
+                  ><span class="highlight"
+                    ><span class="feature-item-title"> Socially </span
+                    ><span class="platform-badge feature-badge">
+                      <strong>BondGroup</strong>
+                    </span>
+                  </span>
+                </h2>
+              </div>
+              <p class="feature-item-description community-description">
+                Engage like-minded individuals and/or join communities that
+                share common preferences, interests, passions or aspirations.
+              </p>
+            </div>
+            <div class="feature-item-image">
+              <img
+                src="assets/screenshots/mobile-communities.png"
+                alt="Community feature"
+              />
+            </div>
+          </div>
 
-        
-        <!-- Why BondBridge Section -->
-        <section class="why-bondbridge-section">
-            <div class="why-bondbridge-container">
-                <!-- Left Content -->
-                <div class="why-bondbridge-left">
-                    <div class="why-bondbridge-badge"><strong>About BondBridge</strong></div>
-                    
-                    <h2 class="why-bondbridge-heading">Why BondBridge?</h2>
-                    
-                    <p class="why-bondbridge-description" style="color: #000000;">
-              Bondbridge is a unique approach towards social media, designed to encourage and assist young adults aged 18-35 with how to become more social. The goal is to reduce the <strong>social anxiety</strong> and <strong>loneliness</strong> that occurs when trying to make new connections. Our app includes: </p>
-            
+          <div class="feature-item">
+            <div class="feature-item-text">
+              <span class="section-badge">FLEXIBILITY</span>
+              <div class="heading-wrapper">
+                <h2 class="section-title">
+                  <span class="feature-item-title">Online </span
+                  ><span class="highlight"
+                    ><span class="feature-item-title"> Webmode </span
+                    ><span class="platform-badge feature-badge">
+                      <strong>BondOnline</strong>
+                    </span>
+                  </span>
+                </h2>
+              </div>
+              <p class="feature-item-description flexibility-description">
+                Download the mobile app or login online for the same secure,
+                unique, interactive user experience at www.bondbridge.online.
+              </p>
+            </div>
+            <div class="feature-item-image">
+              <img src="assets/landing/web-mode.png" alt="Security feature" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Section -->
+      <section class="work-section">
+        <div class="work-content">
+          <div class="section-heading">
+            <span
+              class="section-badge"
+              style="margin-bottom: 30px; font-weight: bold"
+              >FEATURE</span
+            >
+            <h2
+              class="section-title"
+              style="position: relative; font-size: 3rem"
+            >
+              Intuitive
+              <span
+                class="highlight"
+                style="position: relative; display: inline-block"
+                >Chatbot
+                <span
+                  style="
+                    position: absolute;
+                    top: -14px;
+                    background-color: #7c3aed;
+                    color: white;
+                    padding: 5px 15px;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    z-index: 2;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    white-space: nowrap;
+                    left: 192px;
+                  "
+                >
+                  <strong>BondChat</strong>
+                </span>
+              </span>
+            </h2>
+            <p
+              class="section-description"
+              style="
+                color: black;
+                font-weight: 400;
+                text-align: justify;
+                word-spacing: 1px;
+              "
+            >
+              <strong>BondChat</strong> uses a specifically designed AI-Chatbot
+              to communicate with users, suggesting potential connections based
+              on common interests to help alleviate social awkwardness when
+              making friends.
+            </p>
+          </div>
+
+          <div class="work-image-container">
+            <img
+              src="assets/homepageimage.png"
+              alt="GPT at Work Interface"
+              class="work-hero-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="explore-section">
+        <!-- Section Heading -->
+        <h1 class="section-heading">Explore Intriguing Communities</h1>
+        <p class="section-description explore-description">
+          Join BondBridge to connect with a diverse community of users directly
+          or discreetly, within a wide variety of interesting pre-determined
+          and/or user initiated communities. Sign up today to explore!
+        </p>
+
+        <!-- First row: 4 items -->
+        <div class="communities-grid">
+          <div class="community-item">
+            <img
+              src="assets/icons/icon_adventures.png"
+              alt="Adventures"
+              class="community-icon"
+            />
+            <p class="community-name">Adventures</p>
+          </div>
+          <div class="community-item">
+            <img
+              src="assets/icons/icon_music.png"
+              alt="Music"
+              class="community-icon"
+            />
+            <p class="community-name">Entertainment</p>
+          </div>
+          <div class="community-item">
+            <img
+              src="assets/icons/icon_games.png"
+              alt="Games"
+              class="community-icon"
+            />
+            <p class="community-name">Gaming</p>
+          </div>
+          <div class="community-item">
+            <img
+              src="assets/icons/icon_technology.png"
+              alt="Technology"
+              class="community-icon"
+            />
+            <p class="community-name">Technology</p>
+          </div>
+        </div>
+
+        <!-- Community Stats Section -->
+        <div class="stats-section">
+          <div class="stat-item">
+            <span class="stat-value">
+              +50M
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </span>
+            <p class="stat-label">Download Goal</p>
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <div class="stat-item">
+            <span class="stat-value">
+              +100M
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </span>
+            <p class="stat-label">Members Goal</p>
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <div class="stat-item">
+            <span class="stat-value">
+              +25#
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20.9 19.7a3 3 0 0 0-4.2-4.2"></path>
+                <path d="M9.1 19.7a3 3 0 0 1-4.2-4.2"></path>
+                <path d="M13.1 9.1a3 3 0 0 1 4.2-4.2"></path>
+                <path d="M10.9 15.9a3 3 0 0 0-4.2-4.2"></path>
+                <path d="M13.1 15.9a3 3 0 0 1 4.2-4.2"></path>
+                <path d="M10.9 9.1a3 3 0 0 1-4.2-4.2"></path>
+              </svg>
+            </span>
+            <p class="stat-label">Communitity Goal</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why BondBridge Section -->
+      <section class="why-bondbridge-section">
+        <style>
+          .why-bondbridge-section {
+            padding: 80px 0;
+            background-color: #f9fafb;
+            overflow: hidden;
+            position: relative;
+          }
+          .why-bondbridge-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .why-bondbridge-left {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+          }
+          .why-bondbridge-badge {
+            display: inline-block;
+            background-color: #f3e8ff;
+            color: #9333ea;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 14px;
+          }
+          .why-bondbridge-heading {
+            font-size: 42px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 24px;
+            line-height: 1.2;
+          }
+          .why-bondbridge-description {
+            font-size: 18px;
+            color: #4b5563;
+            margin-bottom: 40px;
+            line-height: 1.6;
+          }
+          .why-bondbridge-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            gap: 16px;
+          }
+          .why-bondbridge-feature-icon {
+            background-color: #f9f5ff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+          }
+
+          .why-bondbridge-feature-icon:hover {
+            transform: translateY(-5px);
+            background-color: #f3e8ff;
+          }
+          .why-bondbridge-feature-icon svg {
+            stroke: #9061f9;
+            transition: transform 0.3s ease;
+          }
+          .why-bondbridge-feature-icon:hover svg {
+            transform: scale(1.1);
+          }
+          .why-bondbridge-feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 4px;
+          }
+          .why-bondbridge-feature-description {
+            color: #4b5563;
+            font-size: 16px;
+          }
+          .why-bondbridge-right {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            height: 600px;
+          }
+          .why-bondbridge-dashed-circle {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            border: 2px dashed rgba(209, 213, 219, 0.6);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .why-bondbridge-purple-circle {
+            position: absolute;
+            width: 75%;
+            height: 75%;
+            background-color: #9061f9;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .why-bondbridge-inner-circle {
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            background-color: #f3e8ff;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            transition: transform 0.4s ease;
+          }
+          .why-bondbridge-inner-circle:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+          }
+          .why-bondbridge-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+          }
+          .why-bondbridge-image:hover {
+            transform: scale(1.05);
+          }
+          .why-bondbridge-stat-card {
+            position: absolute;
+            background-color: white;
+            padding: 12px 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 10;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          .why-bondbridge-stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 15px rgba(124, 58, 237, 0.2);
+          }
+          .why-bondbridge-stat-card-top {
+            top: 15%;
+            right: 5%;
+          }
+          .why-bondbridge-stat-card-bottom {
+            bottom: 15%;
+            left: 5%;
+          }
+          .why-bondbridge-stat-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #9061f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .why-bondbridge-stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.2;
+          }
+          .why-bondbridge-stat-label {
+            font-size: 14px;
+            color: #6b7280;
+          }
+          @media (max-width: 768px) {
+            .why-bondbridge-section {
+              padding: 40px 0;
+              background-color: #f9fafb;
+              overflow: hidden;
+              margin-top: 50px;
+              position: relative;
+            }
+            .why-bondbridge-left {
+              scale: 0.7;
+              height: 700px;
+            }
+            .why-bondbridge-right {
+              height: 350px;
+            }
+            .why-bondbridge-stat-card {
+              padding: 8px 12px;
+              transform: scale(0.9);
+            }
+            .why-bondbridge-stat-value {
+              font-size: 18px;
+            }
+            .why-bondbridge-stat-label {
+              font-size: 12px;
+            }
+            .why-bondbridge-image {
+              margin-top: 20px;
+              transform: translateY(-20px) scale(0.9);
+            }
+          }
+        </style>
+        <div class="why-bondbridge-container">
+          <!-- Left Content -->
+          <div class="why-bondbridge-left">
+            <div class="why-bondbridge-badge">
+              <strong>About BondBridge</strong>
+            </div>
+
+            <h2 class="why-bondbridge-heading">Why BondBridge?</h2>
+
+            <p class="why-bondbridge-description" style="color: #000000">
+              Bondbridge is a unique approach towards social media, designed to
+              encourage and assist young adults aged 18-35 with how to become
+              more social. The goal is to reduce the
+              <strong>social anxiety</strong> and
+              <strong>loneliness</strong> that occurs when trying to make new
+              connections. Our app includes:
+            </p>
+
             <!-- Feature 1 -->
-                    <div class="why-bondbridge-feature">
-                        <div class="why-bondbridge-feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+            <div class="why-bondbridge-feature">
+              <div class="why-bondbridge-feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect
+                    width="18"
+                    height="11"
+                    x="3"
+                    y="11"
+                    rx="2"
+                    ry="2"
+                  ></rect>
                   <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
               </div>
-                        <div>
-                            <h3 class="why-bondbridge-feature-title">Safe, Secure InPrivate Messaging</h3>
-                            <p class="why-bondbridge-feature-description">Private, encrypted chats with zero data stored.</p>
+              <div>
+                <h3 class="why-bondbridge-feature-title">
+                  Safe, Secure InPrivate Messaging
+                </h3>
+                <p class="why-bondbridge-feature-description">
+                  Private, encrypted chats with zero data stored.
+                </p>
               </div>
             </div>
-            
+
             <!-- Feature 2 -->
-                    <div class="why-bondbridge-feature">
-                        <div class="why-bondbridge-feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="why-bondbridge-feature">
+              <div class="why-bondbridge-feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <polyline points="16 11 18 13 22 9"></polyline>
                 </svg>
               </div>
-                        <div>
-                            <h3 class="why-bondbridge-feature-title">Algorithms Designed to Connect </h3>
-                            <p class="why-bondbridge-feature-description">Connect with common users, make new friends</p>
+              <div>
+                <h3 class="why-bondbridge-feature-title">
+                  Algorithms Designed to Connect
+                </h3>
+                <p class="why-bondbridge-feature-description">
+                  Connect with common users, make new friends
+                </p>
               </div>
             </div>
-            
+
             <!-- Feature 3 -->
-                    <div class="why-bondbridge-feature">
-                        <div class="why-bondbridge-feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+            <div class="why-bondbridge-feature">
+              <div class="why-bondbridge-feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                  ></path>
                   <path d="m16 10-4 4-2-2"></path>
                 </svg>
               </div>
-                        <div>
-                            <h3 class="why-bondbridge-feature-title">A Unigue AI Chatbot to Converse</h3>
-                            <p class="why-bondbridge-feature-description">Openly communicate with an intelligent chatbot</p>
-                        </div>
+              <div>
+                <h3 class="why-bondbridge-feature-title">
+                  A Unigue AI Chatbot to Converse
+                </h3>
+                <p class="why-bondbridge-feature-description">
+                  Openly communicate with an intelligent chatbot
+                </p>
               </div>
             </div>
-            
-                <!-- Right Content - Circle with Image and Stats -->
-                <div class="why-bondbridge-right" style="scale: 0.9;">
-                    <!-- Dashed Circle -->
-                    <div class="why-bondbridge-dashed-circle"></div>
-                    
-                    <!-- Purple Circle -->
-                    <div class="why-bondbridge-purple-circle"></div>
-                    
-                    <!-- Inner Circle with Image -->
-                    <div class="why-bondbridge-inner-circle">
-                        <img src="assets/landing/girl-on-phone-1.png" alt="Person using BondBridge" style="width: 100%; height: 100%; object-fit: contain;" class="why-bondbridge-image">
-                    </div>
-                    
-                    <!-- Brands Joined Card -->
-                    <div class="why-bondbridge-stat-card why-bondbridge-stat-card-top">
-                        <div class="why-bondbridge-stat-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m5 12 7-7 7 7"></path>
-                                <path d="M12 19V5"></path>
-                  </svg>
-                </div>
-                        <div>
-                            <div class="why-bondbridge-stat-value">7+</div>
-                            <div class="why-bondbridge-stat-label">Brands Joined</div>
-                </div>
-              </div>
-                    
-                    <!-- Match Rate Card -->
-                    <div class="why-bondbridge-stat-card why-bondbridge-stat-card-bottom">
-                        <div class="why-bondbridge-stat-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                            </svg>
-            </div>
-                        <div>
-                            <div class="why-bondbridge-stat-value">85%</div>
-                            <div class="why-bondbridge-stat-label">Match Rate</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-         <!-- Why Choose Us Section - Purple Background with 4 Columns -->
-         <section style="background-color: #5D3B9C;scale: 0.95; color: white; padding: 60px 20px; margin: 80px auto; max-width: 1400px; border-radius: 20px;">
-            <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
-                <!-- Column 1 -->
-                <div style="flex: 1; min-width: 250px; padding: 20px;">
-                    <div style="text-align: center; margin-bottom: 20px;">
-                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s ease;">
-                            <i class="fas fa-server" style="font-size: 28px; color: white; transition: transform 0.3s ease;" onmouseover="this.parentElement.style.transform='rotate(180deg)'" onmouseout="this.parentElement.style.transform='rotate(0deg)'"></i>
-                        </div>
-                    </div>
-                    <div style="position: relative; margin-bottom: 20px;">
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; text-align: center; position: relative; z-index: 1;">Why Choose Us</h3>
-                        
-                        
-                    </div>
-                    
-                    <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.9); text-align: center;">
-                        A multi-platform app designed to help alleviate loneliness &amp; anxiety.</p>
           </div>
 
-                <!-- Column 2 -->
-                <div style="flex: 1; min-width: 250px; padding: 20px;">
-                    <div style="text-align: center; margin-bottom: 20px;">
-                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s ease;">
-                            <i class="fas fa-eye-slash" style="font-size: 28px; color: white; transition: transform 0.3s ease;" onmouseover="this.parentElement.style.transform='rotate(180deg)'" onmouseout="this.parentElement.style.transform='rotate(0deg)'"></i>
-                        </div>
-                    </div>
-                    <div style="position: relative; margin-bottom: 20px;">
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; text-align: center; position: relative; z-index: 1;">Secure Environment</h3>
-                        
-                    </div>
-                    <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.9); text-align: center;">
-                        Safe, secure environment that doesn't use tracking methods.</p>
-                </div>
-            
-                <!-- Column 3 -->
-                <div style="flex: 1; min-width: 250px; padding: 20px;">
-                    <div style="text-align: center; margin-bottom: 20px;">
-                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s ease;">
-                            <i class="fas fa-lock" style="font-size: 28px; color: white; transition: transform 0.3s ease;" onmouseover="this.parentElement.style.transform='rotate(180deg)'" onmouseout="this.parentElement.style.transform='rotate(0deg)'"></i>
-                        </div>
-                    </div>
-                    <div style="position: relative; margin-bottom: 20px;">
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; text-align: center; position: relative; z-index: 1;">Latest Technologies</h3>
-                        
-                    </div>
-                    <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.9); text-align: center;">
-                        AI-Driven platform using the latest algorithms and cloud technology.
-                    </p>
-                </div>
-                
-                <!-- Column 4 -->
-                <div style="flex: 1; min-width: 250px; padding: 20px;">
-                    <div style="text-align: center; margin-bottom: 20px;">
-                        <div style="width: 70px; scale: 0.9; height: 70px; background-color: #5D3B9C; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: transform 0.3s ease;">
-                            <i class="fas fa-users" style="font-size: 28px; color: white; transition: transform 0.3s ease;" onmouseover="this.parentElement.style.transform='rotate(180deg)'" onmouseout="this.parentElement.style.transform='rotate(0deg)'"></i>
-                        </div>
-                    </div>
-                    <div style="position: relative; margin-bottom: 20px;">
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; text-align: center; position: relative; z-index: 1;">Diverse Communities</h3>
-                        
-                    </div>
-                    <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.9); text-align: center;">
-                        A community of young adults 18-35, looking to make <strong>new friends.</strong></p>
-                </div>
-            </div>
-        </section>
+          <!-- Right Content - Circle with Image and Stats -->
+          <div class="why-bondbridge-right" style="scale: 0.9">
+            <!-- Dashed Circle -->
+            <div class="why-bondbridge-dashed-circle"></div>
 
-        <!-- User Feedback Section with Purple Background -->
-        <section style="background-color: #5D3B9C; color: white; padding: 80px 20px 100px; margin-top: 80px;">
-            <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-                <div style="display: inline-block; background-color: rgba(255, 255, 255, 0.2); padding: 8px 20px; border-radius: 30px; margin-bottom: 20px;">
-                    <span style="font-size: 16px; font-weight: 500;">Users Feedback</span>
-                </div>
-                
-                <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 20px;">Voices of BondBridge</h2>
-                
-                <p style="font-size: 18px; max-width: 800px; margin: 0 auto 60px; line-height: 1.6;">
-                    Discover why users love BondBridge. Real feedback and testimonials from real people on how the new way to connect online helps alleviate introversion, social awkwardness and overall loneliness. </p>
-                
-                <!-- Testimonials in a single row -->
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 50px;">
-                    <!-- Testimonial 1 -->
-                    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 30%; min-width: 300px;">
-                        <img src="assets/people/people-1.png" alt="Mat Renshaw" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: -35px; margin-left: 20px; z-index: 2; border: 3px solid #5D3B9C;">
-                        <div style="background-color: white; color: #333; padding: 25px; padding-top: 45px; border-radius: 15px; width: 100%; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
-                            <h3 style="font-size: 20px; margin-bottom: 10px; color: #1f2937;">Monica Williams</h3>
-                            <p style="color: #6b7280; line-height: 1.6; text-align: justify;">
-                            I'm an outgoing but very busy person with work, school, hobbies, etc. and found it very diffiicult to make lasting connections. Using BondBridge online makes it  so much easier. </p>
-                    </div>
-                </div>
-                
-                    <!-- Testimonial 2 -->
-                    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 30%; min-width: 300px;">
-                        <img src="assets/people/people-2.png" alt="Alex Ellis" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: -35px; margin-left: 20px; z-index: 2; border: 3px solid #5D3B9C;">
-                        <div style="background-color: white; color: #333; padding: 25px; padding-top: 45px; border-radius: 15px; width: 100%; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
-                            <h3 style="font-size: 20px; margin-bottom: 10px; color: #1f2937;">Justin Palugari</h3>
-                            <p style="color: #6b7280; line-height: 1.6; text-align: justify;">
-                                I am a naturally shy individual and am not good with striking up conversations. Using the BondBridge has helped me overcome the stress of making new friends.</p>
-                    </div>
-                </div>
-                
-                    <!-- Testimonial 3 -->
-                    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 30%; min-width: 300px;">
-                        <img src="assets/people/people-3.png" alt="Cooper Short" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: -35px; margin-left: 20px; z-index: 2; border: 3px solid #5D3B9C;">
-                        <div style="background-color: white; color: #333; padding: 25px; padding-top: 45px; border-radius: 15px; width: 100%; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
-                            <h3 style="font-size: 20px; margin-bottom: 10px; color: #1f2937;">Robert Conner</h3>
-                            <p style="color: #6b7280; line-height: 1.6; text-align: justify;">
-                                I am not lonely, just a tad bit uncomfortable making any newer friends. This app works  wonders. I just simply connnect with people with common interests and that's it.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
+            <!-- Purple Circle -->
+            <div class="why-bondbridge-purple-circle"></div>
 
-        <!-- Number of Currently Active Users Section -->
-        <section style="background-color: #f3e8ff; padding: 80px 20px; margin-top: 80px; position: relative; overflow: hidden;">
-            <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 40px;">
-                <!-- Left Content -->
-                <div style="flex: 1; min-width: 300px;">
-                    <div style="display: inline-block; background-color: #f3e8ff; color: #9333ea; padding: 8px 20px; border-radius: 30px; margin-bottom: 20px; font-weight: 600; font-size: 14px;">
-                        About BondBridge
-                    </div>
-                    
-                    <h2 style="font-size: 42px; font-weight: 800; color: #111827; margin-bottom: 24px; line-height: 1.2;">BondBridge Current Status</h2>
-                    
-                    <p style="font-size: 18px; color: black; margin-bottom: 40px; line-height: 1.6; max-width: 600px; text-align: justify;">
-                        Join the hundreds of active users live, on BondBridge, in a safe, secure, interactivee environment. Connect one on one, directly, anonymously or in one of the various interest groups. Download the app or sign in today! BondBridge - a new way to connect online! (Mobile or Browser Versions).</p>
-                    
-                        <a href="download.html" class="get-started-btn">
-                            <span>Join Now</span>
-                            <span class="arrow-icon" style="scale: 1.9; margin-top: 2px;">
-                                <i class="fas fa-arrow-right fa-xs" style="scale: 0.6;"></i>
-                            </span>
-                        </a>
-                </div>
-                
-                <!-- Right Content - Stats Cards -->
-                <div style="flex: 1; min-width: 300px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                    <!-- Card 1 -->
-                    <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
-                        <div style="font-size: 16px; margin-bottom: 10px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>
-                        </div>
-                        <div style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">150 +</div>
-                        <div style="color: #6b7280;">Secure Connections</div>
-                    </div>
-                    
-                    <!-- Card 2 -->
-                    <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
-                        <div style="font-size: 16px; margin-bottom: 10px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
-                                <path d="M15 3h6v6"></path>
-                                <path d="M10 14 21 3"></path>
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            </svg>
-                        </div>
-                        <div style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">10 +</div>
-                        <div style="color: #6b7280;">Thriving Communities</div>
-                    </div>
-                    
-                    <!-- Card 3 -->
-                    <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
-                        <div style="font-size: 16px; margin-bottom: 10px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
-                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                            </svg>
-                        </div>
-                        <div style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">200 +</div>
-                        <div style="color: #6b7280;">Conversations Started</div>
-                    </div>
-                    
-                    <!-- Card 4 -->
-                    <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
-                        <div style="font-size: 16px; margin-bottom: 10px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: -5px;">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                            </svg>
-                        </div>
-                        <div style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">50 +</div>
-                        <div style="color: #6b7280;">Daily Engagements</div>
-                    </div>
-                </div>
+            <!-- Inner Circle with Image -->
+            <div class="why-bondbridge-inner-circle">
+              <img
+                src="assets/landing/girl-on-phone-1.png"
+                alt="Person using BondBridge"
+                style="width: 100%; height: 100%; object-fit: contain"
+                class="why-bondbridge-image"
+              />
             </div>
-        </section>
 
-        <!-- Download App Section with Gradient Background -->
-        <section style="padding: 40px 24px; display: flex; align-items: center; justify-content: center;">
-            <div style="width: 100%; max-width: 1200px; background: linear-gradient(to right, #4A8FE9, #000000, #DA23C8); border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); padding: 40px 20px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <img 
-                    src="assets/icon-logo.png" 
-                    alt="BondBridge Logo" 
-                    style="width: 100px; height: auto;"
+            <!-- Brands Joined Card -->
+            <div class="why-bondbridge-stat-card why-bondbridge-stat-card-top">
+              <div class="why-bondbridge-stat-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 >
-
-                <h2 style="font-size: 36px; font-weight: 800; margin-top: 16px; line-height: 1.3; background: linear-gradient(to top right, #3b01b7 , #5e00ff, #ba19eb, #dd0cc8);
-     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; font-family: 'League Spartan';">
-                    BondBridge
-                </h2>
-
-                <div style="width: 80px; height: 2px; background-color: white; opacity: 0.6; margin-top: 8px;"></div>
-
-                <div style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; justify-content: center;">
-                    <a href="download.html">
-                        <img 
-                            src="assets/landing/download-apple.png" 
-                            alt="Download on the App Store" 
-                            style="height: 56px; width: auto;"
-                        >
-                    </a>
-                    <a href="download.html">
-                        <img 
-                            src="assets/landing/download-google.png" 
-                            alt="Get it on Google Play" 
-                            style="height: 56px; width: auto;"
-                        >
-                    </a>
-                    <a href="download.html">
-                        <img 
-                            src="assets/landing/download-windows.png" 
-                            alt="Download for Windows" 
-                            style="height: 140px; width: auto; margin-top: -41px; scale: 0.9; margin-left: -14px;"
-                        >
-                    </a>
-                    
-                </div>
+                  <path d="m5 12 7-7 7 7"></path>
+                  <path d="M12 19V5"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="why-bondbridge-stat-value">7+</div>
+                <div class="why-bondbridge-stat-label">Brands Joined</div>
+              </div>
             </div>
-        </section>
 
-        
+            <!-- Match Rate Card -->
+            <div
+              class="why-bondbridge-stat-card why-bondbridge-stat-card-bottom"
+            >
+              <div class="why-bondbridge-stat-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <div class="why-bondbridge-stat-value">85%</div>
+                <div class="why-bondbridge-stat-label">Match Rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Why Choose Us Section - Purple Background with 4 Columns -->
+      <section class="why-choose-us-section">
+        <div class="why-choose-us-container">
+          <!-- Column 1 -->
+          <div class="why-choose-us-column">
+            <div class="icon-container">
+              <div class="icon-circle">
+                <i
+                  class="fas fa-server"
+                  onmouseover="this.parentElement.style.transform='rotate(180deg)'"
+                  onmouseout="this.parentElement.style.transform='rotate(0deg)'"
+                ></i>
+              </div>
+            </div>
+            <div class="column-heading-container">
+              <h3 class="column-heading">Why Choose Us</h3>
+            </div>
+
+            <p class="column-description">
+              A multi-platform app designed to help alleviate loneliness &amp;
+              anxiety.
+            </p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="why-choose-us-column">
+            <div class="icon-container">
+              <div class="icon-circle">
+                <i
+                  class="fas fa-eye-slash"
+                  onmouseover="this.parentElement.style.transform='rotate(180deg)'"
+                  onmouseout="this.parentElement.style.transform='rotate(0deg)'"
+                ></i>
+              </div>
+            </div>
+            <div class="column-heading-container">
+              <h3 class="column-heading">Secure Environment</h3>
+            </div>
+            <p class="column-description">
+              Safe, secure environment that doesn't use tracking methods.
+            </p>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="why-choose-us-column">
+            <div class="icon-container">
+              <div class="icon-circle">
+                <i
+                  class="fas fa-lock"
+                  onmouseover="this.parentElement.style.transform='rotate(180deg)'"
+                  onmouseout="this.parentElement.style.transform='rotate(0deg)'"
+                ></i>
+              </div>
+            </div>
+            <div class="column-heading-container">
+              <h3 class="column-heading">Latest Technologies</h3>
+            </div>
+            <p class="column-description">
+              AI-Driven platform using the latest algorithms and cloud
+              technology.
+            </p>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="why-choose-us-column">
+            <div class="icon-container">
+              <div class="icon-circle">
+                <i
+                  class="fas fa-users"
+                  onmouseover="this.parentElement.style.transform='rotate(180deg)'"
+                  onmouseout="this.parentElement.style.transform='rotate(0deg)'"
+                ></i>
+              </div>
+            </div>
+            <div class="column-heading-container">
+              <h3 class="column-heading">Diverse Communities</h3>
+            </div>
+            <p class="column-description">
+              A community of young adults 18-35, looking to make
+              <strong>new friends.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Feedback Section with Purple Background -->
+      <section class="user-feedback-section">
+        <div class="user-feedback-container">
+          <div class="user-feedback-badge">
+            <span class="user-feedback-badge-text">Users Feedback</span>
+          </div>
+
+          <h2 class="user-feedback-heading">Voices of BondBridge</h2>
+
+          <p class="user-feedback-description">
+            Discover why users love BondBridge. Real feedback and testimonials
+            from real people on how the new way to connect online helps
+            alleviate introversion, social awkwardness and overall loneliness.
+          </p>
+
+          <!-- Testimonials in a single row -->
+          <div class="user-feedback-testimonials">
+            <!-- Testimonial 1 -->
+            <div class="user-feedback-testimonial">
+              <img
+                src="assets/people/people-1.png"
+                alt="Mat Renshaw"
+                class="user-feedback-testimonial-image"
+              />
+              <div class="user-feedback-testimonial-content">
+                <h3 class="user-feedback-testimonial-name">Monica Williams</h3>
+                <p class="user-feedback-testimonial-text">
+                  I'm an outgoing but very busy person with work, school,
+                  hobbies, etc. and found it very diffiicult to make lasting
+                  connections. Using BondBridge online makes it so much easier.
+                </p>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="user-feedback-testimonial">
+              <img
+                src="assets/people/people-2.png"
+                alt="Alex Ellis"
+                class="user-feedback-testimonial-image"
+              />
+              <div class="user-feedback-testimonial-content">
+                <h3 class="user-feedback-testimonial-name">Justin Palugari</h3>
+                <p class="user-feedback-testimonial-text">
+                  I am a naturally shy individual and am not good with striking
+                  up conversations. Using the BondBridge has helped me overcome
+                  the stress of making new friends.
+                </p>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="user-feedback-testimonial">
+              <img
+                src="assets/people/people-3.png"
+                alt="Cooper Short"
+                class="user-feedback-testimonial-image"
+              />
+              <div class="user-feedback-testimonial-content">
+                <h3 class="user-feedback-testimonial-name">Robert Conner</h3>
+                <p class="user-feedback-testimonial-text">
+                  I am not lonely, just a tad bit uncomfortable making any newer
+                  friends. This app works wonders. I just simply connnect with
+                  people with common interests and that's it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Number of Currently Active Users Section -->
+      <section
+        style="
+          background-color: #f3e8ff;
+          padding: 80px 20px;
+          margin-top: 80px;
+          position: relative;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+          "
+        >
+          <!-- Left Content -->
+          <div style="flex: 1; min-width: 300px">
+            <div
+              style="
+                display: inline-block;
+                background-color: #f3e8ff;
+                color: #9333ea;
+                padding: 8px 20px;
+                border-radius: 30px;
+                margin-bottom: 20px;
+                font-weight: 600;
+                font-size: 14px;
+              "
+            >
+              About BondBridge
+            </div>
+
+            <h2
+              style="
+                font-size: 42px;
+                font-weight: 800;
+                color: #111827;
+                margin-bottom: 24px;
+                line-height: 1.2;
+              "
+            >
+              BondBridge Current Status
+            </h2>
+
+            <p
+              style="
+                font-size: 18px;
+                color: black;
+                margin-bottom: 40px;
+                line-height: 1.6;
+                max-width: 600px;
+                text-align: justify;
+              "
+            >
+              Join the hundreds of active users live, on BondBridge, in a safe,
+              secure, interactivee environment. Connect one on one, directly,
+              anonymously or in one of the various interest groups. Download the
+              app or sign in today! BondBridge - a new way to connect online!
+              (Mobile or Browser Versions).
+            </p>
+
+            <a href="download.html" class="get-started-btn">
+              <span>Join Now</span>
+              <span class="arrow-icon" style="scale: 1.9; margin-top: 2px">
+                <i class="fas fa-arrow-right fa-xs" style="scale: 0.6"></i>
+              </span>
+            </a>
+          </div>
+
+          <!-- Right Content - Stats Cards -->
+          <div
+            style="
+              flex: 1;
+              min-width: 300px;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 20px;
+            "
+          >
+            <!-- Card 1 -->
+            <div
+              style="
+                background-color: white;
+                padding: 30px;
+                border-radius: 16px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <div style="font-size: 16px; margin-bottom: 10px">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="margin-bottom: -5px"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                style="font-size: 36px; font-weight: 700; margin-bottom: 8px"
+              >
+                150 +
+              </div>
+              <div style="color: #6b7280">Secure Connections</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              style="
+                background-color: white;
+                padding: 30px;
+                border-radius: 16px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <div style="font-size: 16px; margin-bottom: 10px">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="margin-bottom: -5px"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                style="font-size: 36px; font-weight: 700; margin-bottom: 8px"
+              >
+                10 +
+              </div>
+              <div style="color: #6b7280">Thriving Communities</div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              style="
+                background-color: white;
+                padding: 30px;
+                border-radius: 16px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <div style="font-size: 16px; margin-bottom: 10px">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="margin-bottom: -5px"
+                >
+                  <polygon
+                    points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+                  ></polygon>
+                </svg>
+              </div>
+              <div
+                style="font-size: 36px; font-weight: 700; margin-bottom: 8px"
+              >
+                200 +
+              </div>
+              <div style="color: #6b7280">Conversations Started</div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              style="
+                background-color: white;
+                padding: 30px;
+                border-radius: 16px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <div style="font-size: 16px; margin-bottom: 10px">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="margin-bottom: -5px"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <div
+                style="font-size: 36px; font-weight: 700; margin-bottom: 8px"
+              >
+                50 +
+              </div>
+              <div style="color: #6b7280">Daily Engagements</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download App Section with Gradient Background -->
+      <section
+        style="
+          padding: 40px 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div
+          class="download-app-container"
+          style="
+            width: 100%;
+            max-width: 1200px;
+            background: linear-gradient(to right, #4a8fe9, #000000, #da23c8);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          "
+        >
+          <img
+            src="assets/icon-logo.png"
+            alt="BondBridge Logo"
+            style="width: 100px; height: auto"
+          />
+
+          <h2
+            style="
+              font-size: 36px;
+              font-weight: 800;
+              margin-top: 16px;
+              line-height: 1.3;
+              background: linear-gradient(
+                to top right,
+                #3b01b7,
+                #5e00ff,
+                #ba19eb,
+                #dd0cc8
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              color: transparent;
+              font-family: 'League Spartan';
+            "
+          >
+            BondBridge
+          </h2>
+
+          <div
+            style="
+              width: 80px;
+              height: 2px;
+              background-color: white;
+              opacity: 0.6;
+              margin-top: 8px;
+            "
+          ></div>
+
+          <div
+            style="
+              display: flex;
+              gap: 16px;
+              margin-top: 24px;
+              flex-wrap: wrap;
+              justify-content: center;
+            "
+          >
+            <a href="download.html">
+              <img
+                src="assets/landing/download-apple.png"
+                alt="Download on the App Store"
+                style="height: 56px; width: auto"
+              />
+            </a>
+            <a href="download.html">
+              <img
+                src="assets/landing/download-google.png"
+                alt="Get it on Google Play"
+                style="height: 56px; width: auto"
+              />
+            </a>
+            <a href="download.html">
+              <img
+                src="assets/landing/download-windows.png"
+                alt="Download for Windows"
+                style="
+                  height: 140px;
+                  width: auto;
+                  margin-top: -41px;
+                  scale: 0.9;
+                  margin-left: -14px;
+                "
+              />
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-    
+
     <!-- Footer - Updated to match Image 2 -->
     <footer class="footer-new">
-        <div class="footer-new-container">
-            <div class="footer-left">
-                <div class="footer-logo-new">
-                    <img src="assets/icon-logo.png" alt="Bond Bridge Logo" width="10" height="15" style="scale: 0.7;">
-                    <span class="footer-logo-text grad" style="font-weight: 800; margin-top: 4px;">BondBridge</span>
-                </div>
-                
-                <div class="footer-location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Chicago, IL, USA</span>
-                </div>
-                
-                <div class="footer-email">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@bondbridge.ai</span>
-                </div>
-            </div>
-            
-            <div class="footer-right">
-                <div class="footer-column">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="support.html">Support</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Other</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-subscribe">
-                    <h3>Stay Updated</h3>
-                    <p>Get the latest news & updates</p>
-                    
-                    <div class="footer-subscribe-form">
-                        <input type="email" placeholder="Your Email Address">
-                        <button class="footer-subscribe-button">Subscribe</button>
-                    </div>
-                    
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="footer-social-icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div class="footer-new-container">
+        <div class="footer-left">
+          <div class="footer-logo-new">
+            <img
+              src="assets/icon-logo.png"
+              alt="Bond Bridge Logo"
+              width="10"
+              height="15"
+              class="footer-logo-img"
+            />
+            <span class="footer-logo-text grad">BondBridge</span>
+          </div>
+
+          <div class="footer-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Chicago, IL, USA</span>
+          </div>
+
+          <div class="footer-email">
+            <i class="fas fa-envelope"></i>
+            <span>info@bondbridge.ai</span>
+          </div>
         </div>
-        
-        <div class="footer-divider"></div>
-        
-        <div class="footer-copyright">
-            Copyright © 2025 All Rights Reserved
+
+        <div class="footer-right">
+          <div class="footer-column">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Other</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-subscribe">
+            <h3>Stay Updated</h3>
+            <p>Get the latest news & updates</p>
+
+            <div class="footer-subscribe-form">
+              <input type="email" placeholder="Your Email Address" />
+              <button class="footer-subscribe-button">Subscribe</button>
+            </div>
+
+            <div class="footer-social">
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" class="footer-social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-copyright">Copyright © 2025 All Rights Reserved</div>
     </footer>
 
     <script src="js/main.js"></script>
-    
-    
+
     <script>
-        // JavaScript for interactive features
-         document.addEventListener('DOMContentLoaded', function() {
-      const features = document.querySelectorAll('.flex.items-center.gap-4.p-4');
-      
-      features.forEach((feature, index) => {
-        feature.addEventListener('mouseenter', () => {
-          // Add active class logic here if needed
+      // JavaScript for interactive features
+      document.addEventListener("DOMContentLoaded", function () {
+        const features = document.querySelectorAll(
+          ".flex.items-center.gap-4.p-4"
+        );
+
+        features.forEach((feature, index) => {
+          feature.addEventListener("mouseenter", () => {
+            // Add active class logic here if needed
+          });
         });
       });
-    });
 
-const imageContainer = document.getElementById('imageContainer');
+      const imageContainer = document.getElementById("imageContainer");
 
-// Add hover event listeners
-imageContainer.addEventListener('mouseenter', () => {
-    imageContainer.classList.add('active');
-});
+      // Add hover event listeners
+      imageContainer.addEventListener("mouseenter", () => {
+        imageContainer.classList.add("active");
+      });
 
-imageContainer.addEventListener('mouseleave', () => {
-    imageContainer.classList.remove('active');
-});
+      imageContainer.addEventListener("mouseleave", () => {
+        imageContainer.classList.remove("active");
+      });
 
-// For touch devices
-imageContainer.addEventListener('touchstart', () => {
-    imageContainer.classList.add('active');
-});
+      // For touch devices
+      imageContainer.addEventListener("touchstart", () => {
+        imageContainer.classList.add("active");
+      });
 
-imageContainer.addEventListener('touchend', () => {
-    setTimeout(() => {
-        imageContainer.classList.remove('active');
-    }, 1000);
-});
+      imageContainer.addEventListener("touchend", () => {
+        setTimeout(() => {
+          imageContainer.classList.remove("active");
+        }, 1000);
+      });
 
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btna');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const mobileMenuClose = document.querySelector('.mobile-menu-close');
-            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.add('active');
-                mobileMenuOverlay.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            });
-            
-            mobileMenuClose.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-            
-            mobileMenuOverlay.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-            
-            // Add animation for floating icons
-            const floatingIcons = document.querySelectorAll('.floating-icon');
-            
-            // Subtle animation even when not hovering
-            let counter = 0;
-            setInterval(function() {
-                counter += 0.02;
-                
-                floatingIcons.forEach((icon, index) => {
-                    const amplitude = 8; // max movement in pixels
-                    const speed = 0.5 + (index * 0.1); // different speeds for each icon
-                    
-                    // Create slight floating effect with sine/cosine
-                    const xOffset = Math.sin(counter * speed) * amplitude;
-                    const yOffset = Math.cos(counter * speed) * amplitude;
-                    
-                    // Apply subtle transform
-                    icon.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-                });
-            }, 50);
+      // Mobile menu functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const mobileMenuClose = document.querySelector(".mobile-menu-close");
+        const mobileMenuOverlay = document.querySelector(
+          ".mobile-menu-overlay"
+        );
+
+        mobileMenuBtn.addEventListener("click", function () {
+          mobileMenu.classList.add("active");
+          mobileMenuOverlay.style.display = "block";
+          document.body.style.overflow = "hidden";
         });
-    </script> 
-     
-</body>
+
+        mobileMenuClose.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          mobileMenuOverlay.style.display = "none";
+          document.body.style.overflow = "auto";
+        });
+
+        mobileMenuOverlay.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          mobileMenuOverlay.style.display = "none";
+          document.body.style.overflow = "auto";
+        });
+
+        // Add animation for floating icons
+        const floatingIcons = document.querySelectorAll(".floating-icon");
+
+        // Subtle animation even when not hovering
+        let counter = 0;
+        setInterval(function () {
+          counter += 0.02;
+
+          floatingIcons.forEach((icon, index) => {
+            const amplitude = 8; // max movement in pixels
+            const speed = 0.5 + index * 0.1; // different speeds for each icon
+
+            // Create slight floating effect with sine/cosine
+            const xOffset = Math.sin(counter * speed) * amplitude;
+            const yOffset = Math.cos(counter * speed) * amplitude;
+
+            // Apply subtle transform
+            icon.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+          });
+        }, 50);
+      });
+    </script>
+  </body>
 </html>
